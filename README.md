@@ -17,9 +17,11 @@ Pictures_Model.xml - модель объясняющая, как рассчит�
 \INC\ - папка содержащая библиотеки FreeImage x86/x64
 
 Запускается с формы: ~RunMe.
+
 ![Pictures_00](https://github.com/iKaRus-VLZ/Pictures/assets/8457437/bbad6b9f-9cb2-45e6-8a3e-165387e4b3c3)
 
 Содержит формы:
+
 Test_PictureData_SetToControl - Пример работы с картинками
 ![Pictures_01](https://github.com/iKaRus-VLZ/Pictures/assets/8457437/14419edb-ec07-4e56-b213-6311203eeaa4)
 Test_OlePictContinuos - Вывод картинок в ленточную форму

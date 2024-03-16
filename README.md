@@ -13,9 +13,12 @@ Some examples of working with Picture data in VBA (Access)
 По умолчанию ищет их в подпапке \INC\ рабочей папки примера
 
 содержит:
-PicturesFI.mdb - база Access содержащая все примеры
+PicturesFI.mdb - база Access содержащая все примеры 
+
 Pictures_Model.xml - модель объясняющая, как рассчитывается позиция текста рядом с картинкой.
+
 \INC\ - папка содержащая библиотеки FreeImage x86/x64
+
 
 Запускается с формы: ~RunMe.
 

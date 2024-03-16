@@ -23,16 +23,24 @@ Pictures_Model.xml - модель объясняющая, как рассчит�
 Содержит формы:
 
 Test_PictureData_SetToControl - Пример работы с картинками
-![Pictures_01](https://github.com/iKaRus-VLZ/Pictures/assets/8457437/14419edb-ec07-4e56-b213-6311203eeaa4)
-Test_OlePictContinuos - Вывод картинок в ленточную форму
-![Pictures_02](https://github.com/iKaRus-VLZ/Pictures/assets/8457437/9bfed7c7-d93b-4a6f-9c0f-938232e4015a)
-Test_OlePictDIBContinuos - Вывод картинок встроенных в Access в ленточную форму
-![Pictures_03](https://github.com/iKaRus-VLZ/Pictures/assets/8457437/3090e749-ba47-46de-a6f3-5a04dac58c62)
-Sample_Clock - Аналоговые часы
-![Pictures_04](https://github.com/iKaRus-VLZ/Pictures/assets/8457437/e207ee53-f88f-46a6-93db-e8dda5c6c468)
-Sample_Dates - Вывод изображений в плавающие кнопки и контекстное меню
-![Pictures_05](https://github.com/iKaRus-VLZ/Pictures/assets/8457437/673ada70-225f-435b-8b75-808ac36c0847)
 
+![Pictures_01](https://github.com/iKaRus-VLZ/Pictures/assets/8457437/14419edb-ec07-4e56-b213-6311203eeaa4)
+
+Test_OlePictContinuos - Вывод картинок в ленточную форму
+
+![Pictures_02](https://github.com/iKaRus-VLZ/Pictures/assets/8457437/9bfed7c7-d93b-4a6f-9c0f-938232e4015a)
+
+Test_OlePictDIBContinuos - Вывод картинок встроенных в Access в ленточную форму
+
+![Pictures_03](https://github.com/iKaRus-VLZ/Pictures/assets/8457437/3090e749-ba47-46de-a6f3-5a04dac58c62)
+
+Sample_Clock - Аналоговые часы
+
+![Pictures_04](https://github.com/iKaRus-VLZ/Pictures/assets/8457437/e207ee53-f88f-46a6-93db-e8dda5c6c468)
+
+Sample_Dates - Вывод изображений в плавающие кнопки и контекстное меню
+
+![Pictures_05](https://github.com/iKaRus-VLZ/Pictures/assets/8457437/673ada70-225f-435b-8b75-808ac36c0847)
 
 Модуль и классы для работы с изображениями:
 modPictureData - содержит функции (основные):

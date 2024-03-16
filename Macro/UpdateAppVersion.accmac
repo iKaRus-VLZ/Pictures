@@ -1,0 +1,7 @@
+Version =196611
+ColumnsShown =0
+Begin
+    Action ="RunCode"
+    Comment ="Обновление версии приложения"
+    Argument ="=UpdateAppVer()"
+End

@@ -1,0 +1,1530 @@
+Version =20
+VersionRequired =20
+Checksum =1018563486
+Begin Form
+    AutoResize = NotDefault
+    Modal = NotDefault
+    RecordSelectors = NotDefault
+    MaxButton = NotDefault
+    MinButton = NotDefault
+    ShortcutMenu = NotDefault
+    NavigationButtons = NotDefault
+    DividingLines = NotDefault
+    KeyPreview = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    ViewsAllowed =1
+    BorderStyle =1
+    GridX =16
+    GridY =16
+    Width =2728
+    ItemSuffix =71
+    Left =195
+    Top =180
+    Right =2925
+    Bottom =2955
+    TimerInterval =500
+    RecSrcDt = Begin
+        0x0194acd0183de140
+    End
+    GUID = Begin
+        0x6b2d9d03a0ffb842bbbdf49226594c30
+    End
+    NameMap = Begin
+        0x0acc0e5500000000000000000000000000000000000000000c00000005000000 ,
+        0x0000000000000000000000000000
+    End
+    Caption ="Калькулятор"
+    OnOpen ="[Event Procedure]"
+    OnClose ="[Event Procedure]"
+    PrtMip = Begin
+        0xae050000a6050000a6050000a605000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x000000000000000038f9080900000000205662baf77f0000335c03baf77f0000 ,
+        0x0104220b9c006c0103df00000100090000000000640001000700580201000100 ,
+        0x580200000000413400de3d0500000000feffffffffffffff25ddf8adff7f0000 ,
+        0x8080800000005802180000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000046500800 ,
+        0x4d53414343455353000000000000000000000000000000000000000000000000 ,
+        0xff3e03005802aa00ac00aa00ac00010000003100436f7572696572204e657700 ,
+        0x0000000000000000000000000000000000000000010001000200000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000009600 ,
+        0x4b002c0100800000
+    End
+    PrtDevNames = Begin
+        0x080015001f000100000000000000000000000000000000000000000000000046 ,
+        0x505231313a0000000000
+    End
+    OnKeyDown ="[Event Procedure]"
+    OnDeactivate ="[Event Procedure]"
+    AllowDatasheetView =0
+    FilterOnLoad =0
+    AllowLayoutView =0
+    PrtDevModeW = Begin
+        0x00000803000000000200000200000000808d3609000000000000000000000000 ,
+        0x88070803000000003a00003a000000008807080300000000301c650100000000 ,
+        0x0104220bdc006c0103df00000100090000000000640001000700580201000100 ,
+        0x5802000000004100340000000000000009031000000000000000000000000000 ,
+        0x5002000000000000480200000000000001000000000000000000300100000000 ,
+        0x2500000000005802180000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000046500800 ,
+        0x4d53414343455353000000000000000000000000000000000000000000000000 ,
+        0xff3e03005802aa00ac00aa00ac00010000003100436f7572696572204e657700 ,
+        0x0000000000000000000000000000000000000000010001000200000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000009600 ,
+        0x4b002c0100800000
+    End
+    PrtDevNamesW = Begin
+        0x040011001b000100000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000046005000520031003100 ,
+        0x3a0000000000000000000000
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontCharSet =204
+            FontName ="Tahoma"
+        End
+        Begin Rectangle
+            SpecialEffect =3
+            BackStyle =0
+            BorderLineStyle =0
+            Width =850
+            Height =850
+        End
+        Begin Line
+            BorderLineStyle =0
+            Width =1701
+        End
+        Begin CommandButton
+            TextFontFamily =2
+            BorderLineStyle =0
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            TextFontCharSet =204
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+            AsianLineBreak =255
+        End
+        Begin FormHeader
+            SpecialEffect =1
+            Height =567
+            BackColor =-2147483633
+            Name ="ЗаголовокФормы"
+            Tag ="BackColor=Dark"
+            GUID = Begin
+                0xf54d1fa0355ec443aa3f5b4038017fac
+            End
+            Begin
+                Begin Line
+                    OverlapFlags =85
+                    SpecialEffect =5
+                    Left =60
+                    Top =525
+                    Width =2608
+                    Name ="linHorizontal002"
+                    GUID = Begin
+                        0x044e0dc28037a042b9b97c5bd7eb3bb4
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =93
+                    TextAlign =3
+                    IMESentenceMode =3
+                    Left =81
+                    Top =106
+                    Width =2580
+                    Height =354
+                    FontSize =14
+                    ForeColor =-2147483640
+                    Name ="txtValue"
+                    Format ="General Number"
+                    FontName ="Impact"
+                    OnChange ="[Event Procedure]"
+                    Tag ="FontColor=Dark"
+                    GUID = Begin
+                        0xcf2b1c2dfc0d6d469ed815c26a7d6889
+                    End
+
+                End
+                Begin Line
+                    OverlapFlags =85
+                    SpecialEffect =5
+                    Left =60
+                    Top =11
+                    Width =2608
+                    Name ="linHorizontal001"
+                    GUID = Begin
+                        0x2a5db617c3bcd340bbd875f89b64d383
+                    End
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =255
+                    TextAlign =2
+                    Left =81
+                    Top =106
+                    Width =170
+                    Height =170
+                    FontSize =6
+                    FontWeight =700
+                    ForeColor =8402176
+                    Name ="lblMemo"
+                    Caption ="M"
+                    Tag ="FontColor=Dark"
+                    GUID = Begin
+                        0x5593b8495d6c01488f721b5536be685f
+                    End
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =247
+                    TextAlign =2
+                    Left =81
+                    Top =276
+                    Width =170
+                    Height =170
+                    FontSize =6
+                    FontWeight =700
+                    ForeColor =255
+                    Name ="lblError"
+                    Caption ="E"
+                    Tag ="FontColor=Red"
+                    GUID = Begin
+                        0x1f45ffb3b625814b8da14fc46d2eee05
+                    End
+                End
+            End
+        End
+        Begin Section
+            SpecialEffect =1
+            Height =1701
+            BackColor =-2147483633
+            Name ="Detail0"
+            Tag ="BackColor=Light"
+            GUID = Begin
+                0x0d5757b2f4a9644c935bb3fd33014adc
+            End
+            Begin
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =614
+                    Top =884
+                    Width =340
+                    Height =340
+                    TabIndex =6
+                    Name ="n07"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xe0b75d11449a084593debd350df838c9
+                    End
+
+                    LayoutCachedLeft =614
+                    LayoutCachedTop =884
+                    LayoutCachedWidth =954
+                    LayoutCachedHeight =1224
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =989
+                    Top =884
+                    Width =340
+                    Height =340
+                    TabIndex =7
+                    Name ="n08"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xdca0715345d76844af917cce00c6dee1
+                    End
+
+                    LayoutCachedLeft =989
+                    LayoutCachedTop =884
+                    LayoutCachedWidth =1329
+                    LayoutCachedHeight =1224
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =1364
+                    Top =884
+                    Width =340
+                    Height =340
+                    TabIndex =8
+                    Name ="n09"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x6d6a5738bea7ad4d91647b97137bf340
+                    End
+
+                    LayoutCachedLeft =1364
+                    LayoutCachedTop =884
+                    LayoutCachedWidth =1704
+                    LayoutCachedHeight =1224
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =614
+                    Top =509
+                    Width =340
+                    Height =340
+                    TabIndex =3
+                    Name ="n04"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x3f3566ab1319e2428c5f6c6a52f0cb66
+                    End
+
+                    LayoutCachedLeft =614
+                    LayoutCachedTop =509
+                    LayoutCachedWidth =954
+                    LayoutCachedHeight =849
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =989
+                    Top =509
+                    Width =340
+                    Height =340
+                    TabIndex =4
+                    Name ="n05"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xb4f416bfc32d764f832c0a38cbaadc09
+                    End
+
+                    LayoutCachedLeft =989
+                    LayoutCachedTop =509
+                    LayoutCachedWidth =1329
+                    LayoutCachedHeight =849
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =1364
+                    Top =509
+                    Width =340
+                    Height =340
+                    TabIndex =5
+                    Name ="n06"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x4e194c8c1fb0bb4199767d5a25824890
+                    End
+
+                    LayoutCachedLeft =1364
+                    LayoutCachedTop =509
+                    LayoutCachedWidth =1704
+                    LayoutCachedHeight =849
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =614
+                    Top =134
+                    Width =340
+                    Height =340
+                    Name ="n01"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x1833120cc4c1374887e58a545b4c0a92
+                    End
+
+                    LayoutCachedLeft =614
+                    LayoutCachedTop =134
+                    LayoutCachedWidth =954
+                    LayoutCachedHeight =474
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =989
+                    Top =134
+                    Width =340
+                    Height =340
+                    TabIndex =1
+                    Name ="n02"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x4559c04b2b48294db8076df0bcde8eb9
+                    End
+
+                    LayoutCachedLeft =989
+                    LayoutCachedTop =134
+                    LayoutCachedWidth =1329
+                    LayoutCachedHeight =474
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =1364
+                    Top =134
+                    Width =340
+                    Height =340
+                    TabIndex =2
+                    Name ="n03"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x5e7c86c99c099847a2110f6553f60a54
+                    End
+
+                    LayoutCachedLeft =1364
+                    LayoutCachedTop =134
+                    LayoutCachedWidth =1704
+                    LayoutCachedHeight =474
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =614
+                    Top =1259
+                    Width =340
+                    Height =340
+                    TabIndex =9
+                    Name ="n10"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x2ffb8a1e042cd84cb9f060d3103171ae
+                    End
+
+                    LayoutCachedLeft =614
+                    LayoutCachedTop =1259
+                    LayoutCachedWidth =954
+                    LayoutCachedHeight =1599
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =989
+                    Top =1259
+                    Width =340
+                    Height =340
+                    TabIndex =10
+                    Name ="n11"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x8c091aaf5cfbc3479f0eb90da7bea03b
+                    End
+
+                    LayoutCachedLeft =989
+                    LayoutCachedTop =1259
+                    LayoutCachedWidth =1329
+                    LayoutCachedHeight =1599
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =2280
+                    Top =885
+                    Width =340
+                    Height =715
+                    TabIndex =12
+                    ForeColor =16711680
+                    Name ="f99"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x934c01ebc54e4e40a0c7d0e339943ca8
+                    End
+
+                    LayoutCachedLeft =2280
+                    LayoutCachedTop =885
+                    LayoutCachedWidth =2620
+                    LayoutCachedHeight =1600
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =2280
+                    Top =510
+                    Width =340
+                    Height =340
+                    TabIndex =18
+                    Name ="f05"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xfb04a47ced535a4a8162e43606c34a81
+                    End
+
+                    LayoutCachedLeft =2280
+                    LayoutCachedTop =510
+                    LayoutCachedWidth =2620
+                    LayoutCachedHeight =850
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =2280
+                    Top =135
+                    Width =340
+                    Height =340
+                    TabIndex =13
+                    Name ="f00"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0x0cd8fedd0005e04ba124828f12c587f8
+                    End
+
+                    LayoutCachedLeft =2280
+                    LayoutCachedTop =135
+                    LayoutCachedWidth =2620
+                    LayoutCachedHeight =475
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin Rectangle
+                    SpecialEffect =2
+                    OverlapFlags =223
+                    Left =570
+                    Top =75
+                    Width =1220
+                    Height =1588
+                    Name ="Прямоугольник55"
+                    GUID = Begin
+                        0xa3a0e76ec80309449c18ff53d270fc66
+                    End
+                End
+                Begin Rectangle
+                    SpecialEffect =2
+                    OverlapFlags =223
+                    Left =1845
+                    Top =75
+                    Width =845
+                    Height =1588
+                    Name ="Прямоугольник56"
+                    GUID = Begin
+                        0x4e5008dd1da1514bb354c654ba898d20
+                    End
+                End
+                Begin Rectangle
+                    SpecialEffect =2
+                    OverlapFlags =93
+                    Left =75
+                    Top =75
+                    Width =455
+                    Height =1588
+                    Name ="Прямоугольник57"
+                    GUID = Begin
+                        0xb8e541149d64be4d9b1b8dcad59de5e1
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =1364
+                    Top =1259
+                    Width =340
+                    Height =340
+                    TabIndex =11
+                    Name ="n12"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0x71820b49c0df1a4d930b191b9001ea8b
+                    End
+
+                    LayoutCachedLeft =1364
+                    LayoutCachedTop =1259
+                    LayoutCachedWidth =1704
+                    LayoutCachedHeight =1599
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =135
+                    Top =884
+                    Width =340
+                    Height =340
+                    TabIndex =21
+                    Name ="f13"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0xbb8f7d89a3548a42852145f77316be1f
+                    End
+
+                    LayoutCachedLeft =135
+                    LayoutCachedTop =884
+                    LayoutCachedWidth =475
+                    LayoutCachedHeight =1224
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =135
+                    Top =509
+                    Width =340
+                    Height =340
+                    TabIndex =20
+                    Name ="f12"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0x596da45ae1c9aa40b707be2d32f578a5
+                    End
+
+                    LayoutCachedLeft =135
+                    LayoutCachedTop =509
+                    LayoutCachedWidth =475
+                    LayoutCachedHeight =849
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =135
+                    Top =1259
+                    Width =340
+                    Height =340
+                    TabIndex =22
+                    Name ="f14"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0x75f2a85fea7c8949936e69073559d135
+                    End
+
+                    LayoutCachedLeft =135
+                    LayoutCachedTop =1259
+                    LayoutCachedWidth =475
+                    LayoutCachedHeight =1599
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =1905
+                    Top =885
+                    Width =340
+                    Height =340
+                    TabIndex =16
+                    Name ="f03"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0xa5cd783d1252ab4e9b9512aeb52c45e0
+                    End
+
+                    LayoutCachedLeft =1905
+                    LayoutCachedTop =885
+                    LayoutCachedWidth =2245
+                    LayoutCachedHeight =1225
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =1905
+                    Top =510
+                    Width =340
+                    Height =340
+                    TabIndex =15
+                    Name ="f02"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0x1ed90ca86511b24db58a7fd6894a6646
+                    End
+
+                    LayoutCachedLeft =1905
+                    LayoutCachedTop =510
+                    LayoutCachedWidth =2245
+                    LayoutCachedHeight =850
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =1905
+                    Top =1260
+                    Width =340
+                    Height =340
+                    TabIndex =17
+                    Name ="f04"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0x60373e2697216846b07c315857825471
+                    End
+
+                    LayoutCachedLeft =1905
+                    LayoutCachedTop =1260
+                    LayoutCachedWidth =2245
+                    LayoutCachedHeight =1600
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =135
+                    Top =134
+                    Width =340
+                    Height =340
+                    TabIndex =19
+                    Name ="f11"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0x94ec6b0f446b1a4caafb96cdea337543
+                    End
+
+                    LayoutCachedLeft =135
+                    LayoutCachedTop =134
+                    LayoutCachedWidth =475
+                    LayoutCachedHeight =474
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =1905
+                    Top =135
+                    Width =340
+                    Height =340
+                    TabIndex =14
+                    Name ="f01"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0x5da75fc32ca6a9419a390494fc5c0f03
+                    End
+
+                    LayoutCachedLeft =1905
+                    LayoutCachedTop =135
+                    LayoutCachedWidth =2245
+                    LayoutCachedHeight =475
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+            End
+        End
+        Begin FormFooter
+            SpecialEffect =1
+            Height =510
+            BackColor =-2147483633
+            Name ="ПримечаниеФормы"
+            Tag ="BackColor=Light"
+            GUID = Begin
+                0x9d3c3a4f12a6134f88c5466725753180
+            End
+            Begin
+                Begin Line
+                    OverlapFlags =85
+                    SpecialEffect =5
+                    Left =60
+                    Top =30
+                    Width =2608
+                    Name ="linHorizontal003"
+                    GUID = Begin
+                        0x7e3ddb053057274cb8866d2d426cd486
+                    End
+                End
+                Begin Line
+                    OverlapFlags =85
+                    SpecialEffect =5
+                    Left =60
+                    Top =465
+                    Width =2608
+                    Name ="linHorizontal004"
+                    GUID = Begin
+                        0xbd6d534f32f31e48bdb278e3bf119fe5
+                    End
+                End
+                Begin CommandButton
+                    Cancel = NotDefault
+                    OverlapFlags =85
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =1908
+                    Top =75
+                    Width =714
+                    Height =340
+                    FontSize =8
+                    FontWeight =400
+                    ForeColor =-2147483630
+                    Name ="cmdCancel"
+                    Caption ="Отмена"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0x4523ae5b02220346a95f555795b66464
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                End
+                Begin CommandButton
+                    Default = NotDefault
+                    OverlapFlags =85
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =1065
+                    Top =75
+                    Width =714
+                    Height =340
+                    FontSize =8
+                    FontWeight =400
+                    TabIndex =1
+                    ForeColor =-2147483630
+                    Name ="cmdOK"
+                    Caption ="OK"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0x5b5c9adc30782f48adb59728dc5ce125
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit
+Option Compare Database
+'=========================
+Private Const c_strModule As String = "Form_frmDROP_Calc"
+'=========================
+' Описание      : Всплывающий калькулятор
+' Версия        : 1.0.0.450966136
+' Дата          : 19.06.2023 14:43:35
+' Автор         : Кашкин Р.В. (KashRus@gmail.com)
+' Примечание    : это только заготовка под простенький калькулятор )
+'               : можно сильно проще, но немного увлёкся - хотел сделать настраиваемый набор произвольных функций
+'               : использует функции из модуля modStrings, в частности для работы с шаблонами строк.
+'=========================
+' можно реализовать как виртуальную клавиатуру - допустить любой ввод в окно, а вычисление перевалить на Eval, отдельно обрабатывая ошибки и пользовательские функции
+' ToDo: дописать до рабочего состояния )
+' +  при нажатии функциональной кнопки проверяется количество необходимых операндов,
+'    если достаточно - производится вычисление и сброс счётчика операндов
+'    иначе           - фиксируется введённый операнд и переход к вводу следующего
+'=========================
+Private m_varValue As Variant           ' текущее значение
+Private m_lngModalResult As VbMsgBoxResult
+'-------------------------
+' для групповой обработки событий контролов
+Private WithEvents mRelay As clsRelay   ' для ретрансляции событий группы контролов в форму
+Attribute mRelay.VB_VarHelpID = -1
+Private colCtls As Collection           ' коллекция для хранения элементов clsControlEventsTransfer
+'-------------------------
+Private Const MoveGap = 0.25 '0.1       ' смещение курсора на которое не реагируем
+'-------------------------
+Private Const c_strError = "!ERR#"
+
+'Private Const c_strNumPref = "n", c_strFunPref = "f" ', c_strModPref = "m"
+Private Enum eCmdType
+    eCmdTypeUndef = 0       '
+    eCmdTypeNum = 1         ' цифровая кнопка
+    eCmdTypeFun = 2         ' кнопка операции
+End Enum
+Private Enum eNumType
+    eNumTypeDec = 0         ' десятичное число (целое или десятичная дробь)
+    eNumTypeNat = -1        ' десятичное число (натуральная дробь)
+    eNumTypeBin = 1:        ' двоичное целое число
+    eNumTypeHex = 2         ' шестнадцатиричное целое число
+End Enum
+Private Enum eFunType
+    eFunTypeDef = 0         ' основные арифметические операции
+End Enum
+Private m_lngNumType As eNumType, m_strNumName As String ' тип текущей числовой клавиатуры/имя панели
+Private m_lngFunType As eFunType, m_strFunName As String ' тип текущей клавиатуры операций/имя панели
+'Private m_lngModType As Long, m_strModName As String ' тип текущей служебной клавиатуры/имя панели
+
+Private cfDecDelim As String * 1    ' Chr(44)  - разделитель целой/дробной части десятичной дроби
+Private cfPosDelim As String * 1    ' Chr(160) - разделитель разрядов целой части
+Private Const cfWhlDelim = " "      ' Chr(32)  - разделитель целой/дробной части натуральной дроби
+Private Const cfNatDelim = "/"      ' Chr(47)  - разделитель числителя/знаменателя натуральной дроби
+
+Private Num() As String, iNum As Long ' буфер операндов
+Private Mem() As String, iMem As Long ' буфер памяти
+'Private Fun() As Double, iFun As Long ' буфер операций (??)
+Private m_bolErr As Boolean         ' признак ошибки
+' Описания кнопок:
+Private xmlDoc As Object
+'--------------------------------------------------------------------------------
+' KERNEL32
+'--------------------------------------------------------------------------------
+Private Const LOCALE_SDECIMAL = &HE     ' десятичный разделитель
+Private Const LOCALE_STHOUSAND = &HF    ' разделитель разрядов
+Private Const LOCALE_USER_DEFAULT = &H400
+Private Const LOCALE_SYSTEM_DEFAULT = &H800
+
+#If VBA7 And Win64 Then '<WIN64 & OFFICE2010+>
+Private Declare PtrSafe Function GetLocaleInfo Lib "kernel32.dll" Alias "GetLocaleInfoA" (ByVal locale As Long, ByVal LCType As Long, ByVal lpLCData As String, ByVal cchData As Long) As Long
+#Else                   '<WIN32>
+Private Declare Function GetLocaleInfo Lib "kernel32.dll" Alias "GetLocaleInfoA" (ByVal Locale As Long, ByVal LCType As Long, ByVal lpLCData As String, ByVal cchData As Long) As Long
+#End If                 '<WIN32>
+
+'----------------------------
+Private Sub Form_Open(Cancel As Integer): Call p_Init: End Sub
+Private Sub Form_Close(): Call p_Erase: End Sub
+Private Sub Form_Deactivate(): Me.Visible = False: End Sub
+Private Sub cmdOK_Click(): m_lngModalResult = vbOK: Me.Visible = False: End Sub
+Private Sub cmdCancel_Click(): m_lngModalResult = vbCancel: Me.Visible = False: End Sub
+Public Property Let Value(rData)
+    If p_IsNumCorrect(rData) Then m_varValue = rData: txtValue = rData
+End Property
+Public Property Get Value(): Value = m_varValue: End Property
+Public Property Get ModalResult() As VbMsgBoxResult: ModalResult = m_lngModalResult: End Property
+'----------------------------
+Private Function p_Init()
+' инициализируем контролы
+    InsideHeight = Section(acDetail).Height + Section(acHeader).Height + Section(acFooter).Height: InsideWidth = Me.Width
+' подготавливаем массивы и переменные
+    cfDecDelim = p_GetLocaleInfo(LOCALE_SDECIMAL)   ' разделитель целой/дробной части десятичной дроби
+    cfPosDelim = p_GetLocaleInfo(LOCALE_STHOUSAND)  ' разделитель разрядов целой части
+    ReDim Num(0): ReDim Fun(0): ReDim Mem(0)
+' выбираем стартовые значения и наборы кнопок
+    NumType = eNumTypeDec: FunType = eFunTypeDef
+    Value = 0: txtValue.SetFocus
+' заполняем справочник значений кнопок
+    Call p_CreateXmlDoc
+' инициализируем контролы
+    Set colCtls = New Collection
+    Set mRelay = New clsRelay
+' запускаем групповой обработчик
+    p_InitControls
+End Function
+Private Function p_Erase()
+On Error Resume Next
+    Set colCtls = Nothing: Set mRelay = Nothing
+    Set xmlDoc = Nothing
+    Erase Num(): Erase Mem() ': Erase Fun()
+    Call SysCmd(acSysCmdSetStatus, vbNullString)
+    Call PictureData_SetIcon(Me.hwnd)
+End Function
+Private Function p_Error(Optional ErrCode As Long)
+On Error Resume Next
+    p_Error = ErrCode ' Err.Raise ErrCode
+    Select Case p_Error
+    Case 0:                                                 ' No error
+    Case 6:     txtValue = c_strError & " " & "OVERFLOW"    ' Overflow
+    Case 11:    txtValue = c_strError & " " & "DIV/0"       ' Division by zero
+    Case 13:    txtValue = c_strError & " " & "MISMATCH"    ' Type mismatch
+    Case 17:    txtValue = c_strError & " " & "UNKNOWN"     ' Can't perform requested operation
+    'Case Else:  txtValue = c_strError & " " & Err '
+    End Select
+    Err.Clear: m_bolErr = ErrCode: lblError.Visible = m_bolErr
+End Function
+'----------------------------
+' для событий из clsControlEventsTransfer
+'----------------------------
+Private Sub mRelay_GetParent(PARENT As Object): Set PARENT = Me: End Sub
+Private Sub p_InitControl(ctl As Access.Control) ', Optional idx)
+' добавляем групповой обработчик по контролу
+Dim cTransf As clsControlEventsTransfer
+    Set cTransf = New clsControlEventsTransfer
+    cTransf.Init Index:=colCtls.Count, EventControl:=ctl, Relay:=mRelay
+    colCtls.Add cTransf
+End Sub
+Private Sub p_InitControls()
+' инициализируем коллекцию контролов для которых будет задана групповая обработка событий
+    On Error GoTo HandleError
+'    WindowFreeze Me.hWnd
+Dim ctl As Access.Control
+' заполняем свойства кнопок
+Dim ctlType As eCmdType, ctlIndex As Long
+Dim strName As String, strText As String, strComm As String, strIcon As String
+Dim strFontName As String, strFontSize As String, strFontColor As String, strFontBold As String
+    On Error Resume Next
+    For Each ctl In Me.Section(acDetail).Controls
+        ' получаем свойства контрола из XML
+        Call p_GetControlInfo(ctl, ctlType, strName, strText, strComm, strIcon, _
+            FontSize:=strFontSize, FontColor:=strFontColor)
+        If ctlType = eCmdTypeUndef Then ctl.Visible = False: Err.Clear: GoTo HandleNext ' если для кнопки в данном наборе не задано значение - скрываем и переходим к другой
+        ' индекс элемента по массиву, подпись и комментарий + иконка
+        With ctl
+        ' основные свойства
+            .Caption = strText: .ControlTipText = strComm: .StatusBarText = strComm
+        ' форматирование
+            If Len(strFontSize) Then .FontSize = strFontSize
+            If Len(strFontColor) Then .ForeColor = GetColorFromText(strFontColor)
+        End With ':
+        ' иконка
+        If Len(strIcon) > 0 Then Call PictureData_SetToControl(ctl, strIcon)                    '
+' инициализация групповой обработки событий
+        p_InitControl ctl
+HandleNext: Next ctl
+'    WindowUnFreeze
+HandleExit:  Exit Sub
+HandleError: Err.Clear: Resume HandleExit
+End Sub
+Public Sub EventControl_Click( _
+    EventControl As Access.Control) 'As Integer
+' обработка события щелчок мышью по кнопке
+Dim Result As Integer
+Dim cmdName As String, cmdType As eCmdType
+Dim strText As String, lngOper As Long
+Dim strTitle As String
+Dim strMessage As String
+    On Error Resume Next
+' заполняем свойства кнопок
+    Call p_GetControlInfo(EventControl, cmdType, cmdName) ' получаем тип/код оператора
+    Call p_GetCommandInfo(cmdName, cmdType, Command:=strText, OpCount:=lngOper)
+    Select Case cmdType
+    Case eCmdTypeNum: strMessage = "цифровую"
+    ' это операнд - проверить:
+    ' соответствует ли ввод формату ожидаемого операнда (ввод м.б. не завершён)
+    Case eCmdTypeFun: strMessage = "функциональную"
+    ' это оператор -  проверить:
+    '   если в стеке операций пусто или
+    '   если количество параметров в стеке соответствует необходимому для операции - передать на вычисление ии результат в окно вывода и в качестве первого параметра
+    '   если не соответствует - введённый параметр в стек и ожидание ввода следующего параметра
+    Case Else: strMessage = "какую-то"
+    End Select
+    strTitle = "Внимание!"
+    strMessage = "Вы нажали " & strMessage & " кнопочку:" & vbCrLf & "Id: " & cmdName & vbTab & "Значение: " & strText & vbCrLf & vbCrLf & _
+                 "Это просто заготовка под настраиваемый калькулятор." & vbCrLf & "На самом деле он ничего не считает)"
+    MsgBox strMessage, vbOKOnly Or vbExclamation, strTitle
+HandleExit:
+End Sub
+Public Sub EventControl_MouseMove( _
+    EventControl As Access.Control, _
+    Button As Integer, Shift As Integer, x As Single, y As Single) 'As Integer
+' обработка события мышь над контролом для дат календаря
+Dim Result As Integer
+Static PrevX As Single, PrevY As Single
+    If Abs(x - PrevX) < MoveGap Or Abs(y - PrevY) < MoveGap Then GoTo HandleExit
+    ' если смещение больше порогового перерисовываем акцентирование
+    With EventControl
+        Call SysCmd(acSysCmdSetStatus, .StatusBarText)
+    End With
+    PrevX = x: PrevY = y
+HandleExit:
+End Sub
+'----------------------------
+Public Property Let NumType(ByVal rData As Long)
+    Select Case rData
+    'Case 0:     m_lngNumType = rData: m_strNumName = "decimal"
+    Case Else:  m_lngNumType = eNumTypeDec: m_strNumName = "decimal"
+    End Select
+End Property
+Public Property Let FunType(ByVal rData As Long)
+    Select Case rData
+    'Case 0:     m_lngFunType = rData: m_strFunName = "basic"
+    Case Else:  m_lngFunType = eFunTypeDef: m_strFunName = "basic"
+    End Select
+End Property
+
+Private Function p_IsNumCorrect(Num As Variant) As Boolean
+' проверяет корректность введённого числа
+    On Error Resume Next
+    Select Case m_lngNumType
+    Case eNumTypeDec:   If Not IsNumeric(Num) Then Err.Raise vbObjectError + 512
+    Case Else:          Err.Raise vbObjectError + 512
+    End Select
+    p_IsNumCorrect = (Err = 0): Call p_Error(Err): Err.Clear
+End Function
+Private Function p_IsFunCorrect(Fun As Variant, Optional Template As String, Optional Operands As Long) As Boolean
+' проверяет корректность заданной операции
+    On Error GoTo HandleError
+    
+HandleExit:  Exit Function
+HandleError: Err.Clear: Resume HandleExit
+End Function
+'----------------------------
+Private Function p_GetLocaleInfo(LCType As Long) As String
+' возвращает региональные настройки
+Const c_strProcedure = "p_GetLocaleInfo"
+' lcType - константы LOCALE_
+Dim lpBuffer As String * 100
+    On Error GoTo HandleError
+    If GetLocaleInfo(LOCALE_USER_DEFAULT, LCType, lpBuffer, 99) = 0 Then Err.Raise vbObjectError + 512
+    p_GetLocaleInfo = Left$(lpBuffer, InStr(lpBuffer, Chr$(0)) - 1)
+HandleExit:  Exit Function
+HandleError: Err.Clear: Resume HandleExit
+End Function
+Private Function p_CreateXmlDoc() As Object
+' возвращает объект xmlDoc содержащий описание всех допустимых кнопок с аттрибутами
+Const c_strProcedure = "p_CreateXmlDoc"
+'-------------------------
+Dim sxmlDoc As String:
+Const cstrXmlBeg = "'=== XML BEG ===", cstrXmlEnd = "'=== XML END ==="  ' метки начала/конца XML вставки
+Const cstrComBeg = "<!-- ", cstrComEnd = " -->"                         ' метки начала/конца XML комментария
+    On Error GoTo HandleError
+'-------------------------
+' XML правила
+'-------------------------
+'=== XML BEG ===
+'<?xml version='1.0' encoding='utf-8'?>
+'<main>
+'    <commands>
+'    <!-- описание всех допустимых кнопок -->
+'        <numbers fontcolor='black'>
+'        <!-- цифровые кнопки -->
+'            <id0 text='0' icon='#70'/>
+'            <id1 text='1' icon='#71'/>
+'            <id2 text='2' icon='#72'/>
+'            <id3 text='3' icon='#73'/>
+'            <id4 text='4' icon='#74'/>
+'            <id5 text='5' icon='#75'/>
+'            <id6 text='6' icon='#76'/>
+'            <id7 text='7' icon='#77'/>
+'            <id8 text='8' icon='#78'/>
+'            <id9 text='9' icon='#79'/>
+'            <idMinus text='±' comm='знак числа' opc='1' cmd='-1*[%1%]'/>
+'            <idDec text='[%DecDelim%]' comm='десятичный разделитель' icon='#4076'/>
+'            <idPos text='[%PosDelim%]' comm='разделитель разрядов'/>
+'            <idWhole text='[%WholeDelim%]' comm='разделитель целой и дробной части натуральной дроби'/>
+'            <idDenom text='[%DenomDelim%]' comm='разделитель числителя и знаменателя натуральной дроби'/>
+'      <!-- дополнительные цифровые кнопки -->
+'            <idA text='A' icon='#80'/>
+'            <idB text='B' icon='#81'/>
+'            <idC text='C' icon='#82'/>
+'            <idD text='D' icon='#83'/>
+'            <idE text='E' icon='#84'/>
+'            <idF text='F' icon='#85'/>
+'        </numbers>
+'        <operations fontcolor='blue'>
+'        <!-- кнопки операций -->
+'        <!-- арифметические операции -->
+'            <idAdd text='+' comm='прибавить' opc='2' cmd='[%1%]+[%2%]'/>
+'            <idSub text='-' comm='вычесть' opc='2' cmd='[%1%]-[%2%]'/>
+'            <idMul text='&#xd7;' comm='умножить' opc='2' cmd='[%1%]*[%2%]'/>
+'            <idDiv text='&#xf7;' comm='разделить' opc='2' cmd='[%1%]/[%2%]' />
+'            <idPer text='%' comm='вычислить процент' opc='2' cmd='100*[%1%]/[%2%]'/>
+'            <idPi text='&#x3c0;' comm='число Pi' cmd='Pi'/>
+'        <!-- операции с памятью -->
+'            <idMemClear text='MC' comm='очистить память' fontsize='6' fontcolor='red'/>
+'            <idMemRead text='MR' comm='вставить значение из памяти' fontsize='6' fontcolor='green'/>
+'            <idMemPlus text='M+' comm='добавить результат в память' fontsize='6' fontcolor='green'/>
+'            <idMemMinus text='M-' comm='вычесть результат из памяти' fontsize='6' fontcolor='green'/>
+'        <!-- служебные операции -->
+'            <idEval text='=' comm='вычислить' icon='#2474'/>
+'            <idErase text='C' comm='очистить' fontcolor='red'/>
+'        </operations>
+'    </commands>
+'    <panels>
+'    <!-- расположение кнопок на панелях -->
+'        <panel name='decimal'>
+'        <!-- цифровая клавиатура для десятичной системы исчисления -->
+'            <n01>id7</n01><n02>id8</n02><n03>id9</n03>
+'            <n04>id4</n04><n05>id5</n05><n06>id6</n06>
+'            <n07>id1</n07><n08>id2</n08><n09>id3</n09>
+'            <n10>id0</n10><n11>idDec</n11><n12>idMinus</n12>
+'        </panel>
+'        <panel name='basic'>
+'        <!-- основной набор операций -->
+'            <f03>idAdd</f03><f04>idSub</f04><f01>idMul</f01><f02>idDiv</f02><f05>idPer</f05>
+'            <f11>idMemClear</f11><f12>idMemRead</f12><f13>idMemPlus</f13><f14>idMemMinus</f14>
+'            <f99>idEval</f99><f00>idErase</f00>
+'        </panel>
+'    </panels>
+'</main>
+'=== XML END ===
+'-------------------------
+HandleStart:
+' читаем текст из текущей процедуры между метками
+Dim lngBegLine As Long, lngBegCol As Long, lngEndLine As Long, lngEndCol As Long
+Dim strTemp As String
+Dim bolFound As Boolean
+    With Application.VBE.ActiveVBProject.VBComponents(c_strModule).CodeModule
+        lngBegCol = 1: lngEndCol = -1
+        lngBegLine = .ProcBodyLine(c_strProcedure, 0)      'vbext_pk_Proc
+   ' ищем начало вставки
+        Do
+            lngBegLine = lngBegLine + 1
+            bolFound = .Find(cstrXmlBeg, lngBegLine, lngBegCol, .ProcBodyLine(c_strProcedure, 0) + .ProcCountLines(c_strProcedure, 0) - 1, -1)
+            If Not bolFound Then Err.Raise vbObjectError + 512
+            If lngBegCol = 1 Then Exit Do ' начало найдено
+        Loop
+   ' ищем конец вставки
+        lngEndLine = lngBegLine
+        Do
+            lngEndLine = lngEndLine + 1
+            bolFound = .Find(cstrXmlEnd, lngEndLine, lngBegCol, .ProcBodyLine(c_strProcedure, 0) + .ProcCountLines(c_strProcedure, 0) - 1, -1)
+            If Not bolFound Then Err.Raise vbObjectError + 512
+            If lngBegCol = 1 Then Exit Do ' конец найден
+        Loop
+   ' читаем строки в переменную
+        sxmlDoc = vbNullString
+        lngBegLine = lngBegLine + 1
+        lngEndLine = lngEndLine '- 1
+        Do While lngBegLine < lngEndLine
+            ' получаем содержимое строки
+            strTemp = VBA.RTrim$(VBA.Trim$(VBA.Mid$(.Lines(lngBegLine, 1), 2)))
+            ' проверяем не является ли строка строкой комментария
+            lngBegCol = InStr(1, strTemp, cstrComBeg)
+            If lngBegCol > 0 Then
+            ' если есть начало - ищем конец комментария
+                lngEndCol = -1
+                strTemp = VBA.RTrim$(VBA.Left$(strTemp, lngBegCol - 1))   ' отсекаем хвост
+                If Not .Find(cstrComEnd, lngBegLine, 1, lngEndLine - 1, lngEndCol) Then Err.Raise vbObjectError + 512
+            ' надо отсечь начало
+                If (lngEndCol < Len(.Lines(lngBegLine, 1))) Then strTemp = VBA.RTrim$(VBA.Mid$(.Lines(lngBegLine, 1), lngEndCol))
+            End If
+            If Len(Trim(strTemp)) > 0 Then sxmlDoc = sxmlDoc & strTemp & vbCr       ' добавляем в выходную строку (не комментарий)
+            lngBegLine = lngBegLine + 1
+        Loop
+    End With
+'-------------------------
+' инициализация документа XML
+'-------------------------
+    ' подставляем значения разделителей
+    sxmlDoc = PlaceHoldersSetByNames(sxmlDoc, "DecDelim=" & cfDecDelim, "PosDelim=" & cfPosDelim, "WholeDelim=" & cfWhlDelim, "DenomDelim=" & cfNatDelim)
+    ' создаём объект XML содержащий настройки клавиатуры калькулятора
+    
+    Set xmlDoc = CreateObject("MSXML2.DOMDocument")
+    With xmlDoc
+        .SetProperty "SelectionLanguage", "XPath"
+        .LoadXml (sxmlDoc)
+        If Len(.XML) = 0 Then Err.Raise vbObjectError + 512 'GoTo HandleStart
+    End With
+    'Set p_CreateXmlDoc = xmlDoc
+HandleExit:  Exit Function
+HandleError: Err.Clear: Resume HandleExit
+End Function
+Private Function p_GetControlInfo(ctl As Access.Control, ctlType As eCmdType, _
+    Optional Name, Optional Text, _
+    Optional Comment, Optional Icon, _
+    Optional FontName, Optional FontSize, Optional FontColor, Optional FontBold _
+    ) As Boolean
+' возвращает из соотв массива свойства кнопки (см. p_CreateXmlDoc)
+'-------------------------
+' ctl - ссылка на контрол параметры которого д.б. получены
+' ctlType - тип контрола
+' Name -  кодовое имя элемента (Id) контрола
+' Text - текст контрола
+' Comment - комментарий к контролу
+' Icon - имя/код картинки контрола
+' FontName\Size\Color\Bold - параметры шрифта контрола
+'-------------------------
+Dim Result As Boolean
+    ctlType = eCmdTypeUndef
+    On Error GoTo HandleError
+Dim xPath As String, xmlNodes As Object
+' проверяем наличие кнопки на панелях
+    xPath = "//panels/panel[@name='[%1%]']/[%2%]" '/child::*"
+    ' проверяем наличие на цифровой панели
+    Set xmlNodes = xmlDoc.SelectNodes(PlaceHoldersSetByIndex(xPath, m_strNumName, ctl.Name)): If xmlNodes.Length > 0 Then ctlType = eCmdTypeNum: GoTo HandleGet
+    ' проверяем наличие на панели операций
+    Set xmlNodes = xmlDoc.SelectNodes(PlaceHoldersSetByIndex(xPath, m_strFunName, ctl.Name)): If xmlNodes.Length > 0 Then ctlType = eCmdTypeFun: GoTo HandleGet
+    ' не найдено
+    Err.Raise vbObjectError + 512
+HandleGet:
+    Name = xmlNodes(0).NodeTypedValue ' идентификатор кнопки
+' ищем аттрибуты кнопки
+    On Error Resume Next
+    xPath = "//commands/[%1%]/[%2%]" '
+    Select Case ctlType
+    Case eCmdTypeNum: xPath = PlaceHoldersSetByIndex(xPath, "numbers", Name)
+    Case eCmdTypeFun: xPath = PlaceHoldersSetByIndex(xPath, "operations", Name)
+    Case Else: Err.Raise vbObjectError + 512
+    End Select
+    Set xmlNodes = xmlDoc.SelectNodes(xPath): If xmlNodes.Length = 0 Then Err.Raise vbObjectError + 512
+' получаем аттрибуты кнопки
+Dim sAttr As String
+    With xmlNodes(0)
+' свойства определяющие значение кнопки
+        Text = vbNullString: If Not IsMissing(Text) Then sAttr = "text": Text = .GetAttribute(sAttr) ' подпись
+        Comment = vbNullString: If Not IsMissing(Comment) Then sAttr = "comm": Comment = .GetAttribute(sAttr): If Len(Comment) = 0 Then Comment = Text ' подсказка
+        Icon = vbNullString: If Not IsMissing(Icon) Then sAttr = "icon": Icon = .GetAttribute(sAttr) ' иконка
+' свойства определяющие оформление кнопки
+        xPath = xPath & "/ancestor-or-self::*/@[%1%]" '
+        FontSize = vbNullString: If Not IsMissing(FontSize) Then sAttr = "fontsize":    With xmlDoc.SelectNodes(PlaceHoldersSetByIndex(xPath, sAttr)): FontSize = IIf(.Length, .Item(.Length - 1).nodeValue, FontSize): End With
+        FontColor = vbNullString: If Not IsMissing(FontColor) Then sAttr = "fontcolor": With xmlDoc.SelectNodes(PlaceHoldersSetByIndex(xPath, sAttr)): FontColor = IIf(.Length, .Item(.Length - 1).nodeValue, FontSize): End With
+    End With
+    Err.Clear: Result = True
+HandleExit:  p_GetControlInfo = Result: Exit Function
+HandleError: Result = False: Err.Clear: Resume HandleExit
+End Function
+
+Private Function p_GetCommandInfo(Name As String, cmdType As eCmdType, _
+    Optional Command, Optional OpCount, _
+    Optional Text, Optional Comment _
+    ) As Boolean
+' возвращает из соотв массива свойства элемента (см. p_CreateXmlDoc)
+'-------------------------
+' Name    -  кодовое имя элемента (Id)
+' cmdType - тип элемента
+' Command - комманда/инструкция которая должна выполняться при срабатывании контрола
+' OpCount - количество операндов которые д.б. прочитаны для исполнения комманды
+' Text    - текст элемента
+' Comment - комментарий к контролу
+'-------------------------
+Dim Result As Boolean
+    'cmdType = eCmdTypeUndef
+    On Error GoTo HandleError
+Dim xPath As String, xmlNodes As Object
+' ищем аттрибуты кнопки
+    On Error Resume Next
+    xPath = "//commands/descendant::[%1%]" '
+    xPath = PlaceHoldersSetByIndex(xPath, Name)
+'    xPath = "//commands/[%1%]/[%2%]" '
+'    Select Case cmdType
+'    Case Else: Err.Raise vbObjectError + 512
+'    End Select
+    Set xmlNodes = xmlDoc.SelectNodes(xPath): If xmlNodes.Length = 0 Then Err.Raise vbObjectError + 512
+' получаем аттрибуты кнопки
+Dim sAttr As String
+    With xmlNodes(0)
+' свойства определяющие значение
+        If Not IsMissing(Text) Then sAttr = "text": Text = .GetAttribute(sAttr)             ' подпись
+' свойства определяющие поведение
+        'cmdType
+        Select Case .ParentNode.nodeName
+        Case "numbers":     cmdType = eCmdTypeNum
+            If Not IsMissing(Command) Then sAttr = "text": Command = .GetAttribute(sAttr)   ' подпись
+        Case "operations":  cmdType = eCmdTypeFun
+            If Not IsMissing(Command) Then sAttr = "cmd": Command = .GetAttribute(sAttr)    ' строка операции
+            If Not IsMissing(OpCount) Then sAttr = "opc": OpCount = .GetAttribute(sAttr)    ' количество операндов
+        End Select
+    End With
+    Err.Clear: Result = True
+HandleExit:  p_GetCommandInfo = Result: Exit Function
+HandleError: Result = False: Err.Clear: Resume HandleExit
+End Function
+
+Private Sub p_RedrawForm()
+' ...
+End Sub
+'Public Property Get FormType() As String: FormType = m_strFormType: End Property
+'Public Property Get FormMode() As String: FormMode = m_strFormMode: End Property
+Private Sub txtValue_Change()
+End Sub
+Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
+' Shift = acShiftMask ' The bit mask for the SHIFT key
+' Shift = acCtrlMask  ' The bit mask for the CTRL key
+' Shift = acAltMask   ' The bit mask for the ALT key
+'    Debug.Print KeyCode, Shift
+    Select Case KeyCode
+'    Case vbKeyAdd:      OperClick ("+")
+'    Case vbKeySubtract: OperClick ("-")     ' возможно не оператор, а знак числа
+'    Case vbKeyMultiply: OperClick ("*")
+'    Case vbKeyDivide:   OperClick ("/")
+'    Case Asc("%"):      OperClick ("%")
+'    Case vbKeyDecimal:  DecimalClick
+'    Case vbKeyBack:     BkspcClick
+'    Case vbKeyReturn, vbKeyExecute: EvalClick
+'    Case vbKeyClear, vbKeyEscape:   ClearClick
+'    Case vbKey0 To vbKey9 ' нажата цифра
+'        If Shift = 0 Then
+'            NumberClick (KeyCode - vbKey0)
+'        ElseIf Shift = acShiftMask Then
+'            Select Case KeyCode
+'            Case vbKey5                     ' %
+'            Case vbKey8: OperClick (sqlAll) ' *
+'            End Select
+'        End If
+'    Case vbKeyNumpad0 To vbKeyNumpad9: NumberClick (KeyCode - vbKeyNumpad0) ' нажата цифра на цифровой клавиатуре
+    End Select
+End Sub
+'----------------------------

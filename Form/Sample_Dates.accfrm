@@ -1,0 +1,1302 @@
+Version =20
+VersionRequired =20
+Checksum =-1624885230
+Begin Form
+    RecordSelectors = NotDefault
+    NavigationButtons = NotDefault
+    DividingLines = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    ViewsAllowed =1
+    RecordLocks =2
+    TabularCharSet =204
+    TabularFamily =0
+    BorderStyle =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =3969
+    DatasheetFontHeight =10
+    ItemSuffix =53
+    Left =180
+    Top =210
+    Right =7860
+    Bottom =5910
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x1ff607003343e540
+    End
+    GUID = Begin
+        0xc94ff19f2f136b468cca4f7f3cef7bf1
+    End
+    NameMap = Begin
+        0x0acc0e5500000000000000000000000000000000000000000c00000005000000 ,
+        0x0000000000000000000000000000
+    End
+    OnOpen ="[Event Procedure]"
+    OnClose ="[Event Procedure]"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0x3702000037020000370200003702000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x0000000000000000386af4070000000020569e33f77f0000335c3f33f77f0000 ,
+        0x0104220b9c006c01036e07000100090000000000640001000100580202000100 ,
+        0x580203000000413400a60d0500000000feffffffffffffff25dd0d41fe7f0000 ,
+        0xc0c0c00000005802180000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000046500800 ,
+        0x4d53414343455353000000000000000000000000000000000000000000000000 ,
+        0xff3e03005802aa00ac00aa00ac00010000003100436f7572696572204e657700 ,
+        0x0000000000000000000000000000000000000000010001000200000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000009600 ,
+        0x4b002c0100800000
+    End
+    PrtDevNames = Begin
+        0x080015001f000100000000000000000000000000000000000000000000000046 ,
+        0x505231313a00
+    End
+    OnTimer ="[Event Procedure]"
+    OnResize ="[Event Procedure]"
+    AllowDatasheetView =0
+    FilterOnLoad =0
+    DatasheetGridlinesColor12 =12632256
+    PrtDevModeW = Begin
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0104220bdc006c01036e07000100090000000000640001000100580202000100 ,
+        0x580203000000410034000000000000000000000000000000ff03000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000005802180000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000046500800 ,
+        0x4d53414343455353000000000000000000000000000000000000000000000000 ,
+        0xff3e03005802aa00ac00aa00ac00010000003100436f7572696572204e657700 ,
+        0x0000000000000000000000000000000000000000010001000200000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000009600 ,
+        0x4b002c0100800000
+    End
+    PrtDevNamesW = Begin
+        0x040011001b000100000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000046005000520031003100 ,
+        0x3a000000
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontCharSet =204
+            FontName ="Tahoma"
+        End
+        Begin Line
+            BorderLineStyle =0
+            Width =1701
+        End
+        Begin OptionButton
+            SpecialEffect =2
+            BorderLineStyle =0
+            LabelX =230
+            LabelY =-30
+        End
+        Begin CheckBox
+            SpecialEffect =2
+            BorderLineStyle =0
+            LabelX =230
+            LabelY =-30
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            TextFontCharSet =204
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+            AsianLineBreak =255
+        End
+        Begin ComboBox
+            TextFontCharSet =204
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            FontName ="Calibri"
+            AllowValueListEdits =1
+            InheritValueList =1
+            ThemeFontIndex =1
+            BackThemeColorIndex =1
+            BorderThemeColorIndex =3
+            BorderShade =90.0
+            ForeThemeColorIndex =2
+            ForeShade =50.0
+            GridlineThemeColorIndex =1
+            GridlineShade =65.0
+        End
+        Begin FormHeader
+            Height =567
+            BackColor =-2147483633
+            Name ="ЗаголовокФормы"
+            Tag ="BackColor=Dark"
+            GUID = Begin
+                0xaab97095f31a2a4c8dd4f036586cf3dc
+            End
+            Begin
+                Begin Label
+                    OverlapFlags =93
+                    Left =73
+                    Top =88
+                    Width =3635
+                    Height =454
+                    FontSize =14
+                    FontWeight =700
+                    ForeColor =9605778
+                    Name ="lblTitle2"
+                    Caption ="Пример"
+                    Tag ="FontColor=Grey"
+                    GUID = Begin
+                        0xe9c1bf272091d74b929673790779938f
+                    End
+                    LayoutCachedLeft =73
+                    LayoutCachedTop =88
+                    LayoutCachedWidth =3708
+                    LayoutCachedHeight =542
+                End
+                Begin Label
+                    OverlapFlags =223
+                    Left =30
+                    Top =45
+                    Width =3635
+                    Height =454
+                    FontSize =14
+                    FontWeight =700
+                    Name ="lblTitle"
+                    Caption ="Пример"
+                    Tag ="FontColor=White"
+                    GUID = Begin
+                        0x7022e949961e774ea969fedd368dbf1c
+                    End
+                    LayoutCachedLeft =30
+                    LayoutCachedTop =45
+                    LayoutCachedWidth =3665
+                    LayoutCachedHeight =499
+                    ForeThemeColorIndex =0
+                End
+                Begin Line
+                    OverlapFlags =87
+                    SpecialEffect =5
+                    Left =70
+                    Top =495
+                    Width =3775
+                    Name ="Line01"
+                    GUID = Begin
+                        0x447b8e32a0c1d941aa455d063abd72e6
+                    End
+                    LayoutCachedLeft =70
+                    LayoutCachedTop =495
+                    LayoutCachedWidth =3845
+                    LayoutCachedHeight =495
+                End
+            End
+        End
+        Begin Section
+            Height =4536
+            BackColor =-2147483633
+            Name ="ОбластьДанных"
+            Tag ="BackColor=Light"
+            GUID = Begin
+                0xdf7cfcf31f22704e8bf691d7fcb18aac
+            End
+            Begin
+                Begin TextBox
+                    OverlapFlags =87
+                    TextAlign =3
+                    IMESentenceMode =3
+                    Left =1145
+                    Top =1134
+                    Width =909
+                    TabIndex =8
+                    Name ="txtDate1"
+                    Format ="Short Date"
+                    AfterUpdate ="[Event Procedure]"
+                    OnEnter ="[Event Procedure]"
+                    OnExit ="[Event Procedure]"
+                    OnKeyDown ="[Event Procedure]"
+                    GUID = Begin
+                        0x3c81eeeabcb0484fa7b8377f09b7303a
+                    End
+                    ShowDatePicker =0
+
+                    LayoutCachedLeft =1145
+                    LayoutCachedTop =1134
+                    LayoutCachedWidth =2054
+                    LayoutCachedHeight =1374
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =795
+                            Top =1134
+                            Width =345
+                            Height =240
+                            FontWeight =700
+                            Name ="Надпись1"
+                            Caption ="с"
+                            GUID = Begin
+                                0x7577bab3f1ca834fb4d25f864e95c631
+                            End
+                            LayoutCachedLeft =795
+                            LayoutCachedTop =1134
+                            LayoutCachedWidth =1140
+                            LayoutCachedHeight =1374
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    TextAlign =3
+                    IMESentenceMode =3
+                    Left =2835
+                    Top =1134
+                    Width =909
+                    TabIndex =9
+                    Name ="txtDate2"
+                    Format ="Short Date"
+                    AfterUpdate ="[Event Procedure]"
+                    OnEnter ="[Event Procedure]"
+                    OnExit ="[Event Procedure]"
+                    OnKeyDown ="[Event Procedure]"
+                    GUID = Begin
+                        0x19eba0f1452d50499095f7cfba0dbbd6
+                    End
+                    ShowDatePicker =0
+
+                    LayoutCachedLeft =2835
+                    LayoutCachedTop =1134
+                    LayoutCachedWidth =3744
+                    LayoutCachedHeight =1374
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =1
+                            Left =2490
+                            Top =1134
+                            Width =345
+                            Height =240
+                            FontWeight =700
+                            Name ="Надпись3"
+                            Caption ="по"
+                            GUID = Begin
+                                0xae9717dce0449a428dd9f54c11fd7a0c
+                            End
+                            LayoutCachedLeft =2490
+                            LayoutCachedTop =1134
+                            LayoutCachedWidth =2835
+                            LayoutCachedHeight =1374
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    TextAlign =3
+                    IMESentenceMode =3
+                    Left =2835
+                    Top =1455
+                    Width =909
+                    TabIndex =10
+                    Name ="txtCalDays"
+                    AfterUpdate ="[Event Procedure]"
+                    OnEnter ="[Event Procedure]"
+                    OnExit ="[Event Procedure]"
+                    OnKeyDown ="[Event Procedure]"
+                    GUID = Begin
+                        0x870bfa9112b11b4f8990079199117426
+                    End
+
+                    LayoutCachedLeft =2835
+                    LayoutCachedTop =1455
+                    LayoutCachedWidth =3744
+                    LayoutCachedHeight =1695
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =567
+                            Top =1455
+                            Width =1926
+                            Height =240
+                            FontWeight =700
+                            Name ="Надпись5"
+                            Caption ="календарных дней"
+                            GUID = Begin
+                                0x0de012d92c83294380ddb6629077e00c
+                            End
+                            LayoutCachedLeft =567
+                            LayoutCachedTop =1455
+                            LayoutCachedWidth =2493
+                            LayoutCachedHeight =1695
+                        End
+                    End
+                End
+                Begin CheckBox
+                    TabStop = NotDefault
+                    OverlapFlags =85
+                    Left =3459
+                    Top =510
+                    Width =227
+                    Height =227
+                    TabIndex =7
+                    Name ="chkUseHolidays"
+                    AfterUpdate ="[Event Procedure]"
+                    OnEnter ="[Event Procedure]"
+                    OnExit ="[Event Procedure]"
+                    DefaultValue ="False"
+                    OnKeyDown ="[Event Procedure]"
+                    GUID = Begin
+                        0x7e17ae12543a2549ba34c34b600ccb09
+                    End
+
+                    LayoutCachedLeft =3459
+                    LayoutCachedTop =510
+                    LayoutCachedWidth =3686
+                    LayoutCachedHeight =737
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            TextAlign =1
+                            Left =60
+                            Top =510
+                            Width =3285
+                            Height =240
+                            Name ="Надпись9"
+                            Caption ="Учитывать нерабочие дни по SysCalendar"
+                            GUID = Begin
+                                0x66f40560d2b9634a8ecdcec5320eae29
+                            End
+                            LayoutCachedLeft =60
+                            LayoutCachedTop =510
+                            LayoutCachedWidth =3345
+                            LayoutCachedHeight =750
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    TextAlign =3
+                    IMESentenceMode =3
+                    Left =2835
+                    Top =1755
+                    Width =909
+                    TabIndex =11
+                    Name ="txtWrkDays"
+                    AfterUpdate ="[Event Procedure]"
+                    OnEnter ="[Event Procedure]"
+                    OnExit ="[Event Procedure]"
+                    OnKeyDown ="[Event Procedure]"
+                    GUID = Begin
+                        0x9420b50b0157864bafecf633d016d49c
+                    End
+
+                    LayoutCachedLeft =2835
+                    LayoutCachedTop =1755
+                    LayoutCachedWidth =3744
+                    LayoutCachedHeight =1995
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =567
+                            Top =1755
+                            Width =1926
+                            Height =240
+                            FontWeight =700
+                            Name ="Надпись12"
+                            Caption ="рабочих дней"
+                            GUID = Begin
+                                0x8b2e7daf7ae5a244bb34e8472d2ce9f1
+                            End
+                            LayoutCachedLeft =567
+                            LayoutCachedTop =1755
+                            LayoutCachedWidth =2493
+                            LayoutCachedHeight =1995
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    TextAlign =3
+                    IMESentenceMode =3
+                    Left =2835
+                    Top =2045
+                    Width =909
+                    TabIndex =12
+                    Name ="txtHolDays"
+                    AfterUpdate ="[Event Procedure]"
+                    OnEnter ="[Event Procedure]"
+                    OnExit ="[Event Procedure]"
+                    OnKeyDown ="[Event Procedure]"
+                    GUID = Begin
+                        0x206fbd09b2ee984981050816239c1c3e
+                    End
+
+                    LayoutCachedLeft =2835
+                    LayoutCachedTop =2045
+                    LayoutCachedWidth =3744
+                    LayoutCachedHeight =2285
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =567
+                            Top =2045
+                            Width =1926
+                            Height =240
+                            FontWeight =700
+                            Name ="Надпись14"
+                            Caption ="нерабочих дней"
+                            GUID = Begin
+                                0xca4734ce2a4a734995879a59a51ea30c
+                            End
+                            LayoutCachedLeft =567
+                            LayoutCachedTop =2045
+                            LayoutCachedWidth =2493
+                            LayoutCachedHeight =2285
+                        End
+                    End
+                End
+                Begin Line
+                    OverlapFlags =85
+                    SpecialEffect =5
+                    Left =70
+                    Top =795
+                    Width =3775
+                    Name ="Line02"
+                    GUID = Begin
+                        0x9c09661fda592f4a8912c54ec9c5cf4c
+                    End
+                    LayoutCachedLeft =70
+                    LayoutCachedTop =795
+                    LayoutCachedWidth =3845
+                    LayoutCachedHeight =795
+                End
+                Begin CheckBox
+                    TabStop = NotDefault
+                    OverlapFlags =85
+                    Left =1758
+                    Top =258
+                    Width =227
+                    Height =227
+                    Name ="d1"
+                    AfterUpdate ="=p_WeekendsChange(\"\")"
+                    DefaultValue ="0"
+                    GUID = Begin
+                        0x63920ce42e4b8a49a34c259fcf48c929
+                    End
+
+                    LayoutCachedLeft =1758
+                    LayoutCachedTop =258
+                    LayoutCachedWidth =1985
+                    LayoutCachedHeight =485
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =1758
+                            Width =270
+                            Height =240
+                            Name ="Надпись24"
+                            Caption ="Пн"
+                            GUID = Begin
+                                0xf23a8afe919abe47b89d1d62ade214c8
+                            End
+                            LayoutCachedLeft =1758
+                            LayoutCachedWidth =2028
+                            LayoutCachedHeight =240
+                        End
+                    End
+                End
+                Begin CheckBox
+                    TabStop = NotDefault
+                    OverlapFlags =85
+                    Left =3462
+                    Top =258
+                    Width =227
+                    Height =227
+                    TabIndex =6
+                    Name ="d7"
+                    AfterUpdate ="=p_WeekendsChange(\"\")"
+                    DefaultValue ="1"
+                    GUID = Begin
+                        0x0a9e7115fd7e0640a136fafda7644673
+                    End
+
+                    LayoutCachedLeft =3462
+                    LayoutCachedTop =258
+                    LayoutCachedWidth =3689
+                    LayoutCachedHeight =485
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =3462
+                            Width =270
+                            Height =240
+                            Name ="Надпись26"
+                            Caption ="Вс"
+                            GUID = Begin
+                                0x6dc0581400242749a9e45e6c1c3a7aa6
+                            End
+                            LayoutCachedLeft =3462
+                            LayoutCachedWidth =3732
+                            LayoutCachedHeight =240
+                        End
+                    End
+                End
+                Begin CheckBox
+                    TabStop = NotDefault
+                    OverlapFlags =85
+                    Left =2042
+                    Top =258
+                    Width =227
+                    Height =227
+                    TabIndex =1
+                    Name ="d2"
+                    AfterUpdate ="=p_WeekendsChange(\"\")"
+                    DefaultValue ="0"
+                    GUID = Begin
+                        0xff42117741d6f14ca6ad5da459b029f0
+                    End
+
+                    LayoutCachedLeft =2042
+                    LayoutCachedTop =258
+                    LayoutCachedWidth =2269
+                    LayoutCachedHeight =485
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =2042
+                            Width =270
+                            Height =240
+                            Name ="Надпись28"
+                            Caption ="Вт"
+                            GUID = Begin
+                                0xd4331f56b85edf47aa391cd6b771aa41
+                            End
+                            LayoutCachedLeft =2042
+                            LayoutCachedWidth =2312
+                            LayoutCachedHeight =240
+                        End
+                    End
+                End
+                Begin CheckBox
+                    TabStop = NotDefault
+                    OverlapFlags =85
+                    Left =2326
+                    Top =258
+                    Width =227
+                    Height =227
+                    TabIndex =2
+                    Name ="d3"
+                    AfterUpdate ="=p_WeekendsChange(\"\")"
+                    DefaultValue ="0"
+                    GUID = Begin
+                        0xe8fbb9bfa6828f408d66f6e3bbab1c02
+                    End
+
+                    LayoutCachedLeft =2326
+                    LayoutCachedTop =258
+                    LayoutCachedWidth =2553
+                    LayoutCachedHeight =485
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =2326
+                            Width =270
+                            Height =240
+                            Name ="Надпись30"
+                            Caption ="Ср"
+                            GUID = Begin
+                                0xd3fc25bc7858fe41976f182caf333115
+                            End
+                            LayoutCachedLeft =2326
+                            LayoutCachedWidth =2596
+                            LayoutCachedHeight =240
+                        End
+                    End
+                End
+                Begin CheckBox
+                    TabStop = NotDefault
+                    OverlapFlags =85
+                    Left =2610
+                    Top =258
+                    Width =227
+                    Height =227
+                    TabIndex =3
+                    Name ="d4"
+                    AfterUpdate ="=p_WeekendsChange(\"\")"
+                    DefaultValue ="0"
+                    GUID = Begin
+                        0x7b55e99ac76b1b408f97eac269d769f6
+                    End
+
+                    LayoutCachedLeft =2610
+                    LayoutCachedTop =258
+                    LayoutCachedWidth =2837
+                    LayoutCachedHeight =485
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =2610
+                            Width =270
+                            Height =240
+                            Name ="Надпись32"
+                            Caption ="Чт"
+                            GUID = Begin
+                                0x569a32b6cc0258499f4b421698989de6
+                            End
+                            LayoutCachedLeft =2610
+                            LayoutCachedWidth =2880
+                            LayoutCachedHeight =240
+                        End
+                    End
+                End
+                Begin CheckBox
+                    TabStop = NotDefault
+                    OverlapFlags =85
+                    Left =2894
+                    Top =258
+                    Width =227
+                    Height =227
+                    TabIndex =4
+                    Name ="d5"
+                    AfterUpdate ="=p_WeekendsChange(\"\")"
+                    DefaultValue ="0"
+                    GUID = Begin
+                        0x04db9338a3b5ee4e99794fe019b785d2
+                    End
+
+                    LayoutCachedLeft =2894
+                    LayoutCachedTop =258
+                    LayoutCachedWidth =3121
+                    LayoutCachedHeight =485
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =2894
+                            Width =270
+                            Height =240
+                            Name ="Надпись34"
+                            Caption ="Пт"
+                            GUID = Begin
+                                0xb22e68717f06054cb654800ff9ae6272
+                            End
+                            LayoutCachedLeft =2894
+                            LayoutCachedWidth =3164
+                            LayoutCachedHeight =240
+                        End
+                    End
+                End
+                Begin CheckBox
+                    TabStop = NotDefault
+                    OverlapFlags =85
+                    Left =3178
+                    Top =258
+                    Width =227
+                    Height =227
+                    TabIndex =5
+                    Name ="d6"
+                    AfterUpdate ="=p_WeekendsChange(\"\")"
+                    DefaultValue ="1"
+                    GUID = Begin
+                        0x79261f6ab087e54487198f88451ba877
+                    End
+
+                    LayoutCachedLeft =3178
+                    LayoutCachedTop =258
+                    LayoutCachedWidth =3405
+                    LayoutCachedHeight =485
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =3178
+                            Width =270
+                            Height =240
+                            Name ="Надпись36"
+                            Caption ="Сб"
+                            GUID = Begin
+                                0xf1ac67aae41dcc4bb017eb2eae5363db
+                            End
+                            LayoutCachedLeft =3178
+                            LayoutCachedWidth =3448
+                            LayoutCachedHeight =240
+                        End
+                    End
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =570
+                    Top =240
+                    Width =1125
+                    Height =240
+                    Name ="Надпись37"
+                    Caption ="Выходные:"
+                    GUID = Begin
+                        0x0117e325752a214f922ba8821ea7d003
+                    End
+                    LayoutCachedLeft =570
+                    LayoutCachedTop =240
+                    LayoutCachedWidth =1695
+                    LayoutCachedHeight =480
+                End
+                Begin Line
+                    OverlapFlags =93
+                    SpecialEffect =5
+                    Left =70
+                    Top =2987
+                    Width =3775
+                    Name ="Line03"
+                    GUID = Begin
+                        0xbe9f047b36ae154ca35ef07e2d93ae36
+                    End
+                    LayoutCachedLeft =70
+                    LayoutCachedTop =2987
+                    LayoutCachedWidth =3845
+                    LayoutCachedHeight =2987
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =60
+                    Top =855
+                    Width =2850
+                    Height =240
+                    FontWeight =700
+                    Name ="Надпись39"
+                    Caption ="Производственный календарь:"
+                    GUID = Begin
+                        0xdbc7f13467707b42a88f49177c97d116
+                    End
+                    LayoutCachedLeft =60
+                    LayoutCachedTop =855
+                    LayoutCachedWidth =2910
+                    LayoutCachedHeight =1095
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =60
+                    Width =1635
+                    Height =210
+                    FontWeight =700
+                    Name ="Надпись40"
+                    Caption ="Настройки:"
+                    GUID = Begin
+                        0xe8e8777516e10240945532d7e6ac39ea
+                    End
+                    LayoutCachedLeft =60
+                    LayoutCachedWidth =1695
+                    LayoutCachedHeight =210
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =60
+                    Top =3060
+                    Width =2850
+                    Height =240
+                    FontWeight =700
+                    Name ="Надпись41"
+                    Caption ="Относительное событие:"
+                    GUID = Begin
+                        0xcab2ad76581b6b4ca67456861f3003e4
+                    End
+                    LayoutCachedLeft =60
+                    LayoutCachedTop =3060
+                    LayoutCachedWidth =2910
+                    LayoutCachedHeight =3300
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    TextAlign =3
+                    IMESentenceMode =3
+                    Left =2835
+                    Top =3345
+                    Width =909
+                    TabIndex =16
+                    Name ="txtDate3"
+                    Format ="Short Date"
+                    AfterUpdate ="[Event Procedure]"
+                    OnEnter ="[Event Procedure]"
+                    OnExit ="[Event Procedure]"
+                    OnKeyDown ="[Event Procedure]"
+                    GUID = Begin
+                        0x15fac7945386374da7ada187582efdc0
+                    End
+                    ShowDatePicker =0
+
+                    LayoutCachedLeft =2835
+                    LayoutCachedTop =3345
+                    LayoutCachedWidth =3744
+                    LayoutCachedHeight =3585
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    RowSourceTypeInt =1
+                    SpecialEffect =2
+                    OldBorderStyle =0
+                    OverlapFlags =85
+                    TextAlign =1
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =2070
+                    Top =3345
+                    Width =737
+                    FontSize =8
+                    TabIndex =15
+                    GUID = Begin
+                        0x41b169fc01294d43adf6b3fa2fed6371
+                    End
+                    Name ="txtOffsetDir"
+                    RowSourceType ="Value List"
+                    RowSource ="1;после;-1;перед"
+                    ColumnWidths ="0"
+                    AfterUpdate ="[Event Procedure]"
+                    DefaultValue ="1"
+                    FontName ="Tahoma"
+
+                    LayoutCachedLeft =2070
+                    LayoutCachedTop =3345
+                    LayoutCachedWidth =2807
+                    LayoutCachedHeight =3585
+                    ThemeFontIndex =-1
+                    BackThemeColorIndex =-1
+                    BorderThemeColorIndex =-1
+                    BorderShade =100.0
+                    ForeThemeColorIndex =-1
+                    ForeShade =100.0
+                    GridlineThemeColorIndex =-1
+                    GridlineShade =100.0
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    TextAlign =3
+                    IMESentenceMode =3
+                    Left =2835
+                    Top =3630
+                    Width =909
+                    TabIndex =17
+                    Name ="txtDate4"
+                    Format ="Short Date"
+                    OnEnter ="[Event Procedure]"
+                    OnExit ="[Event Procedure]"
+                    OnKeyDown ="[Event Procedure]"
+                    GUID = Begin
+                        0xfd90013e44eee545b6a04902ae554872
+                    End
+                    ShowDatePicker =0
+
+                    LayoutCachedLeft =2835
+                    LayoutCachedTop =3630
+                    LayoutCachedWidth =3744
+                    LayoutCachedHeight =3870
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            TextAlign =1
+                            Left =567
+                            Top =3630
+                            Width =1926
+                            Height =240
+                            FontWeight =700
+                            Name ="Надпись45"
+                            Caption ="приходится на"
+                            GUID = Begin
+                                0x55d958f95a5db54aaec846e4ed52ee26
+                            End
+                            LayoutCachedLeft =567
+                            LayoutCachedTop =3630
+                            LayoutCachedWidth =2493
+                            LayoutCachedHeight =3870
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =215
+                    TextAlign =3
+                    IMESentenceMode =3
+                    Left =60
+                    Top =3345
+                    Width =285
+                    TabIndex =13
+                    Name ="txtOffsetVal"
+                    AfterUpdate ="[Event Procedure]"
+                    OnEnter ="[Event Procedure]"
+                    OnExit ="[Event Procedure]"
+                    DefaultValue ="1"
+                    OnKeyDown ="[Event Procedure]"
+                    GUID = Begin
+                        0xe790dc7e8d7fe34c8af782afbf03194b
+                    End
+
+                    LayoutCachedLeft =60
+                    LayoutCachedTop =3345
+                    LayoutCachedWidth =345
+                    LayoutCachedHeight =3585
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =1
+                            Left =285
+                            Top =3345
+                            Width =345
+                            Height =240
+                            Name ="Надпись50"
+                            Caption =" -й"
+                            GUID = Begin
+                                0x4cb0d07d60ef2e41853db5144c22ade2
+                            End
+                            LayoutCachedLeft =285
+                            LayoutCachedTop =3345
+                            LayoutCachedWidth =630
+                            LayoutCachedHeight =3585
+                        End
+                    End
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =60
+                    Top =3945
+                    Width =3635
+                    Height =567
+                    Name ="lblDesc2"
+                    Caption ="Описание"
+                    GUID = Begin
+                        0x605bc36f831bde458eb220a7851c1bff
+                    End
+                    LayoutCachedLeft =60
+                    LayoutCachedTop =3945
+                    LayoutCachedWidth =3695
+                    LayoutCachedHeight =4512
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    RowSourceTypeInt =1
+                    SpecialEffect =2
+                    OldBorderStyle =0
+                    OverlapFlags =215
+                    TextAlign =1
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =590
+                    Top =3345
+                    Width =1449
+                    FontSize =8
+                    TabIndex =14
+                    GUID = Begin
+                        0x805f879adf030a4c800e9f2f3a54cf26
+                    End
+                    Name ="txtOffsetType"
+                    RowSourceType ="Value List"
+                    RowSource ="yyyy;год;q;квартал;m;месяц;w;неделя;d;день;wd;рабочий день;mon;понедельник;tues;"
+                        "вторник;wed;среда;thur;четверг;fri;пятница;sat;суббота;sun;воскресенье"
+                    ColumnWidths ="0"
+                    AfterUpdate ="[Event Procedure]"
+                    DefaultValue ="\"wd\""
+                    FontName ="Tahoma"
+
+                    LayoutCachedLeft =590
+                    LayoutCachedTop =3345
+                    LayoutCachedWidth =2039
+                    LayoutCachedHeight =3585
+                    ThemeFontIndex =-1
+                    BackThemeColorIndex =-1
+                    BorderThemeColorIndex =-1
+                    BorderShade =100.0
+                    ForeThemeColorIndex =-1
+                    ForeShade =100.0
+                    GridlineThemeColorIndex =-1
+                    GridlineShade =100.0
+                End
+                Begin Label
+                    OverlapFlags =93
+                    Left =60
+                    Top =2342
+                    Width =3630
+                    Height =405
+                    Name ="lblDesc1"
+                    Caption ="Описание"
+                    GUID = Begin
+                        0x55d5d085ef1de94c9d2d74fcb8acbf15
+                    End
+                    LayoutCachedLeft =60
+                    LayoutCachedTop =2342
+                    LayoutCachedWidth =3690
+                    LayoutCachedHeight =2747
+                End
+                Begin Label
+                    FontUnderline = NotDefault
+                    OverlapFlags =215
+                    Left =60
+                    Top =2747
+                    Width =3630
+                    Height =240
+                    ForeColor =16711680
+                    Name ="lblLink"
+                    Caption ="Link:"
+                    GUID = Begin
+                        0x5b8486afdbfafc438c9998f38e8c06b9
+                    End
+                    LayoutCachedLeft =60
+                    LayoutCachedTop =2747
+                    LayoutCachedWidth =3690
+                    LayoutCachedHeight =2987
+                End
+            End
+        End
+        Begin FormFooter
+            Height =1418
+            BackColor =-2147483633
+            Name ="ПримечаниеФормы"
+            Tag ="BackColor=Light"
+            GUID = Begin
+                0x06ef97793b440847acd715c66c3b74cf
+            End
+            Begin
+                Begin Label
+                    OverlapFlags =85
+                    Left =56
+                    Top =56
+                    Width =3635
+                    Height =1333
+                    Name ="lblComment"
+                    Caption ="Комментарий"
+                    GUID = Begin
+                        0xad4c53731bf4814e9d6b7f2a0bb88b8d
+                    End
+                    LayoutCachedLeft =56
+                    LayoutCachedTop =56
+                    LayoutCachedWidth =3691
+                    LayoutCachedHeight =1389
+                End
+                Begin Line
+                    OverlapFlags =85
+                    SpecialEffect =5
+                    Left =70
+                    Top =11
+                    Width =3775
+                    Name ="Line09"
+                    GUID = Begin
+                        0xe0bbb8100736cd4faecdf5cc37f0345f
+                    End
+                    LayoutCachedLeft =70
+                    LayoutCachedTop =11
+                    LayoutCachedWidth =3845
+                    LayoutCachedHeight =11
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Option Explicit
+'=========================
+Private Const c_strModule As String = "Form_Sample_Dates"
+'=========================
+' Описание      : Пример работы с датами
+' Версия        : 1.0.0.453565671
+' Дата          : 05.03.2024 13:36:37
+' Автор         : Кашкин Р.В. (KashRus@gmail.com)
+' Примечание    : использует функции модуля modDates, для плавающей кнопки - clsFloatButton, для контекстного меню - clsContextMenu
+'=========================
+Private Const Indent = 70 '0.125 * cm   ' отступ от края формы и расстояние между контролами
+' константы заголовков
+Private Const c_strTitle = "Пример плавающей кнопки"
+Private Const c_strComment = "Плавающие кнопки появляются при получении фокуса соответствующим полем. " & vbCrLf & _
+                             "Присвоить иконку всплывающей форме в Win x64 не получается (см.FreeImage_GetIcon)." & vbCrLf & vbCrLf & _
+                             "Данные о праздничных и выходных днях при расчете берутся по SysCalendar " & vbCrLf & _
+                             "Даты календаря настраиваются из контекстного меню всплывающего календарика." & vbCrLf & _
+                             "Обновление производственного календаря всплывающей кнопкой поля: ""учитывать праздники"""
+' константы комманд для DoAction
+Private Const c_strAskDate = "AskDate", c_strIconDate = c_strAppDibIdPref & 1106      '125
+Private Const c_strAskCalc = "AskCalc", c_strIconCalc = c_strAppDibIdPref & 283 '50
+Private Const c_strAskWeb = "UpdateFromWeb", c_strIconWeb = c_strAppDibIdPref & 1948
+' для групповой обработки событий контролов
+Private WithEvents mRelay As clsRelay   ' для ретрансляции событий группы контролов в форму
+Attribute mRelay.VB_VarHelpID = -1
+Private colFloats As Collection         ' коллекция для хранения элементов clsFloatButton
+' для работы с датами
+Private m_strWeekends As String         ' строка выходных дней
+'' объявление API
+'#If VBA7 Then       '<WIN64 & OFFICE2010+>  PtrSafe, LongPtr and LongLong
+'Private Declare PtrSafe Function GetWindowRect Lib "user32" (ByVal hwnd As LongPtr, lpRect As RECT) As Long
+'#Else
+'Private Declare Function GetWindowRect Lib "user32" (ByVal hWnd As Long, lpRect As RECT) As Long
+'#End If
+'------------------------
+Private Sub Form_Open(Cancel As Integer)
+Const cShadow = 0.075 * cm
+    Call p_WeekendsChange '("0000011")' по-умолчанию выходные суббота/воскресенье
+' m_strWeekends
+    InsideHeight = Section(acDetail).Height + Section(acHeader).Height + Section(acFooter).Height:    InsideWidth = 14 * cm
+Dim i As Long
+' настройка комментариев
+    lblTitle.Caption = c_strTitle: lblTitle2.Caption = lblTitle.Caption: lblTitle2.Left = lblTitle.Left + cShadow: lblTitle2.Top = lblTitle.Top + cShadow
+    lblDesc1.Caption = "Результаты могут не совпадать с buh.ru из-за нерабочих дней по Указам, например в 2020-2021 г." & vbCrLf & _
+                       "или др. (местных или своих) выходных/рабочих дней, заданных в таблице SysCalendar."
+    lblLink.Caption = "Открыть на buh.ru":
+    lblComment.Caption = c_strComment
+'' форматирование формы
+'    Call AccObjectSet(Me)
+' настройка полей
+    txtDate1 = DateSerial(DatePart("yyyy", Now), 1, 1): txtDate2 = DateSerial(DatePart("yyyy", Now), 12, 31): txtDate3 = txtDate1
+    chkUseHolidays = True
+    p_UpdateResults
+' инициализация кнопок
+    Set colFloats = New Collection
+    Set mRelay = New clsRelay
+    p_InitFloats
+End Sub
+Private Sub Form_Close(): p_Erase: End Sub
+Private Sub Form_Resize()
+    On Error Resume Next 'GoTo HandleError
+'Dim rct As RECT:        GetWindowRect ScrollbarGetHwnd(Me.hwnd, &H1&), rct 'SBS_VERT
+Dim tmpWidth As Long:   tmpWidth = Me.InsideWidth '- ConvPixelsToTwips(rct.Right - rct.Left)
+Dim i As Long
+    For i = 1 To 9
+        With Controls("Line" & Format$(i, "00"))
+            If Err Then Err.Clear Else .Left = Indent: .Width = tmpWidth - 2 * Indent
+        End With
+    Next i
+' ресайзим дополнительные контролы по форме
+    With lblTitle:      .Width = tmpWidth - 4 * Indent: End With
+    With lblTitle2:     .Width = tmpWidth - 4 * Indent: End With
+    With lblLink:       .Width = tmpWidth - 4 * Indent: End With
+    With lblDesc1:      .Width = tmpWidth - 4 * Indent: End With
+    With lblDesc2:      .Width = tmpWidth - 4 * Indent: End With
+    With lblComment:    .Width = tmpWidth - 4 * Indent: End With
+HandleExit:  Exit Sub
+HandleError: Err.Clear: Resume HandleExit
+End Sub
+Private Sub txtDate1_AfterUpdate(): p_UpdateResults: End Sub
+Private Sub txtDate2_AfterUpdate(): p_UpdateResults: End Sub
+Private Sub txtOffsetVal_AfterUpdate(): p_UpdateResults: End Sub
+Private Sub txtOffsetDir_AfterUpdate(): p_UpdateResults: End Sub
+Private Sub txtOffsetType_AfterUpdate(): p_UpdateResults: End Sub
+Private Sub txtDate3_AfterUpdate(): p_UpdateResults: End Sub
+Private Sub chkUseHolidays_AfterUpdate(): p_UpdateResults: End Sub
+Private Function p_WeekendsChange(Optional Weekends As String)
+' изменился список выходных дней недели
+    On Error GoTo HandleError
+Const cWrk = "0", cHol = "1"
+Dim i As Long: If Len(Weekends) = 0 Then For i = 1 To 7: Weekends = Weekends & IIf(Me.Controls("d" & i), cHol, cWrk): Next i
+    If (Len(Weekends) - Len(Replace(Weekends, cHol, ""))) / Len(cHol) >= 7 Then Call DoCmd.RunCommand(acCmdUndo): Exit Function
+    Call SetWeekends(Weekends): p_UpdateResults: m_strWeekends = Weekends
+HandleExit:  Exit Function
+HandleError: Err.Clear: Resume HandleExit
+End Function
+Private Function p_UpdateResults()
+    On Error GoTo HandleError
+Dim db As Date, de As Date
+Dim dn As Long, dt As String
+' расчёт дней производственного календаря
+    dt = "d"
+    db = txtDate1: If txtDate1 <= txtDate2 Then de = txtDate2 Else db = txtDate2: de = txtDate1
+    'de = DateAdd(dt, 1, de)                                             ' добавляем день к концу чтобы включить в расчёт границы периода
+    txtCalDays = Abs(DateDiff(dt, db, DateAdd(dt, 1, de)))              ' календарных дней в периоде
+    txtWrkDays = Abs(NETWORKDAYS(db, de, IIf(chkUseHolidays, 0, -1)))   ' рабочих дней в периоде    'Abs(DateDiffEx("wd", db, de))
+    txtHolDays = txtCalDays - txtWrkDays                                ' выходных дней в периоде   'Abs(DateDiffEx("hd", db, de))
+    lblLink.HyperlinkAddress = "https://buh.ru/calendar/" & Year(db)
+' получение даты относительного события
+    db = txtDate3                                                       ' основание смещения
+    dt = txtOffsetType                                                  ' тип смещения
+    dn = txtOffsetVal                                                   ' величина смещения
+    If txtOffsetDir = -1 Then                                           ' учитываем направление
+        dn = -dn
+        Select Case dt
+    ' Задавая относительные даты для дней недели иметь ввиду, что периоды ПЕРЕД датой,
+    ' считают заданную дату и предшествующие её 6 дней одной неделей, соответственно:
+    ' 1-й понедельник перед датой надо задавать числом 0, 2-й - (-)1 и т.д.
+        Case c_strSundayLiteral, c_strSundayLiteral1, c_strSundayLiteral2, c_strSundayLiteral3, _
+             c_strMondayLiteral, c_strMondayLiteral1, c_strMondayLiteral2, c_strMondayLiteral3, _
+             c_strTuesdayLiteral, c_strTuesdayLiteral1, c_strTuesdayLiteral2, c_strTuesdayLiteral3, _
+             c_strWednesdayLiteral, c_strWednesdayLiteral1, c_strWednesdayLiteral2, c_strWednesdayLiteral3, _
+             c_strThursdayLiteral, c_strThursdayLiteral1, c_strThursdayLiteral2, c_strThursdayLiteral3, _
+             c_strFridayLiteral, c_strFridayLiteral1, c_strFridayLiteral2, c_strFridayLiteral3, _
+             c_strSaturdayLiteral, c_strSaturdayLiteral1, c_strSaturdayLiteral2, c_strSaturdayLiteral3: dn = 1 + dn
+        End Select
+    End If
+    txtDate4 = DateAddEx(txtOffsetType, dn, db)                          ' результат
+    lblDesc2.Caption = _
+            NumToWords(txtOffsetVal, Unit:=txtOffsetType.Column(1), NewCase:=DeclineCaseImen, NewType:=NumeralCardinal) & " " & _
+        txtOffsetDir.Column(1) & " " & _
+            NumToWords(Day(txtDate3), NewType:=NumeralCardinal, NewCase:=IIf(txtOffsetDir = 1, DeclineCaseRod, DeclineCaseTvor), NewGend:=DeclineGendNeut) & " " & DeclineWord(LCase(Format(txtDate3, "mmmm")), DeclineCaseRod) & " " & _
+            NumToWords(Year(txtDate3), Unit:="год", NewType:=NumeralCardinal, NewCase:=DeclineCaseRod) & " " & vbCrLf & _
+        "приходится на " & _
+            NumToWords(Day(txtDate4), NewType:=NumeralCardinal, NewCase:=DeclineCaseImen, NewGend:=DeclineGendNeut) & " " & DeclineWord(LCase(Format(txtDate4, "mmmm")), DeclineCaseRod) & " " & _
+            NumToWords(Year(txtDate4), Unit:="год", NewType:=NumeralCardinal, NewCase:=DeclineCaseRod)
+HandleExit: Exit Function
+HandleError: Err.Clear: Resume HandleExit
+End Function
+Private Sub p_InitFloats()
+Dim i As Long ', iMax As Long
+Dim arrCtls() As String
+Dim ctl As Access.Control, cTransf As clsFloatButton
+Const cCols = 4     ' количество колонок в массиве
+Dim aFloats()       ' имя контрола | действие | картинка | подсказка
+    aFloats() = Array("txtDate1", c_strAskDate, c_strIconDate, "Открыть календарь", _
+                      "txtDate2", c_strAskDate, c_strIconDate, "Открыть календарь", _
+                      "txtDate3", c_strAskDate, c_strIconDate, "Открыть календарь", _
+                      "txtDate4", c_strAskDate, c_strIconDate, "Открыть календарь", _
+                      "txtCalDays", c_strAskCalc, c_strIconCalc, "Открыть калькулятор", _
+                      "txtWrkDays", c_strAskCalc, c_strIconCalc, "Открыть калькулятор", _
+                      "txtHolDays", c_strAskCalc, c_strIconCalc, "Открыть калькулятор", _
+                      "txtOffsetVal", c_strAskCalc, c_strIconCalc, "Открыть калькулятор", _
+                      "chkUseHolidays", c_strAskWeb, c_strIconWeb, "Обновить из сети" _
+                      )
+    For i = LBound(aFloats) To UBound(aFloats) Step cCols
+        Set ctl = Me.Controls(Trim$(aFloats(i))) ' ControlName
+    ' создаем новый экземпляр класса
+        Set cTransf = New clsFloatButton
+        With cTransf
+            .Action = aFloats(i + 1)    '"MsgBox('Поле " & i & "')"
+            .Icon = aFloats(i + 2)      '
+            .Tooltip = aFloats(i + 3)   '
+    ' собственно инициализация
+            .Init Index:=i \ cCols, EventControl:=ctl, Relay:=mRelay
+        End With
+    ' сохраняем ссылку на объект класса,
+    ' чтобы обрабатывались события его встроенного объекта EventControl.
+        colFloats.Add cTransf
+    Next i
+End Sub
+Private Sub p_Erase()
+On Error Resume Next
+    DropTempCalendar ' удаляем временный календарь
+    Set colFloats = Nothing: Set mRelay = Nothing
+    Call SysCmd(acSysCmdSetStatus, vbNullString)
+    Call PictureData_SetIcon(Me.hwnd)
+End Sub
+Private Sub mRelay_GetParent(PARENT As Object): Set PARENT = Me: End Sub
+Public Sub FloatButton_Click( _
+    EventControl As Access.Control, Optional Action As String) 'As Integer
+' обрабатываем нажатие
+    Select Case Action
+    Case c_strAskDate: Call FormOpenDrop("frmDROP_Date", PARENT:=EventControl, Icon:=c_strIconDate): p_UpdateResults
+    Case c_strAskCalc: Call FormOpenDrop("frmDROP_Calc", PARENT:=EventControl, Icon:=c_strIconCalc): p_UpdateResults
+    Case c_strAskWeb:  Call DateInfoUpdate(txtDate1, txtDate2): p_UpdateResults
+    End Select
+End Sub

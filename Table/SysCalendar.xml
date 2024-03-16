@@ -1,0 +1,3381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:od="urn:schemas-microsoft-com:officedata">
+<xsd:schema>
+<xsd:element name="dataroot">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element ref="SysCalendar" minOccurs="0" maxOccurs="unbounded"/>
+</xsd:sequence>
+<xsd:attribute name="generated" type="xsd:dateTime"/>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="SysCalendar">
+<xsd:annotation>
+<xsd:appinfo>
+<od:index index-name="DayTypeKey" index-key="DATEBEG DATEEND DATETYPE OFFSET PERIOD " primary="no" unique="no" clustered="no" order="asc asc asc asc asc"/>
+<od:index index-name="PrimaryKey" index-key="ID " primary="yes" unique="yes" clustered="no" order="asc"/>
+<od:index index-name="SysCalendarPARENT" index-key="PARENT " primary="no" unique="no" clustered="no" order="asc"/>
+</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="ID" minOccurs="1" od:jetType="autonumber" od:sqlSType="int" od:autoUnique="yes" od:nonNullable="yes" type="xsd:int"/>
+<xsd:element name="PARENT" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
+<xsd:element name="DATETYPE" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
+<xsd:element name="DATEBEG" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime"/>
+<xsd:element name="DATEEND" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime"/>
+<xsd:element name="DATEDESC" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="OFFSET" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="4"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="OFFSETVAL" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
+<xsd:element name="PERIOD" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="4"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="PERIODVAL" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
+<xsd:element name="ACTBEG" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime"/>
+<xsd:element name="ACTEND" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime"/>
+<xsd:element name="EDITDATE" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime"/>
+<xsd:element name="COMMENT" minOccurs="0" od:jetType="memo" od:sqlSType="ntext">
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="536870910"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+<dataroot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" generated="2024-03-17T00:39:01">
+<SysCalendar>
+<ID>1</ID>
+<DATETYPE>500</DATETYPE>
+<DATEBEG>1980-01-01T00:00:00</DATEBEG>
+<DATEDESC>Государственные праздники и памятные даты</DATEDESC>
+<ACTBEG>1980-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>2</ID>
+<PARENT>1</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>1981-01-01T00:00:00</DATEBEG>
+<DATEDESC>Новый год</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1981-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Новогодние каникулы, Ст. 112 Трудового кодекса РФ от 30.12.2001 № 197-ФЗ; Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>3</ID>
+<PARENT>1</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>1981-01-01T00:00:00</DATEBEG>
+<DATEEND>1981-01-08T00:00:00</DATEEND>
+<DATEDESC>Новогодние каникулы</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1981-01-02T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Новогодние каникулы, Ст. 112 Трудового кодекса РФ от 30.12.2001 № 197-ФЗ; Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>9</ID>
+<PARENT>1</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2002-01-07T00:00:00</DATEBEG>
+<DATEDESC>Рождество</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2002-01-07T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Рождество Христово, Ст. 112 Трудового кодекса РФ от 30.12.2001 № 197-ФЗ </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>10</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1996-01-12T00:00:00</DATEBEG>
+<DATEDESC>День работника прокуратуры Российской Федерации </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1996-01-12T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника прокуратуры Российской Федерации, Указ Президента РФ от 29.12.95 № 1329 &quot;Об установлении Дня работника прокуратуры Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>11</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1992-01-13T00:00:00</DATEBEG>
+<DATEDESC>День российской печати </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1992-01-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День российской печати, Постановление Президиума Верховного Совета РСФСР от 28.12.91 № 3043-1 &quot;О Дне российской печати&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>12</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2007-01-14T00:00:00</DATEBEG>
+<DATEDESC>День трубопроводных войск</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2007-01-14T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день. День трубопроводных войск, Указ Президента РФ от 31.05.2006 №549</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>13</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2007-01-21T00:00:00</DATEBEG>
+<DATEDESC>День инженерных войск </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2007-01-21T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день. День инженерных войск, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>14</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1996-01-25T00:00:00</DATEBEG>
+<DATEDESC>День российского студенчества </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1996-01-25T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятная дата России. День российского студенчества, Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot;; Указ Президента РФ от 25.01.2005 № 76 &quot;О Дне российского студенчества&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>15</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1996-01-27T00:00:00</DATEBEG>
+<DATEDESC>День освобождения Ленинграда от блокады</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1996-01-27T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День полного освобождения Ленинграда от фашистской блокады (1944 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>16</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1996-02-02T00:00:00</DATEBEG>
+<DATEDESC>День разгрома в Сталинградской битве</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1996-02-02T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День разгрома советскими войсками немецко-фашистских войск в Сталинградской битве (1943 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>17</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2000-02-08T00:00:00</DATEBEG>
+<DATEDESC>День российской науки </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2000-02-08T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День российской науки, Указ Президента РФ от 07.06.99 № 717 &quot;Об установлении Дня российской науки&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>18</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2013-02-09T00:00:00</DATEBEG>
+<DATEDESC>День работника гражданской авиации</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2013-02-09T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника гражданской авиации, Указ Президента РФ от 09.02.2013 № 98 &quot;О Дне работника гражданской авиации&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>19</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2003-02-10T00:00:00</DATEBEG>
+<DATEDESC>День дипломатического работника</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2003-02-10T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День дипломатического работника, Указ Президента РФ от 31.10.2002 № 1279 &quot;О Дне дипломатического работника&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>20</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1996-02-15T00:00:00</DATEBEG>
+<DATEDESC>День памяти о россиянах, исполнявших служебный долг за пределами Отечества</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1996-02-15T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятная дата России День памяти о россиянах, исполнявших служебный долг за пределами Отечества, Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>21</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2016-02-17T00:00:00</DATEBEG>
+<DATEDESC>День российских студенческих отрядов</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2016-02-17T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День российских студенческих отрядов, Указ Президента РФ от 21.02.2015 № 86 &quot;О Дне российских студенческих отрядов&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>22</ID>
+<PARENT>1</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2002-02-23T00:00:00</DATEBEG>
+<DATEDESC>День защитника Отечества </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2002-02-23T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День защитника Отечества, Ст. 112 Трудового кодекса РФ от 30.12.2001 № 197-ФЗ </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>23</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2007-02-27T00:00:00</DATEBEG>
+<DATEDESC>День Сил специальных операций</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2007-02-27T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День Сил специальных операций, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>24</ID>
+<PARENT>1</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2002-03-08T00:00:00</DATEBEG>
+<DATEDESC>Международный женский день </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2002-03-08T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Международный женский день, Ст. 112 Трудового кодекса РФ от 30.12.2001 № 197-ФЗ </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>25</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2001-03-01T00:00:00</DATEBEG>
+<DATEDESC>День работников геодезии и картографии </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>2</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2001-03-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работников геодезии и картографии, (второе воскресенье марта) Указ Президента РФ от 11.11.2000 № 1867 &quot;О Дне работников геодезии и картографии&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>26</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2009-03-11T00:00:00</DATEBEG>
+<DATEDESC>День работника органов наркоконтроля </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2009-03-11T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника органов наркоконтроля, Указ Президента РФ от 16.02.2008 № 205 &quot;О Дне работника органов наркоконтроля&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>27</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2011-03-12T00:00:00</DATEBEG>
+<DATEDESC>День работника уголовно-исполнительной системы </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2011-03-12T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника уголовно-исполнительной системы, Указ Президента РФ от 16.11.2010 № 1433 &quot;О Дне работника уголовно-исполнительной системы&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>28</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1981-03-01T00:00:00</DATEBEG>
+<DATEDESC>День работников торговли</DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>3</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1981-03-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работников торговли, бытового обслуживания населения и жилищно-коммунального хозяйства, (третье воскресенье марта) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>29</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2009-03-23T00:00:00</DATEBEG>
+<DATEDESC>День метеоролога</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2009-03-23T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работников гидрометеорологической службы, Указ Президента РФ от 19.05.2008 № 812 &quot;О Дне работников гидрометеорологической службы&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>30</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2008-03-25T00:00:00</DATEBEG>
+<DATEDESC>День работника культуры </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2008-03-25T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника культуры, Указ Президента РФ от 27.08.2007 № 1111 &quot;О Дне работника культуры&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>31</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2017-03-27T00:00:00</DATEBEG>
+<DATEDESC>День войск национальной гвардии</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2017-03-27T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День войск национальной гвардии Российской Федерации, Указ Президента РФ от 16.01.2017 № 10 &quot;Oб установлении дня войск национальной гвардии российской федерации&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>32</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2007-03-29T00:00:00</DATEBEG>
+<DATEDESC>День специалиста юридической службы </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2007-03-29T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День специалиста юридической службы в Вооруженных Силах Российской Федерации, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>33</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1996-04-02T00:00:00</DATEBEG>
+<DATEDESC>День единения народов </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1996-04-02T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День единения народов, Указ Президента РФ от 02.04.1996 № 489 &quot;О Дне единения народов&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>34</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1981-04-01T00:00:00</DATEBEG>
+<DATEDESC>День геолога </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>1</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1981-04-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День геолога, (первое воскресенье апреля) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>35</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2007-04-08T00:00:00</DATEBEG>
+<DATEDESC>День сотрудников военных комиссариатов </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2007-04-08T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День сотрудников военных комиссариатов, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>36</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2023-04-08T00:00:00</DATEBEG>
+<DATEDESC>День российской анимации</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2023-04-08T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День российской анимации, Указ Президента РФ от 12.08.2022 № 543</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>37</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1981-04-12T00:00:00</DATEBEG>
+<DATEDESC>День космонавтики </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1981-04-12T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятная дата России День космонавтики, Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>38</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2007-04-01T00:00:00</DATEBEG>
+<DATEDESC>День войск противовоздушной обороны </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>2</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2007-04-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День войск противовоздушной обороны, (второе воскресенье апреля) Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>39</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2007-04-15T00:00:00</DATEBEG>
+<DATEDESC>День специалиста по радиоэлектронной борьбе </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2007-04-15T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День специалиста по радиоэлектронной борьбе, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>40</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1996-04-18T00:00:00</DATEBEG>
+<DATEDESC>День победы на Чудском озере</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1996-04-18T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День победы русских воинов князя Александра Невского над немецкими рыцарями на Чудском озере (Ледовое побоище, 1242 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>41</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1996-04-19T00:00:00</DATEBEG>
+<DATEDESC>День принятия Крыма, Тамани и Кубани в состав Российской империи</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1996-04-19T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День принятия Крыма, Тамани и Кубани в состав Российской империи (1783 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>42</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2013-04-21T00:00:00</DATEBEG>
+<DATEDESC>День местного самоуправления</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2013-04-21T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День местного самоуправления, Указ Президента РФ от 10.06.2012 № 805 &quot;О Дне местного самоуправления&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>43</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1995-04-26T00:00:00</DATEBEG>
+<DATEDESC>День участников ликвидации последствий радиационных катастроф</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-04-26T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День участников ликвидации последствий радиационных радиационных аварий и катастроф и памяти жертв этих аварий и катастроф, Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>44</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2016-04-26T00:00:00</DATEBEG>
+<DATEDESC>День нотариата</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2016-04-26T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День нотариата, Указ Президента РФ от 26.04.2016 № 195 &quot;О Дне нотариата&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>45</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1995-04-27T00:00:00</DATEBEG>
+<DATEDESC>День российского парламентаризма</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-04-27T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День российского парламентаризма, Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>46</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2020-04-28T00:00:00</DATEBEG>
+<DATEDESC>День работника скорой медицинской помощи</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2020-04-28T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника скорой медицинской помощи, Постановление Правительства РФ от 28.04.2020 № 600 &quot;О Дне работника скорой медицинской помощи&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>47</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1999-04-30T00:00:00</DATEBEG>
+<DATEDESC>День пожарной охраны </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1999-04-30T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День пожарной охраны, Указ Президента РФ от 30.04.99 № 539 &quot;Об установлении Дня пожарной охраны&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>48</ID>
+<PARENT>1</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2002-05-01T00:00:00</DATEBEG>
+<DATEDESC>Праздник Весны и Труда </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2002-05-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Праздник Весны и Труда, Ст. 112 Трудового кодекса РФ от 30.12.2001 № 197-ФЗ </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>49</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1981-05-07T00:00:00</DATEBEG>
+<DATEDESC>День радио </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1981-05-07T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День радио, праздник работников всех отраслей связи, Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>50</ID>
+<PARENT>1</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>1995-05-09T00:00:00</DATEBEG>
+<DATEDESC>День Победы</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-05-09T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День Победы советского народа в Великой Отечественной войне 1941 - 1945 годов (1945 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; Ст. 112 Трудового кодекса РФ от 30.12.2001 № 197-ФЗ </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>51</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2021-05-19T00:00:00</DATEBEG>
+<DATEDESC>День фармацевтического работника</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2021-05-19T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День фармацевтического работника, Постановление Правительства РФ от 15.05.2021 № 736 &quot;О Дне фармацевтического работника&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>52</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2013-05-21T00:00:00</DATEBEG>
+<DATEDESC>День полярника</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2013-05-21T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День полярника, Указ Президента РФ от 21.05.2013 № 502 &quot;О дне полярника&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>53</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1981-05-31T00:00:00</DATEBEG>
+<DATEDESC>День химика </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>0</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1981-05-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День химика, (последнее воскресенье мая) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>54</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1991-05-24T00:00:00</DATEBEG>
+<DATEDESC>День славянской письменности и культуры </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1991-05-24T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День славянской письменности и культуры, Постановление Президиума Верховного Совета РСФСР от 30.01.91 № 568-I &quot;О Дне славянской письменности и культуры&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>55</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2008-05-26T00:00:00</DATEBEG>
+<DATEDESC>День российского предпринимательства </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2008-05-26T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День российского предпринимательства, Указ Президента РФ от 18.10.2007 № 1381 &quot;О Дне российского предпринимательства&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>56</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1995-05-27T00:00:00</DATEBEG>
+<DATEDESC>Общероссийский День библиотек </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-05-27T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Общероссийский День библиотек, Указ Президента РФ от 27.05.95 № 539 &quot;Об установлении общероссийского Дня библиотек&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>57</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1994-05-28T00:00:00</DATEBEG>
+<DATEDESC>День пограничника </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1994-05-28T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День пограничника, Указ Президента РФ от 23.05.94 № 1011 &quot;Об установлении Дня пограничника&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>58</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2000-05-29T00:00:00</DATEBEG>
+<DATEDESC>День военного автомобилиста</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2000-05-29T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День военного автомобилиста, Приказ Министра обороны РФ от 24.02.2000 № 100 &quot;Об учреждении Дня военного автомобилиста&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>59</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2005-05-31T00:00:00</DATEBEG>
+<DATEDESC>День Российской адвокатуры</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2005-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День Российской адвокатуры, Резолюция № 4 Второго Всероссийского съезда адвокатов от 08.04.2005 г.</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>60</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2008-06-05T00:00:00</DATEBEG>
+<DATEDESC>День эколога </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2008-06-05T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День эколога, Указ Президента РФ от 21.07.2007 № 933 &quot;О Дне эколога&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>61</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1997-06-06T00:00:00</DATEBEG>
+<DATEDESC>Пушкинский день России </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1997-06-06T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Пушкинский день России, Указ Президента РФ от 21.05.1997 № 506 &quot;О 200-летии со дня рождения А.С. Пушкина и установлении Пушкинского дня России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>62</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2011-06-06T00:00:00</DATEBEG>
+<DATEDESC>День русского языка</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2011-06-06T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День русского языка, Указ Президента РФ от 06.06.2011 № 705 &quot;О Дне русского языка&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>63</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2001-06-08T00:00:00</DATEBEG>
+<DATEDESC>День социального работника </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2001-06-08T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День социального работника, Указ Президента РФ от 27.10.2000 № 1796 &quot;О Дне социального работника&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>64</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1994-06-12T00:00:00</DATEBEG>
+<DATEDESC>День принятия Декларации о государственном суверенитете</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1994-06-12T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День принятия Декларации о государственном суверенитете Российской Федерации - государственный праздник Российской Федерации, Указ Президента РФ от 02.06.94 № 1113 &quot;О государственном празднике Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>65</ID>
+<PARENT>1</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2002-06-12T00:00:00</DATEBEG>
+<DATEDESC>День России </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2002-06-12T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День России, Ст. 112 Трудового кодекса РФ от 30.12.2001 № 197-ФЗ </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>66</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2001-06-01T00:00:00</DATEBEG>
+<DATEDESC>День работников легкой промышленности </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>2</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2001-06-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работников текстильной и легкой промышленности, (второе воскресенье июня) Указ Президента РФ от 17.06.2000 № 1111 &quot;О Дне работников текстильной и легкой промышленности&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>67</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2007-06-14T00:00:00</DATEBEG>
+<DATEDESC>День работника миграционной службы </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2007-06-14T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника миграционной службы, Указ Президента РФ от 04.06.2007 № 701 &quot;Об установлении Дня работника миграционной службы </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>68</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2006-06-18T00:00:00</DATEBEG>
+<DATEDESC>День службы военных сообщений</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-06-18T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День службы военных сообщений, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>69</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2022-06-30T00:00:00</DATEBEG>
+<DATEDESC>День народных художественных промыслов</DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>-1</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2022-06-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День народных художественных промыслов, (предпоследнее воскресенье июня) Указ Президента РФ от 17.06.2022 № 384</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>70</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1981-06-01T00:00:00</DATEBEG>
+<DATEDESC>День медицинского работника </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>3</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1981-06-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День медицинского работника, (третье воскресенье июня) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>71</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2023-06-30T00:00:00</DATEBEG>
+<DATEDESC>День молодежи </DATEDESC>
+<OFFSET>sat</OFFSET>
+<OFFSETVAL>0</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2023-06-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День молодежи, (последняя суббота июня) Распоряжение Президента РФ от 02.05.2023 № 132-рп</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>72</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1981-06-30T00:00:00</DATEBEG>
+<DATEDESC>День изобретателя и рационализатора</DATEDESC>
+<OFFSET>sat</OFFSET>
+<OFFSETVAL>0</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1981-06-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День изобретателя и рационализатора, (последняя суббота июня) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>73</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1996-06-22T00:00:00</DATEBEG>
+<DATEDESC>День памяти и скорби</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1996-06-22T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятная дата День памяти и скорби - день начала Великой Отечественной войны (1941 год), Указ Президента РФ от 08.06.96 № 857 &quot;О Дне памяти и скорби&quot; Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>74</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2015-06-25T00:00:00</DATEBEG>
+<DATEDESC>День работника статистики</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2015-06-25T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника статистики, Приказ Росстата от 21.07.2014 № 481 &quot;Об установлении профессионального праздника - Дня работника статистики&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>75</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2023-06-28T00:00:00</DATEBEG>
+<DATEDESC>День судебного эксперта</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2023-06-28T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День судебного эксперта, Постановление Правительства РФ от 29.09.2022 № 1720</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>76</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1995-06-29T00:00:00</DATEBEG>
+<DATEDESC>День партизан и подпольщиков </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-06-29T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятная дата России День партизан и подпольщиков, Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>77</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2017-06-29T00:00:00</DATEBEG>
+<DATEDESC>День кораблестроителя</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2017-06-29T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День кораблестроителя, Постановление Правительства РФ от 30.05.2017 № 659 &quot;О Дне кораблестроителя&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>78</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-07-01T00:00:00</DATEBEG>
+<DATEDESC>День работников морского и речного флота </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>1</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1980-10-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работников морского и речного флота, (первое воскресенье июля) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>79</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-07-03T00:00:00</DATEBEG>
+<DATEDESC>День ГИБДД МВД России</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2009-07-03T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День Государственной инспекции безопасности дорожного движения Министерства внутренних дел Российской Федерации (ГИБДД МВД России), Приказ МВД РФ от 03.07.2009 № 502 &quot;Об объявлении Дня Государственной инспекции безопасности дорожного движения Министерства внутренних дел Российской Федерации&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>80</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-07-07T00:00:00</DATEBEG>
+<DATEDESC>День победы в Чесменском сражении (1770 год)</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День победы русского флота над турецким флотом в Чесменском сражении (1770 год), Федеральный закон от 13.03.1995 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>81</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-07-08T00:00:00</DATEBEG>
+<DATEDESC>День семьи, любви и верности</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2022-06-28T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День семьи, любви и верности, Указ Президента РФ от 28.06.2022 № 411</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>82</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-07-01T00:00:00</DATEBEG>
+<DATEDESC>День рыбака </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>2</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1980-10-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День рыбака, (второе воскресенье июля) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>83</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-07-01T00:00:00</DATEBEG>
+<DATEDESC>День российской почты </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>2</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1994-05-16T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День российской почты, (второе воскресенье июля) Указ Президента РФ от 16.05.94 № 944 &quot;О Дне российской почты&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>84</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-07-10T00:00:00</DATEBEG>
+<DATEDESC>День победы в Полтавском сражении (1709 год)</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День победы русской армии под командованием Петра Первого над шведами в Полтавском сражении (1709 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>85</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-07-01T00:00:00</DATEBEG>
+<DATEDESC>День металлурга </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>3</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1980-10-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День металлурга, (третье воскресенье июля) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>86</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-07-25T00:00:00</DATEBEG>
+<DATEDESC>День сотрудника органов следствия </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2013-08-27T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День сотрудника органов следствия Российской Федерации, Постановление Правительства РФ от 27.08.2013 № 741 &quot;О Дне сотрудника органов следствия Российской Федерации&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>87</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-07-01T00:00:00</DATEBEG>
+<DATEDESC>День работника торговли</DATEDESC>
+<OFFSET>sat</OFFSET>
+<OFFSETVAL>4</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2013-05-07T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника торговли, (четвертая суббота июля) Указ Президента РФ от 07.05.2013 № 459 &quot;О Дне работника торговли&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>88</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-07-28T00:00:00</DATEBEG>
+<DATEDESC>День Крещения Руси</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятная дата России День Крещения Руси, Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>89</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-07-31T00:00:00</DATEBEG>
+<DATEDESC>День Военно-Морского Флота </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>0</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День Военно-Морского Флота, (последнее воскресенье июля) Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>90</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-01T00:00:00</DATEBEG>
+<DATEDESC>День Тыла </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День Тыла Вооруженных Сил Российской Федерации, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>91</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-01T00:00:00</DATEBEG>
+<DATEDESC>День памяти российских воинов, погибших в Первой мировой войне 1914 - 1918 годов</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятная дата России День памяти российских воинов, погибших в Первой мировой войне 1914 - 1918 годов, Федеральный закон от 13.03.1995 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>92</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-02T00:00:00</DATEBEG>
+<DATEDESC>День Воздушно-десантных войск </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День Воздушно-десантных войск, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>93</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-01T00:00:00</DATEBEG>
+<DATEDESC>День железнодорожника </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>1</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1980-10-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День железнодорожника, (первое воскресенье августа) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>94</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-06T00:00:00</DATEBEG>
+<DATEDESC>День Железнодорожных войск </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День Железнодорожных войск, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>95</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-09T00:00:00</DATEBEG>
+<DATEDESC>День победы у мыса Гангут (1714 год) </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День первой в российской истории морской победы русского флота под командованием Петра Первого над шведами у мыса Гангут (1714 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>96</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-12T00:00:00</DATEBEG>
+<DATEDESC>День Военно-воздушных сил </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День Военно-воздушных сил, (праздничные мероприятия, посвященные Дню Военно-воздушных сил, проводятся в День Воздушного Флота России) Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot;; Указ Президента РФ от 29.08.97 № 949 &quot;Об установлении Дня Военно-воздушных сил&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>97</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-01T00:00:00</DATEBEG>
+<DATEDESC>День физкультурника </DATEDESC>
+<OFFSET>sat</OFFSET>
+<OFFSETVAL>2</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1980-10-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День физкультурника, (вторая суббота августа) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>98</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-01T00:00:00</DATEBEG>
+<DATEDESC>День строителя </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>2</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1980-10-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День строителя, (второе воскресенье августа) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>99</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-18T00:00:00</DATEBEG>
+<DATEDESC>День географа</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2020-04-03T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День географа, Приказ Минэкономразвития РФ от 03.04.2020 № 198 &quot;Об установлении профессионального праздника - Дня географа&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>100</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-01T00:00:00</DATEBEG>
+<DATEDESC>День Воздушного Флота России </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>3</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1992-09-28T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День Воздушного Флота России, (третье воскресенье августа) Постановление Президиума Верховного Совета РФ от 28.09.92 № 3564-1 &quot;Об установлении праздника День Воздушного Флота России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>101</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-22T00:00:00</DATEBEG>
+<DATEDESC>День Государственного флага </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1994-08-20T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День Государственного флага Российской Федерации, Указ Президента РФ от 20.08.94 № 1714 &quot;О Дне Государственного флага Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>102</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-23T00:00:00</DATEBEG>
+<DATEDESC>День разгрома в Курской битве (1943 год) </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День разгрома советскими войсками немецко-фашистских войск в Курской битве (1943 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>103</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-31T00:00:00</DATEBEG>
+<DATEDESC>День шахтёра </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>0</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1980-10-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День шахтера, (последнее воскресенье августа) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>104</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-27T00:00:00</DATEBEG>
+<DATEDESC>День кино </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1980-10-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День кино, Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>105</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-08-31T00:00:00</DATEBEG>
+<DATEDESC>День ветеринарного работника</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2014-06-11T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День ветеринарного работника, Приказ Минсельхоза России от 11.06.2014 № 188 &quot;Об установлении профессионального праздника - Дня ветеринарного работника&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>106</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-01T00:00:00</DATEBEG>
+<DATEDESC>День знаний </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1980-10-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День знаний, Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>107</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-02T00:00:00</DATEBEG>
+<DATEDESC>День российской гвардии </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День российской гвардии, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>108</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-03T00:00:00</DATEBEG>
+<DATEDESC>День окончания Второй мировой войны (1945 год)</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День окончания Второй мировой войны (1945 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>109</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-03T00:00:00</DATEBEG>
+<DATEDESC>День солидарности в борьбе с терроризмом </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятная дата России День солидарности в борьбе с терроризмом, Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>110</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-04T00:00:00</DATEBEG>
+<DATEDESC>День специалиста по ядерному обеспечению </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День специалиста по ядерному обеспечению, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>111</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-01T00:00:00</DATEBEG>
+<DATEDESC>День работников нефтяной и газовой промышленности </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>1</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1980-10-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работников нефтяной и газовой промышленности, (первое воскресенье сентября) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>112</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-08T00:00:00</DATEBEG>
+<DATEDESC>День Бородинского сражения (1812 год) </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День Бородинского сражения русской армии под командованием М.И. Кутузова с французской армией (1812 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>113</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-08T00:00:00</DATEBEG>
+<DATEDESC>День финансиста</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2011-08-19T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День финансиста, Указ Президента РФ от 19.08.2011 № 1101 &quot;О Дне финансиста&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>114</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-11T00:00:00</DATEBEG>
+<DATEDESC>День победы у мыса Тендра (1790 год) </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День победы русской эскадры под командованием Ф.Ф. Ушакова над турецкой эскадрой у мыса Тендра (1790 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>115</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-11T00:00:00</DATEBEG>
+<DATEDESC>День специалиста органов воспитательной работы</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2007-05-30T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День специалиста органов воспитательной работы в Вооруженных Силах Российской Федерации, Приказ Минобороны РФ от 30.05.2007 № 25 &quot;Об установлении в Вооруженных Силах Российской Федерации Дня специалиста органов воспитательной работы&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>116</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2009-01-01T00:00:00</DATEBEG>
+<DATEDESC>День программиста </DATEDESC>
+<OFFSET>d</OFFSET>
+<OFFSETVAL>256</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2009-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День программиста, (в 256-й день года) Указ Президента РФ от 11.09.2009 № 1034 &quot;О Дне программиста&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>117</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-01T00:00:00</DATEBEG>
+<DATEDESC>День танкиста </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>2</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День танкиста, (второе воскресенье сентября) Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>118</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-15T00:00:00</DATEBEG>
+<DATEDESC>День федерального государственного санитарно-эпидемиологического надзора</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2022-09-15T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День федерального государственного санитарно-эпидемиологического надзора, Приказ Роспотребнадзора от 15.09.2022 № 486</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>119</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-19T00:00:00</DATEBEG>
+<DATEDESC>День оружейника</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2011-12-03T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День оружейника, Указ Президента РФ от 03.12.2011 № 1578 &quot;О Дне оружейника&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>120</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-21T00:00:00</DATEBEG>
+<DATEDESC>День победы в Куликовской битве (1380 год) </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День победы русских полков во главе с великим князем Дмитрием Донским над монголо-татарскими войсками в Куликовской битве (1380 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>121</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-01T00:00:00</DATEBEG>
+<DATEDESC>День работников леса </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>3</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1980-10-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работников леса, (третье воскресенье сентября) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>122</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-27T00:00:00</DATEBEG>
+<DATEDESC>День воспитателя и всех дошкольных работников</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2016-05-17T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воспитателя и всех дошкольных работников, Приказ Минобрнауки России от 17.05.2016 № 577 &quot;Об установлении профессионального праздника - Дня воспитателя и всех дошкольных работников&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>123</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-28T00:00:00</DATEBEG>
+<DATEDESC>День работника атомной промышленности </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2005-06-03T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника атомной промышленности, Указ Президента РФ от 03.06.2005 № 633 &quot;О Дне работника атомной промышленности&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>124</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-09-30T00:00:00</DATEBEG>
+<DATEDESC>День машиностроителя </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>0</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1980-10-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День машиностроителя, (последнее воскресенье сентября) Указ Президиума Верховного Совета СССР от 01.10.80 № 3018-X &quot;О праздничных и памятных днях&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>125</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>2023-09-30T00:00:00</DATEBEG>
+<DATEDESC>День воссоединения ДНР, ЛНР, Запорожской и Херсонской области с Российской Федерацией</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2023-09-30T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воссоединения Донецкой Народной Республики, Луганской Народной Республики, Запорожской области и Херсонской области с Российской Федерацией, Федеральный закон от 13.03.1995 № 32-ФЗ </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>126</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-01T00:00:00</DATEBEG>
+<DATEDESC>День пожилых людей </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1992-06-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День пожилых людей, Постановление Президиума Верховного Совета РФ от 01.06.92 № 2890/1-1 &quot;О проблемах пожилых людей&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>127</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-01T00:00:00</DATEBEG>
+<DATEDESC>День Сухопутных войск </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День Сухопутных войск, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>128</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-02T00:00:00</DATEBEG>
+<DATEDESC>День среднего профессионального образования</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2022-07-25T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День среднего профессионального образования, Указ Президента РФ от 25.07.2022</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>129</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-02T00:00:00</DATEBEG>
+<DATEDESC>День метростроителя</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2023-01-23T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День метростроителя, Указ Президента РФ от 23.01.2023</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>130</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-04T00:00:00</DATEBEG>
+<DATEDESC>День Космических войск </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День Космических войск, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>131</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-05T00:00:00</DATEBEG>
+<DATEDESC>День учителя </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1994-10-03T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День учителя, Указ Президента РФ от 03.10.94 № 1961 &quot;О праздновании Дня учителя&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>132</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-09T00:00:00</DATEBEG>
+<DATEDESC>День разгрома в битве за Кавказ (1943 год)</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День разгрома советскими войсками немецко-фашистских войск в битве за Кавказ (1943 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>133</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-01T00:00:00</DATEBEG>
+<DATEDESC>День работника сельского хозяйства </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>2</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1999-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника сельского хозяйства и перерабатывающей промышленности, (второе воскресенье октября) Указ Президента РФ от 31.05.99 № 679 &quot;О Дне работника сельского хозяйства и перерабатывающей промышленности&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>134</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-20T00:00:00</DATEBEG>
+<DATEDESC>День военного связиста </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День военного связиста, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>135</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-01T00:00:00</DATEBEG>
+<DATEDESC>День работников дорожного хозяйства </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>3</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2000-03-23T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работников дорожного хозяйства, (третье воскресенье октября) Указ Президента РФ от 23.03.2000 № 556 &quot;О Дне работников дорожного хозяйства&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>136</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-01T00:00:00</DATEBEG>
+<DATEDESC>День отца</DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>3</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2021-10-04T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День отца, (третье воскресенье октября) Указ Президента РФ от 04.10.2021 № 573 &quot;О Дне отца&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>137</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-22T00:00:00</DATEBEG>
+<DATEDESC>День финансово-экономической службы</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День финансово-экономической службы, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>138</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-24T00:00:00</DATEBEG>
+<DATEDESC>День подразделений специального назначения </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День подразделений специального назначения, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>139</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-25T00:00:00</DATEBEG>
+<DATEDESC>День таможенника</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-08-04T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День таможенника Российской Федерации, Указ Президента РФ от 04.08.95 № 811 &quot;Об установлении Дня таможенника Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>140</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-31T00:00:00</DATEBEG>
+<DATEDESC>День работника автомобильного транспорта </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>0</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2012-06-25T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника автомобильного и городского пассажирского транспорта, (последнее воскресенье октября) Указ Президента РФ от 25.06.2012 № 897 &quot;О дне работника автомобильного и городского пассажирского транспорта&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>141</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-10-30T00:00:00</DATEBEG>
+<DATEDESC>День памяти жертв политических репрессий </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1991-10-18T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День памяти жертв политических репрессий, Постановление Верховного Совета РСФСР от 18.10.91 № 1763/1-I &quot;Об установлении Дня памяти жертв политических репрессий&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>142</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-01T00:00:00</DATEBEG>
+<DATEDESC>День судебного пристава </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2009-09-08T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День судебного пристава, Указ Президента РФ от 08.09.2009 № 1019 &quot;Об установлении Дня судебного пристава&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>143</ID>
+<PARENT>1</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2002-11-04T00:00:00</DATEBEG>
+<DATEDESC>День народного единства </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2002-11-04T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День народного единства, Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; Ст. 112 Трудового кодекса РФ от 30.12.01 № 197-ФЗ </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>144</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-05T00:00:00</DATEBEG>
+<DATEDESC>День военного разведчика </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День военного разведчика, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>145</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-07T00:00:00</DATEBEG>
+<DATEDESC>День военного парада на Красной площади в Москве (1941 г.) </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День проведения военного парада на Красной площади в городе Москве в ознаменование двадцать четвертой годовщины Великой Октябрьской социалистической революции (1941 г.), Федеральный закон от 13.03.95 № 32-ФЗ&quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>146</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-07T00:00:00</DATEBEG>
+<DATEDESC>День Великой Октябрьской социалистической революции 1917 года</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятная дата России День Октябрьской революции 1917 года, Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>147</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-07T00:00:00</DATEBEG>
+<DATEDESC>День согласия и примирения</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1996-11-07T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День согласия и примирения, Указ Президента РФ от 07.11.96 № 1537 &quot;О Дне согласия и примирения&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>148</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-10T00:00:00</DATEBEG>
+<DATEDESC>День сотрудника органов внутренних дел</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2011-10-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День сотрудника органов внутренних дел Российской Федерации, Указ Президента РФ от 13.10.2011 № 1348 &quot;О Дне сотрудника органов внутренних дел российской федерации&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>149</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-11T00:00:00</DATEBEG>
+<DATEDESC>День экономиста</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2015-11-24T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День экономиста, Приказ Минэкономразвития России от 24.11.2015 № 876 &quot;Об установлении профессионального праздника - Дня экономиста&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>150</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-13T00:00:00</DATEBEG>
+<DATEDESC>День войск радиационной, химической и биологической защиты</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День войск радиационной, химической и биологической защиты, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>151</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-16T00:00:00</DATEBEG>
+<DATEDESC>День самбо</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2022-12-19T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День самбо, Указ Президента РФ от 19.12.2022</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>152</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-19T00:00:00</DATEBEG>
+<DATEDESC>День ракетных войск и артиллерии </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День ракетных войск и артиллерии, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>153</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-19T00:00:00</DATEBEG>
+<DATEDESC>День преподавателя высшей школы</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2021-11-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День преподавателя высшей школы, Приказ Минобрнауки РФ от 01.11.2021 № 992 &quot;Об установлении профессионального праздника - Дня преподавателя высшей школы&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>154</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-20T00:00:00</DATEBEG>
+<DATEDESC>День работника транспорта</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2020-08-10T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника транспорта, Приказ Минтранса РФ от 10.08.2020 № 300 &quot;Об установлении профессионального праздника - Дня работника транспорта&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>155</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-21T00:00:00</DATEBEG>
+<DATEDESC>День военной присяги</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День военной присяги, Федеральный закон от 13.03.1995 № 32-ФЗ</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>156</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-21T00:00:00</DATEBEG>
+<DATEDESC>День работника налоговых органов Российской Федерации </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2000-11-11T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника налоговых органов Российской Федерации, Указ Президента РФ от 11.11.2000 № 1868 &quot;О Дне работника налоговых органов Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>157</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-22T00:00:00</DATEBEG>
+<DATEDESC>День психолога</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2023-10-10T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День психолога, Постановление Правительства РФ от 10.10.2023 № 1666</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>158</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-11-30T00:00:00</DATEBEG>
+<DATEDESC>День матери </DATEDESC>
+<OFFSET>sun</OFFSET>
+<OFFSETVAL>0</OFFSETVAL>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1998-01-30T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День матери, (последнее воскресенье ноября) Указ Президента РФ от 30.01.98 № 120 &quot;О Дне матери&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>159</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-01T00:00:00</DATEBEG>
+<DATEDESC>День победы у мыса Синоп (1853 год) </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День победы русской эскадры под командованием П.С. Нахимова над турецкой эскадрой у мыса Синоп (1853 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>160</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-03T00:00:00</DATEBEG>
+<DATEDESC>День юриста </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2008-02-04T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День юриста, Указ Президента РФ от 04.02.2008 № 130 &quot;Об установлении Дня юриста&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>161</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-03T00:00:00</DATEBEG>
+<DATEDESC>День Неизвестного Солдата</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятная дата России День Неизвестного Солдата, Федеральный закон от 13.03.1995 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>162</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-05T00:00:00</DATEBEG>
+<DATEDESC>День начала контрнаступления под Москвой (1941 год) </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День начала контрнаступления советских войск против немецко-фашистских войск в битве под Москвой (1941 год), Федеральный закон от 13.03.95 № 32-ФЗ&quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>163</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-05T00:00:00</DATEBEG>
+<DATEDESC>День добровольца (волонтера)</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2017-11-27T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День добровольца (волонтера), Указ Президента РФ от 27.11.2017 № 572 &quot;О Дне добровольца (волонтера)&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>164</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-09T00:00:00</DATEBEG>
+<DATEDESC>День Героев Отечества </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятная дата России День Героев Отечества, Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>165</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-12T00:00:00</DATEBEG>
+<DATEDESC>День Конституции</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятная дата России День Конституции Российской Федерации - государственный праздник, Указ Президента РФ от 19.09.94 № 1926 &quot;О Дне Конституции Российской Федерации&quot; Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>166</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-17T00:00:00</DATEBEG>
+<DATEDESC>День Ракетных войск стратегического назначения </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2006-05-31T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Памятный день День Ракетных войск стратегического назначения, Указ Президента РФ от 31.05.2006 № 549 &quot;Об установлении профессиональных праздников и памятных дней в Вооруженных Силах Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>167</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-20T00:00:00</DATEBEG>
+<DATEDESC>День работника органов безопасности </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-12-20T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника органов безопасности Российской Федерации, Указ Президента РФ от 20.12.95 № 1280 &quot;Об установлении Дня работника органов безопасности Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>168</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-22T00:00:00</DATEBEG>
+<DATEDESC>День энергетика </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2015-12-21T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День энергетика, Постановление Правительства РФ от 21.12.2015 № 1396 &quot;О Дне энергетика&quot;</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>169</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-24T00:00:00</DATEBEG>
+<DATEDESC>День взятия крепости Измаил (1790 год) </DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-03-13T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День воинской славы России День взятия турецкой крепости Измаил русскими войсками под командованием А.В. Суворова (1790 год), Федеральный закон от 13.03.95 № 32-ФЗ &quot;О днях воинской славы и памятных датах России&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>170</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-25T00:00:00</DATEBEG>
+<DATEDESC>День работника органов регистрации прав на недвижимое имущество и сделок с ним</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>2023-12-21T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День работника органов регистрации прав на недвижимое имущество и сделок с ним, Приказ Росреестра от 21.12.2023 № П/0547</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>171</ID>
+<PARENT>1</PARENT>
+<DATETYPE>0</DATETYPE>
+<DATEBEG>1980-12-27T00:00:00</DATEBEG>
+<DATEDESC>День спасателя</DATEDESC>
+<PERIOD>yyyy</PERIOD>
+<PERIODVAL>1</PERIODVAL>
+<ACTBEG>1995-12-26T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>День спасателя Российской Федерации, Указ Президента РФ от 26.12.95 № 1306 &quot;Об установлении Дня спасателя Российской Федерации&quot; </COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>189</ID>
+<DATETYPE>500</DATETYPE>
+<DATEBEG>2020-01-01T00:00:00</DATEBEG>
+<DATEEND>2020-12-31T00:00:00</DATEEND>
+<DATEDESC>Нерабочие дни по указам (с 01.01.2020 по 31.12.2020)</DATEDESC>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<ACTEND>2020-12-31T00:00:00</ACTEND>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>190</ID>
+<PARENT>189</PARENT>
+<DATETYPE>80</DATETYPE>
+<DATEBEG>2020-03-30T00:00:00</DATEBEG>
+<DATEEND>2020-04-30T00:00:00</DATEEND>
+<DATEDESC>нерабочий с сохранением заработной платы</DATEDESC>
+<ACTBEG>2020-03-30T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Указы Президента РФ от от 25.03.2020 N 206, от 02.04.2020 №239, от 28.04.2020 №294</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>214</ID>
+<PARENT>189</PARENT>
+<DATETYPE>80</DATETYPE>
+<DATEBEG>2020-05-06T00:00:00</DATEBEG>
+<DATEEND>2020-05-08T00:00:00</DATEEND>
+<DATEDESC>нерабочий с сохранением заработной платы</DATEDESC>
+<ACTBEG>2020-05-06T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Указы Президента РФ от от 25.03.2020 N 206, от 02.04.2020 №239, от 28.04.2020 №294</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>217</ID>
+<PARENT>189</PARENT>
+<DATETYPE>80</DATETYPE>
+<DATEBEG>2020-06-24T00:00:00</DATEBEG>
+<DATEDESC>нерабочий с сохранением заработной платы</DATEDESC>
+<ACTBEG>2020-06-24T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Указ Президента РФ от 29.05.2020 № 345</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>218</ID>
+<PARENT>189</PARENT>
+<DATETYPE>80</DATETYPE>
+<DATEBEG>2020-07-01T00:00:00</DATEBEG>
+<DATEDESC>день голосования за изменения в Конституцию</DATEDESC>
+<ACTBEG>2020-07-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Указ Президента РФ от 01.06.2020 №354</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>239</ID>
+<DATETYPE>500</DATETYPE>
+<DATEBEG>2021-01-01T00:00:00</DATEBEG>
+<DATEEND>2021-12-31T00:00:00</DATEEND>
+<DATEDESC>Нерабочие дни по указам (с 01.01.2021 по 31.12.2021)</DATEDESC>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<ACTEND>2021-12-31T00:00:00</ACTEND>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>240</ID>
+<PARENT>239</PARENT>
+<DATETYPE>80</DATETYPE>
+<DATEBEG>2021-05-04T00:00:00</DATEBEG>
+<DATEEND>2021-05-07T00:00:00</DATEEND>
+<DATEDESC>нерабочий с сохранением заработной платы</DATEDESC>
+<ACTBEG>2021-05-04T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Указ «Об установлении на территории Российской Федерации нерабочих дней в мае 2021 года» от 23.04.2021</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>244</ID>
+<PARENT>239</PARENT>
+<DATETYPE>80</DATETYPE>
+<DATEBEG>2021-11-01T00:00:00</DATEBEG>
+<DATEEND>2021-11-03T00:00:00</DATEEND>
+<DATEDESC>нерабочий с сохранением заработной платы</DATEDESC>
+<ACTBEG>2021-11-01T00:00:00</ACTBEG>
+<EDITDATE>2024-01-31T00:00:00</EDITDATE>
+<COMMENT>Указ Президента РФ от 20.10.2021 №595</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>247</ID>
+<DATETYPE>500</DATETYPE>
+<DATEBEG>2024-02-01T00:00:00</DATEBEG>
+<DATEDESC>Нерабочие дни (местные)</DATEDESC>
+<ACTBEG>2024-02-01T00:00:00</ACTBEG>
+<ACTEND>2024-02-01T00:00:00</ACTEND>
+<EDITDATE>2024-02-01T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>248</ID>
+<PARENT>247</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-02-01T00:00:00</DATEBEG>
+<DATEEND>2023-02-02T00:00:00</DATEEND>
+<DATEDESC>80 летие разгрома в Сталинградской битве</DATEDESC>
+<ACTBEG>2023-02-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-01T00:00:00</EDITDATE>
+<COMMENT>Постановление Администрации Волгоградской области от 23.01.2023 №32-п</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>250</ID>
+<PARENT>247</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-02-02T00:00:00</DATEBEG>
+<DATEDESC>75 летие разгрома в Сталинградской битве</DATEDESC>
+<ACTBEG>2018-02-02T00:00:00</ACTBEG>
+<EDITDATE>2024-02-01T00:00:00</EDITDATE>
+<COMMENT>Постановление Администрации Волгоградской области от 22.01.2018 №6-п</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>535</ID>
+<DATETYPE>900</DATETYPE>
+<DATEBEG>2018-01-01T00:00:00</DATEBEG>
+<DATEEND>2018-12-31T00:00:00</DATEEND>
+<DATEDESC>Производственный календарь (с 01.01.2018 по 31.12.2018)</DATEDESC>
+<ACTBEG>2024-02-27T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+<COMMENT>Загружено с: https://buh.ru/calendar/</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>536</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-01-01T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>537</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-01-02T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>538</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-01-03T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>539</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-01-04T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>540</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-01-05T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>541</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-01-08T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>542</ID>
+<PARENT>535</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2018-02-22T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>543</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-02-23T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>544</ID>
+<PARENT>535</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2018-03-07T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>545</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-03-08T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>546</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-03-09T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>547</ID>
+<PARENT>535</PARENT>
+<DATETYPE>10</DATETYPE>
+<DATEBEG>2018-04-28T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>548</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-04-30T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>549</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-05-01T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>550</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-05-02T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>551</ID>
+<PARENT>535</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2018-05-08T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>552</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-05-09T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>553</ID>
+<PARENT>535</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2018-06-09T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>554</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-06-11T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>555</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-06-12T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>556</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-11-05T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>557</ID>
+<PARENT>535</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2018-12-29T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>558</ID>
+<PARENT>535</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2018-12-31T00:00:00</DATEBEG>
+<ACTBEG>2018-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>559</ID>
+<DATETYPE>900</DATETYPE>
+<DATEBEG>2019-01-01T00:00:00</DATEBEG>
+<DATEEND>2019-12-31T00:00:00</DATEEND>
+<DATEDESC>Производственный календарь (с 01.01.2019 по 31.12.2019)</DATEDESC>
+<ACTBEG>2024-02-27T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+<COMMENT>Загружено с: https://buh.ru/calendar/</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>560</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-01-01T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>561</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-01-02T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>562</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-01-03T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>563</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-01-04T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>564</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-01-07T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>565</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-01-08T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>566</ID>
+<PARENT>559</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2019-02-22T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>567</ID>
+<PARENT>559</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2019-03-07T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>568</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-03-08T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>569</ID>
+<PARENT>559</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2019-04-30T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>570</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-05-01T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>571</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-05-02T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>572</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-05-03T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>573</ID>
+<PARENT>559</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2019-05-08T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>574</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-05-09T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>575</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-05-10T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>576</ID>
+<PARENT>559</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2019-06-11T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>577</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-06-12T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>578</ID>
+<PARENT>559</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2019-11-04T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>579</ID>
+<PARENT>559</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2019-12-31T00:00:00</DATEBEG>
+<ACTBEG>2019-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>580</ID>
+<DATETYPE>900</DATETYPE>
+<DATEBEG>2020-01-01T00:00:00</DATEBEG>
+<DATEEND>2020-12-31T00:00:00</DATEEND>
+<DATEDESC>Производственный календарь (с 01.01.2020 по 31.12.2020)</DATEDESC>
+<ACTBEG>2024-02-27T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+<COMMENT>Загружено с: https://buh.ru/calendar/</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>581</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-01-01T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>582</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-01-02T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>583</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-01-03T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>584</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-01-06T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>585</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-01-07T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>586</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-01-08T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>587</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-02-24T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>588</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-03-09T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>589</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-05-01T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>590</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-05-04T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>591</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-05-05T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>592</ID>
+<PARENT>580</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2020-06-11T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>593</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-06-12T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>594</ID>
+<PARENT>580</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2020-11-03T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>595</ID>
+<PARENT>580</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2020-11-04T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>596</ID>
+<PARENT>580</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2020-12-31T00:00:00</DATEBEG>
+<ACTBEG>2020-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>597</ID>
+<DATETYPE>900</DATETYPE>
+<DATEBEG>2021-01-01T00:00:00</DATEBEG>
+<DATEEND>2021-12-31T00:00:00</DATEEND>
+<DATEDESC>Производственный календарь (с 01.01.2021 по 31.12.2021)</DATEDESC>
+<ACTBEG>2024-02-27T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+<COMMENT>Загружено с: https://buh.ru/calendar/</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>598</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-01-01T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>599</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-01-04T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>600</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-01-05T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>601</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-01-06T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>602</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-01-07T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>603</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-01-08T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>604</ID>
+<PARENT>597</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2021-02-20T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>605</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-02-22T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>606</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-02-23T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>607</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-03-08T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>608</ID>
+<PARENT>597</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2021-04-30T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>609</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-05-03T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>610</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-05-10T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>611</ID>
+<PARENT>597</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2021-06-11T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>612</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-06-14T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>613</ID>
+<PARENT>597</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2021-11-03T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>614</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-11-04T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>615</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-11-05T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>616</ID>
+<PARENT>597</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2021-12-31T00:00:00</DATEBEG>
+<ACTBEG>2021-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>617</ID>
+<DATETYPE>900</DATETYPE>
+<DATEBEG>2022-01-01T00:00:00</DATEBEG>
+<DATEEND>2022-12-31T00:00:00</DATEEND>
+<DATEDESC>Производственный календарь (с 01.01.2022 по 31.12.2022)</DATEDESC>
+<ACTBEG>2024-02-27T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+<COMMENT>Загружено с: https://buh.ru/calendar/</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>618</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-01-03T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>619</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-01-04T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>620</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-01-05T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>621</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-01-06T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>622</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-01-07T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>623</ID>
+<PARENT>617</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2022-02-22T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>624</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-02-23T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>625</ID>
+<PARENT>617</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2022-03-05T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>626</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-03-07T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>627</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-03-08T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>628</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-05-02T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>629</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-05-03T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>630</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-05-09T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>631</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-05-10T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>632</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-06-13T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>633</ID>
+<PARENT>617</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2022-11-03T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>634</ID>
+<PARENT>617</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2022-11-04T00:00:00</DATEBEG>
+<ACTBEG>2022-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>635</ID>
+<DATETYPE>900</DATETYPE>
+<DATEBEG>2023-01-01T00:00:00</DATEBEG>
+<DATEEND>2023-12-31T00:00:00</DATEEND>
+<DATEDESC>Производственный календарь (с 01.01.2023 по 31.12.2023)</DATEDESC>
+<ACTBEG>2024-02-27T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+<COMMENT>Загружено с: https://buh.ru/calendar/</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>636</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-01-02T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>637</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-01-03T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>638</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-01-04T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>639</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-01-05T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>640</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-01-06T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>641</ID>
+<PARENT>635</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2023-02-22T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>642</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-02-23T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>643</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-02-24T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>644</ID>
+<PARENT>635</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2023-03-07T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>645</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-03-08T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>646</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-05-01T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>647</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-05-08T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>648</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-05-09T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>649</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-06-12T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>650</ID>
+<PARENT>635</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2023-11-03T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>651</ID>
+<PARENT>635</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2023-11-06T00:00:00</DATEBEG>
+<ACTBEG>2023-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-02-27T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>677</ID>
+<DATETYPE>900</DATETYPE>
+<DATEBEG>2024-01-01T00:00:00</DATEBEG>
+<DATEEND>2024-12-31T00:00:00</DATEEND>
+<DATEDESC>Производственный календарь (с 01.01.2024 по 31.12.2024)</DATEDESC>
+<ACTBEG>2024-03-15T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+<COMMENT>Загружено с: https://buh.ru/calendar/</COMMENT>
+</SysCalendar>
+<SysCalendar>
+<ID>678</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-01-01T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>679</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-01-02T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>680</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-01-03T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>681</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-01-04T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>682</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-01-05T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>683</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-01-08T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>684</ID>
+<PARENT>677</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2024-02-22T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>685</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-02-23T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>686</ID>
+<PARENT>677</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2024-03-07T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>687</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-03-08T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>688</ID>
+<PARENT>677</PARENT>
+<DATETYPE>10</DATETYPE>
+<DATEBEG>2024-04-27T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>689</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-04-29T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>690</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-04-30T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>691</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-05-01T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>692</ID>
+<PARENT>677</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2024-05-08T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>693</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-05-09T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>694</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-05-10T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>695</ID>
+<PARENT>677</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2024-06-11T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>696</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-06-12T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>697</ID>
+<PARENT>677</PARENT>
+<DATETYPE>20</DATETYPE>
+<DATEBEG>2024-11-02T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>698</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-11-04T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>699</ID>
+<PARENT>677</PARENT>
+<DATETYPE>10</DATETYPE>
+<DATEBEG>2024-12-28T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>700</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-12-30T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+<SysCalendar>
+<ID>701</ID>
+<PARENT>677</PARENT>
+<DATETYPE>70</DATETYPE>
+<DATEBEG>2024-12-31T00:00:00</DATEBEG>
+<ACTBEG>2024-01-01T00:00:00</ACTBEG>
+<EDITDATE>2024-03-15T00:00:00</EDITDATE>
+</SysCalendar>
+</dataroot>
+</root>

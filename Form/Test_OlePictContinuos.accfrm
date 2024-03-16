@@ -1,0 +1,566 @@
+Version =20
+VersionRequired =20
+Checksum =-121310047
+Begin Form
+    AutoCenter = NotDefault
+    KeyPreview = NotDefault
+    AllowDesignChanges = NotDefault
+    TabularCharSet =204
+    TabularFamily =119
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =5670
+    DatasheetFontHeight =10
+    ItemSuffix =24
+    Left =210
+    Top =210
+    Right =6165
+    Bottom =6495
+    DatasheetGridlinesColor =12632256
+    Filter ="[Name] LIKE \"*l*\" AND [Name] LIKE \"*lo*\""
+    RecSrcDt = Begin
+        0x6e426fe653c7e540
+    End
+    GUID = Begin
+        0x69bad2850753ff41a14f705896796209
+    End
+    NameMap = Begin
+        0x0acc0e55000000005d0e98c4897a0d47970ff66d9dfbce2800000000e5fcff9b ,
+        0xee22e64000000000000000005300790073004f0062006a004400610074006100 ,
+        0x000000000000208750acaa5e6640a02577862dd8cdf0070000005d0e98c4897a ,
+        0x0d47970ff66d9dfbce284e0061006d00650000000000000062f172dd31d32e44 ,
+        0xa110e17e7fba0796070000005d0e98c4897a0d47970ff66d9dfbce2849004400 ,
+        0x000000000000461ec025291f284dbff04d38519609e4070000005d0e98c4897a ,
+        0x0d47970ff66d9dfbce2843006f006d006d0065006e0074000000000000004422 ,
+        0x808a26380e46928629d4dfcf10170600000069bad2850753ff41a14f70589679 ,
+        0x6209740078007400500069006300740049006400000000000000000000000000 ,
+        0x000000000000000000000c000000050000000000000000000000000000000000
+    End
+    RecordSource ="SysObjData"
+    Caption ="SysDibPictures"
+    OnCurrent ="[Event Procedure]"
+    OnOpen ="[Event Procedure]"
+    OnClose ="[Event Procedure]"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xae050000a5050000a5050000a505000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x0000000000000000386af4070000000020569e33f77f0000335c3f33f77f0000 ,
+        0x0104220b9c006c01036e07000100090000000000640001000100580202000100 ,
+        0x580202000000413400a30d0500000000feffffffffffffff25dd0d41fe7f0000 ,
+        0xc0c0c00000005802180000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000046500800 ,
+        0x4d53414343455353000000000000000000000000000000000000000000000000 ,
+        0xff3e03005802aa00ac00aa00ac00010000003100436f7572696572204e657700 ,
+        0x0000000000000000000000000000000000000000010001000200000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000009600 ,
+        0x4b002c0100800000
+    End
+    PrtDevNames = Begin
+        0x080015001f000100000000000000000000000000000000000000000000000046 ,
+        0x505231313a00
+    End
+    OnKeyDown ="[Event Procedure]"
+    OnResize ="[Event Procedure]"
+    OnLoad ="[Event Procedure]"
+    FilterOnLoad =0
+    DatasheetGridlinesColor12 =12632256
+    PrtDevModeW = Begin
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0104220bdc006c01036e07000100090000000000640001000100580202000100 ,
+        0x5802020000004100340000000000000009031000000000000000000000000000 ,
+        0x5002000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000005802180000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000046500800 ,
+        0x4d53414343455353000000000000000000000000000000000000000000000000 ,
+        0xff3e03005802aa00ac00aa00ac00010000003100436f7572696572204e657700 ,
+        0x0000000000000000000000000000000000000000010001000200000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000009600 ,
+        0x4b002c0100800000
+    End
+    PrtDevNamesW = Begin
+        0x040011001b000100000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000046005000520031003100 ,
+        0x3a000000
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontCharSet =204
+            BackColor =-2147483633
+            ForeColor =-2147483630
+        End
+        Begin Rectangle
+            SpecialEffect =3
+            BackStyle =0
+            BorderLineStyle =0
+            Width =850
+            Height =850
+        End
+        Begin Line
+            BorderLineStyle =0
+            Width =1701
+        End
+        Begin Image
+            BackStyle =0
+            OldBorderStyle =0
+            BorderLineStyle =0
+            PictureAlignment =2
+            Width =1701
+            Height =1701
+        End
+        Begin CommandButton
+            TextFontCharSet =204
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+            BorderLineStyle =0
+        End
+        Begin OptionButton
+            SpecialEffect =2
+            BorderLineStyle =0
+            LabelX =230
+            LabelY =-30
+        End
+        Begin CheckBox
+            SpecialEffect =2
+            BorderLineStyle =0
+            LabelX =230
+            LabelY =-30
+        End
+        Begin OptionGroup
+            SpecialEffect =3
+            BorderLineStyle =0
+            Width =1701
+            Height =1701
+        End
+        Begin BoundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =0
+            BorderLineStyle =0
+            BackStyle =0
+            Width =4536
+            Height =2835
+            LabelX =-1701
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            TextFontCharSet =204
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            BackColor =-2147483643
+            ForeColor =-2147483640
+            AsianLineBreak =255
+        End
+        Begin ListBox
+            SpecialEffect =2
+            TextFontCharSet =204
+            BorderLineStyle =0
+            Width =1701
+            Height =1417
+            LabelX =-1701
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            TextFontCharSet =204
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin Subform
+            SpecialEffect =2
+            BorderLineStyle =0
+            Width =1701
+            Height =1701
+        End
+        Begin UnboundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =1
+            Width =4536
+            Height =2835
+        End
+        Begin ToggleButton
+            TextFontCharSet =204
+            Width =283
+            Height =283
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+            BorderLineStyle =0
+        End
+        Begin Tab
+            TextFontCharSet =204
+            BackStyle =0
+            Width =5103
+            Height =3402
+            BorderLineStyle =0
+        End
+        Begin FormHeader
+            Height =567
+            BackColor =-2147483633
+            Name ="ЗаголовокФормы"
+            Tag ="BackColor=Dark"
+            GUID = Begin
+                0xff35f400d703e341a79535d9cb1b4d22
+            End
+            Begin
+                Begin Label
+                    OverlapFlags =93
+                    TextAlign =1
+                    Left =60
+                    Top =30
+                    Width =861
+                    Height =240
+                    FontWeight =700
+                    ForeColor =0
+                    Name ="txtPictId_Надпись"
+                    Caption ="Id"
+                    Tag ="FontColor=White"
+                    GUID = Begin
+                        0xb3de21eaca620144b65fe55eb66346b4
+                    End
+                    ForeThemeColorIndex =0
+                End
+                Begin Label
+                    OverlapFlags =93
+                    TextAlign =1
+                    Left =3780
+                    Top =30
+                    Width =1856
+                    Height =240
+                    FontWeight =700
+                    ForeColor =0
+                    Name ="Comment_Надпись"
+                    Caption ="Comment"
+                    Tag ="FontColor=White"
+                    GUID = Begin
+                        0x28147a6b090981449eda2e431fad195c
+                    End
+                    ForeThemeColorIndex =0
+                End
+                Begin Label
+                    OverlapFlags =93
+                    TextAlign =1
+                    Left =2085
+                    Top =30
+                    Width =1650
+                    Height =240
+                    FontWeight =700
+                    ForeColor =0
+                    Name ="Надпись21"
+                    Caption ="Name"
+                    Tag ="FontColor=White"
+                    GUID = Begin
+                        0xd9ec7a817aee5b459dfc8f23c384632d
+                    End
+                    ForeThemeColorIndex =0
+                End
+                Begin TextBox
+                    AutoTab = NotDefault
+                    OverlapFlags =95
+                    TextAlign =3
+                    IMESentenceMode =3
+                    Left =60
+                    Top =270
+                    Width =861
+                    Height =255
+                    ColumnOrder =0
+                    Name ="txtPictIdFilter"
+                    OnChange ="[Event Procedure]"
+                    GUID = Begin
+                        0xc5ffb40791fe4f469af9d3388966acec
+                    End
+
+                End
+                Begin TextBox
+                    AutoTab = NotDefault
+                    OverlapFlags =95
+                    IMESentenceMode =3
+                    Left =3780
+                    Top =270
+                    Width =1856
+                    Height =255
+                    ColumnOrder =2
+                    TabIndex =2
+                    Name ="txtCommentFilter"
+                    FontName ="Arial"
+                    OnChange ="[Event Procedure]"
+                    GUID = Begin
+                        0x031d107350079a4e911a1174ed0654ca
+                    End
+
+                End
+                Begin Line
+                    OverlapFlags =95
+                    SpecialEffect =5
+                    Left =29
+                    Top =533
+                    Width =5613
+                    Name ="lin01"
+                    GUID = Begin
+                        0xcd8e08a22238d545b4c8d111e6fe50cd
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    FilterLookup =0
+                    IMESentenceMode =3
+                    Left =2085
+                    Top =270
+                    Width =1650
+                    Height =255
+                    ColumnOrder =1
+                    TabIndex =1
+                    Name ="txtNameFilter"
+                    OnChange ="[Event Procedure]"
+                    GUID = Begin
+                        0x5d28679f7f16cd46991b8417d0f7f08f
+                    End
+
+                End
+            End
+        End
+        Begin Section
+            Height =1136
+            BackColor =-2147483633
+            Name ="ОбластьДанных"
+            Tag ="BackColor=Light"
+            GUID = Begin
+                0x1b42d3f5943a2b4c8dfccd5aa4ff5c10
+            End
+            Begin
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =56
+                    Top =30
+                    Width =861
+                    ColumnWidth =1701
+                    Name ="txtPictId"
+                    ControlSource ="ID"
+                    GUID = Begin
+                        0x4422808a26380e46928629d4dfcf1017
+                    End
+
+                    LayoutCachedLeft =60
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =921
+                    LayoutCachedHeight =270
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =3780
+                    Top =30
+                    Width =1856
+                    Height =255
+                    TabIndex =3
+                    Name ="txtComment"
+                    ControlSource ="Comment"
+                    GUID = Begin
+                        0x67799803ed31014ab3904d7bf6832439
+                    End
+
+                End
+                Begin BoundObjectFrame
+                    SizeMode =3
+                    SpecialEffect =0
+                    OverlapFlags =85
+                    Left =960
+                    Top =30
+                    Width =1106
+                    Height =1106
+                    TabIndex =1
+                    Name ="olePicture"
+                    ControlSource ="=OleObject_CreateFromSysObjs([txtPictId])"
+                    GUID = Begin
+                        0x509716d38838c44ca79bf58712327402
+                    End
+
+                    LayoutCachedLeft =963
+                    LayoutCachedWidth =1530
+                    LayoutCachedHeight =567
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =2085
+                    Top =30
+                    Width =1650
+                    Height =255
+                    TabIndex =2
+                    Name ="txtName"
+                    ControlSource ="Name"
+                    GUID = Begin
+                        0x1ed310a67959b84d93c58ee057e0c4d2
+                    End
+
+                End
+            End
+        End
+        Begin FormFooter
+            Height =0
+            BackColor =-2147483633
+            Name ="ПримечаниеФормы"
+            GUID = Begin
+                0x906a95e028e74e4e9cb73f9a4282bf6f
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Option Explicit
+'=========================
+Private Const c_strModule As String = "Form_Test_OlePictContinuos"
+'=========================
+' Описание      : Ленточная форма с картинками
+' Версия        : 1.0.0.452885137
+' Дата          : 28.12.2023 12:19:44
+' Автор         : Кашкин Р.В. (KashRus@gmail.com)
+' Примечание    : выводит картинки из таблицы в ленточную форму
+'=========================
+#Const ObjectDataType = 0
+' ObjectDataType = 0 - (x86/x64) использует библиотеки FreeImage             https://freeimage.sourceforge.io/download.html
+'                для работы проект должен содержать модуль modFreeImage (адаптированный под x64 вариант Visual Basic Wrapper for FreeImage 3 by Carsten Klein (cklein05@users.sourceforge.net))
+'                ВНИМАНИЕ!!! MSO 2003 (x86) вылетает на Load Library FreeImage.dll (v.3.18 x86), поэтому для x86 используем  FreeImage.dll (v.3.17 x86)
+' ObjectDataType = 1 - (x86)     использует модифицированные классы LaVolpe  http://www.planet-source-code.com/vb/scripts/ShowCode.asp? txtCodeId=67466&lngWId=1
+
+' size convertion constants
+Private Const PointsPerInch = 72
+Private Const TwipsPerInch = 1440
+Private Const CentimitersPerInch = 2.54                 '1 дюйм = 127 / 50 см
+Private Const HimetricPerInch = 2540                    '1 дюйм = 1000 * 127/50 himetrix
+'
+Private Const inch = TwipsPerInch                       '1 дюйм = 1440 twips
+Private Const pt = TwipsPerInch / PointsPerInch         '1 пункт = 20 twips
+Private Const cm = TwipsPerInch / CentimitersPerInch    '1 см = 566.929133858 twips
+
+Private Const cGap = 0.1 * cm
+
+#If ObjectDataType = 1 Then
+Dim lvPict As clsPictureData
+#End If
+
+Private Sub Form_Open(Cancel As Integer):
+    Me.Filter = vbNullString:
+#If ObjectDataType = 0 Then
+FreeImage_LoadLibrary:
+#End If
+'' форматирование формы
+'    Call AccObjectSet(Me)
+End Sub
+#If ObjectDataType = 0 Then
+Private Sub Form_Close():   FreeImage_UnLoadLibrary: End Sub
+#End If
+Private Sub Form_Load():    olePicture.SizeMode = acOLESizeZoom:  p_ResizeControls: End Sub
+Private Sub Form_Current(): Call PictureData_SetIcon(Me.hwnd, txtName): End Sub
+Private Sub Form_Resize():  p_ResizeControls: End Sub
+Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
+    On Error GoTo HandleError
+    Select Case KeyCode
+    Case vbKeyDown: DoCmd.GoToRecord , , acNext
+    Case vbKeyUp:   DoCmd.GoToRecord , , acPrevious
+    End Select
+HandleExit:  Exit Sub
+HandleError: Err.Clear: Resume HandleExit
+End Sub
+Private Sub p_ResizeControls()
+    On Error GoTo HandleError
+Dim tmpWidth As Long: tmpWidth = InsideWidth - 255 'PixelsToTwips(pxScrBar)
+    txtComment.Width = tmpWidth - txtComment.Left - txtComment.Height - cGap
+    txtCommentFilter.Width = txtComment.Width
+    lin01.Width = tmpWidth - 2 * lin01.Left
+    'oleColor.Width = tmpWidth
+    Me.Width = tmpWidth
+HandleExit:  Exit Sub
+HandleError: Err.Clear: Resume HandleExit
+End Sub
+Private Function ButtonClick(DibId As Long)
+    MsgBox ("Нажата картинка код #" & DibId)
+End Function
+Private Function OleObject_CreateFromSysObjs(ID As Long)
+    On Error GoTo HandleError
+' прочитать данные таблицы
+Dim aData() As Byte
+    If ByteArray_ReadFromTable(ID, aData) <> 0 Then Err.Raise vbObjectError + 512
+' получить размер контрола
+Dim Xc As Long, Yc As Long, Wc As Long, Hc As Long
+    AccControlLocation olePicture, Xc, Yc, Wc, Hc, ClientAreaPos:=True
+#If ObjectDataType = 0 Then
+' получить FIBITMAP
+Dim fiPict As LongPtr: fiPict = FreeImage_LoadBitmapFromMemoryEx(aData(), Width:=Wc, Height:=Hc): If fiPict = 0 Then Err.Raise vbObjectError + 512
+' получить OLEDATA для FIBITMAP
+    OleObject_CreateFromSysObjs = PictureData_CreateOleObject(fiPict, Me.Section(acDetail).BackColor)
+#Else
+' получить clsPictureData
+    Set lvPict = PictureData_LoadFromEx(aData, Width:=Abs(Wc), Height:=Abs(Hc)): If lvPict.Handle = 0 Then Err.Raise vbObjectError + 512
+' получить OLEDATA для FIBITMAP
+    OleObject_CreateFromSysObjs = PictureData_CreateOleObject(lvPict, Me.Section(acDetail).BackColor)
+#End If
+HandleExit:  Exit Function
+HandleError: Err.Clear: Resume HandleExit
+End Function
+Private Sub txtNameFilter_Change():     Call p_Filter_Change: End Sub
+Private Sub txtPictIdFilter_Change():   Call p_Filter_Change: End Sub
+Private Sub txtCommentFilter_Change():  Call p_Filter_Change: End Sub
+Private Sub p_Filter_Change(Optional FilterControl)
+' фильтр по акативному полю
+    On Error GoTo HandleError
+Const cOper = " AND "
+Const cFunc = " LIKE "
+    With ActiveControl
+Dim lPos As Long: lPos = InStrRev(.Name, "Filter")
+        If lPos > 0 Then
+Dim lSelBeg As Long:    lSelBeg = .SelStart
+Dim lSelLen As Long:    lSelLen = .SelLength
+Dim sFilter As String:  sFilter = Me.Filter
+Dim sField As String:   sField = "[" & Mid$(.Name, 4, lPos - 4) & "]"
+            If Len(.Text) > 0 Then
+                sFilter = TaggedStringSet(sFilter, sField, """*" & .Text & "*""", cOper, cFunc)
+            Else
+                sFilter = TaggedStringDel(sFilter, sField, cOper, cFunc)
+            End If
+            Me.Filter = sFilter
+            If Len(sFilter) > 0 Then
+                Me.FilterOn = True: .SetFocus
+                .SelStart = lSelBeg: .SelLength = lSelLen
+            Else
+                Me.FilterOn = False: .SetFocus
+            End If
+        End If
+    End With
+HandleExit:  Exit Sub
+HandleError: Err.Clear: Resume HandleExit
+End Sub

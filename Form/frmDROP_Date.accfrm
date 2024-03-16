@@ -1,0 +1,2502 @@
+Version =20
+VersionRequired =20
+Checksum =-1031695356
+Begin Form
+    AutoResize = NotDefault
+    RecordSelectors = NotDefault
+    MaxButton = NotDefault
+    MinButton = NotDefault
+    ShortcutMenu = NotDefault
+    NavigationButtons = NotDefault
+    DividingLines = NotDefault
+    DefaultView =0
+    AllowUpdating =2
+    ScrollBars =0
+    ViewsAllowed =1
+    BorderStyle =1
+    GridX =32
+    GridY =32
+    Width =3118
+    ItemSuffix =774
+    Left =240
+    Top =225
+    Right =3360
+    Bottom =3360
+    RecSrcDt = Begin
+        0xc1caa1d57840e140
+    End
+    GUID = Begin
+        0xe16adb876ae05a4f84a759ad80fafa8d
+    End
+    NameMap = Begin
+        0x0acc0e5500000000000000000000000000000000000000000c00000005000000 ,
+        0x0000000000000000000000000000
+    End
+    OnOpen ="[Event Procedure]"
+    OnClose ="[Event Procedure]"
+    PrtMip = Begin
+        0xae050000a6050000a6050000a605000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x000000000000000030690109000000002056ec1ff77f0000335c8d1ff77f0000 ,
+        0x0104220b9c006c0103df00000100090000000000640001000700580201000100 ,
+        0x58020000000041340092650500000000feffffffffffffff25dd5d02fd7f0000 ,
+        0x8080800000005802180000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000046500800 ,
+        0x4d53414343455353000000000000000000000000000000000000000000000000 ,
+        0xff3e03005802aa00ac00aa00ac00010000003100436f7572696572204e657700 ,
+        0x0000000000000000000000000000000000000000010001000200000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000009600 ,
+        0x4b002c0100800000
+    End
+    PrtDevNames = Begin
+        0x080015001f000100000000000000000000000000000000000000000000000046 ,
+        0x505231313a00
+    End
+    OnKeyDown ="[Event Procedure]"
+    OnDeactivate ="[Event Procedure]"
+    AllowDatasheetView =0
+    FilterOnLoad =0
+    AllowLayoutView =0
+    PrtDevModeW = Begin
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0104220bdc006c0103df00000100090000000000640001000700580201000100 ,
+        0x5802000000004100340000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000005802180000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000046500800 ,
+        0x4d53414343455353000000000000000000000000000000000000000000000000 ,
+        0xff3e03005802aa00ac00aa00ac00010000003100436f7572696572204e657700 ,
+        0x0000000000000000000000000000000000000000010001000200000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000009600 ,
+        0x4b002c0100800000
+    End
+    PrtDevNamesW = Begin
+        0x040011001b000100000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000046005000520031003100 ,
+        0x3a000000
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontCharSet =204
+            FontName ="Tahoma"
+        End
+        Begin Rectangle
+            SpecialEffect =3
+            BackStyle =0
+            BorderLineStyle =0
+            Width =850
+            Height =850
+        End
+        Begin Line
+            BorderLineStyle =0
+        End
+        Begin CommandButton
+            TextFontFamily =2
+            BorderLineStyle =0
+        End
+        Begin TextBox
+            SpecialEffect =2
+            OldBorderStyle =0
+            BorderLineStyle =0
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            TextFontCharSet =204
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+        End
+        Begin ToggleButton
+            TextFontFamily =2
+            BorderLineStyle =0
+        End
+        Begin FormHeader
+            Height =637
+            BackColor =-2147483633
+            Name ="ЗаголовокФормы"
+            Tag ="BackColor=Dark"
+            GUID = Begin
+                0xaaafaecb66e40048bf482ef83803b259
+            End
+            Begin
+                Begin CommandButton
+                    AutoRepeat = NotDefault
+                    TabStop = NotDefault
+                    OverlapFlags =93
+                    Left =2010
+                    Top =105
+                    Width =204
+                    Height =353
+                    TabIndex =3
+                    Name ="cmdPrevYear"
+                    Caption ="<< Yr"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x280000000b0000000b0000000100080000000000840000000000000000000000 ,
+                        0x1400000000000000000000000000800000800000008080008000000080008000 ,
+                        0x80800000c0c0c000c0dcc000f0caa600f0fbff00a4a0a000808080000000ff00 ,
+                        0x00ff000000ffff00ff000000ff00ff00ffff0000ffffff000707070707070707 ,
+                        0x0707070007070707070707000707070007070707070700000707070007070707 ,
+                        0x0700000007070700070707070000000007070700070707000000000007070700 ,
+                        0x0707070700000000070707000707070707000000070707000707070707070000 ,
+                        0x0707070007070707070707000707070007070707070707070707070000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x000000000000000000000000
+                    End
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    ControlTipText ="Предыдущий год"
+                    GUID = Begin
+                        0x90097ebd09a898419384793ba3425462
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    AutoRepeat = NotDefault
+                    TabStop = NotDefault
+                    OverlapFlags =93
+                    Left =2867
+                    Top =105
+                    Width =204
+                    Height =353
+                    TabIndex =5
+                    Name ="cmdNextYear"
+                    Caption ="Yr >>"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x280000000b0000000b0000000100040000000000580000000000000000000000 ,
+                        0x1000000010000000000000000000bf0000bf000000bfbf00bf000000bf00bf00 ,
+                        0xbfbf0000c0c0c000808080000000ff0000ff000000ffff00ff000000ff00ff00 ,
+                        0xffff0000ffffff0077777777777b0000777077777773000077700777777b0000 ,
+                        0x77700077777b000077700007777f000077700000777f000077700007777f0000 ,
+                        0x777000777777000077700777777f0000777077777777000077777777777f0000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x000000000000000000000000
+                    End
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    ControlTipText ="Следующий год"
+                    GUID = Begin
+                        0x6a02a9740e95d247bfc0128e4cdd1814
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    AutoRepeat = NotDefault
+                    TabStop = NotDefault
+                    OverlapFlags =93
+                    Left =90
+                    Top =105
+                    Width =204
+                    Height =353
+                    Name ="cmdPrevMonth"
+                    Caption ="<< Mnth"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x280000000b0000000b0000000100080000000000840000000000000000000000 ,
+                        0x1400000000000000000000000000800000800000008080008000000080008000 ,
+                        0x80800000c0c0c000c0dcc000f0caa600f0fbff00a4a0a000808080000000ff00 ,
+                        0x00ff000000ffff00ff000000ff00ff00ffff0000ffffff000707070707070707 ,
+                        0x0707070007070707070707000707070007070707070700000707070007070707 ,
+                        0x0700000007070700070707070000000007070700070707000000000007070700 ,
+                        0x0707070700000000070707000707070707000000070707000707070707070000 ,
+                        0x0707070007070707070707000707070007070707070707070707070000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x000000000000000000000000
+                    End
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    ControlTipText ="Предыдущий месяц"
+                    GUID = Begin
+                        0x2eca8cfd7d719e49ba0d342fe89912af
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    AutoRepeat = NotDefault
+                    TabStop = NotDefault
+                    OverlapFlags =85
+                    Left =1785
+                    Top =105
+                    Width =204
+                    Height =353
+                    TabIndex =2
+                    Name ="cmdNextMonth"
+                    Caption ="Mnth >>"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x280000000b0000000b0000000100040000000000580000000000000000000000 ,
+                        0x1000000010000000000000000000bf0000bf000000bfbf00bf000000bf00bf00 ,
+                        0xbfbf0000c0c0c000808080000000ff0000ff000000ffff00ff000000ff00ff00 ,
+                        0xffff0000ffffff0077777777777b0000777077777773000077700777777b0000 ,
+                        0x77700077777b000077700007777f000077700000777f000077700007777f0000 ,
+                        0x777000777777000077700777777f0000777077777777000077777777777f0000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x000000000000000000000000
+                    End
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    ControlTipText ="Следующий месяц"
+                    GUID = Begin
+                        0x2b1844dd8416fc4fad0c68b898cdf438
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin TextBox
+                    TabStop = NotDefault
+                    DecimalPlaces =0
+                    OverlapFlags =87
+                    TextFontCharSet =204
+                    TextAlign =2
+                    Left =2214
+                    Top =105
+                    Width =653
+                    Height =353
+                    ColumnOrder =1
+                    FontSize =14
+                    TabIndex =4
+                    Name ="fldYear"
+                    Format ="General Number"
+                    AfterUpdate ="[Event Procedure]"
+                    FontName ="Impact"
+                    Tag ="FontColor=Dark"
+                    GUID = Begin
+                        0x69b0db41a768ae4c82cc2ee5ed78d7ac
+                    End
+
+                    ForeThemeColorIndex =0
+                End
+                Begin Line
+                    OverlapFlags =85
+                    SpecialEffect =5
+                    Left =57
+                    Top =15
+                    Width =3005
+                    Name ="linHorizontal002"
+                    GUID = Begin
+                        0x69a9c51098e4724d9d4203cdc2d9b97b
+                    End
+                End
+                Begin Line
+                    OverlapFlags =85
+                    SpecialEffect =5
+                    Left =57
+                    Top =510
+                    Width =3005
+                    Name ="Линия763"
+                    GUID = Begin
+                        0xd2530c9c2fc6d24e99c4f2f19fb1f8f9
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    TabStop = NotDefault
+                    RowSourceTypeInt =1
+                    OldBorderStyle =0
+                    OverlapFlags =87
+                    TextAlign =1
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =294
+                    Top =105
+                    Width =1470
+                    Height =353
+                    ColumnOrder =0
+                    FontSize =14
+                    TabIndex =1
+                    GUID = Begin
+                        0x469e702e47dead43adbcf8bdfd5601a2
+                    End
+                    Name ="fldMonth"
+                    RowSourceType ="Value List"
+                    RowSource ="1;'Январь';2;'Февраль';3;'Март';4;'Апрель';5;'Май';6;'Июнь';7;'Июль';8;'Август';"
+                        "9;'Сентябрь';10;'Октябрь';11;'Ноябрь';12;'Декабрь'"
+                    ColumnWidths ="0"
+                    AfterUpdate ="[Event Procedure]"
+                    FontName ="Impact"
+                    Tag ="FontColor=Dark"
+
+                    ForeThemeColorIndex =0
+                End
+            End
+        End
+        Begin Section
+            Height =1995
+            BackColor =-2147483633
+            Name ="Detail"
+            Tag ="BackColor=Light"
+            OnMouseMove ="[Event Procedure]"
+            GUID = Begin
+                0x807ec64626ecf5428755a23f7afda601
+            End
+            Begin
+                Begin Rectangle
+                    Visible = NotDefault
+                    SpecialEffect =0
+                    BorderWidth =1
+                    OverlapFlags =93
+                    Left =156
+                    Top =455
+                    Width =351
+                    Height =225
+                    BackColor =16764057
+                    BorderColor =16764057
+                    Name ="boxLine"
+                    GUID = Begin
+                        0x8be03c5630a42546b994d2164c5d93a9
+                    End
+                End
+                Begin Label
+                    OverlapFlags =93
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2256
+                    Top =135
+                    Width =350
+                    Height =230
+                    FontWeight =700
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="c06"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    ControlTipText ="суббота"
+                    GUID = Begin
+                        0x9052aa25d5f78c499b9c7b29bacc1c34
+                    End
+                    LayoutCachedLeft =2256
+                    LayoutCachedTop =135
+                    LayoutCachedWidth =2606
+                    LayoutCachedHeight =365
+                End
+                Begin Label
+                    OverlapFlags =93
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =506
+                    Top =135
+                    Width =350
+                    Height =230
+                    FontWeight =700
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="c01"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    ControlTipText ="понедельник"
+                    GUID = Begin
+                        0x493d30fe855eb649bcd1c480647b9e46
+                    End
+                    LayoutCachedLeft =506
+                    LayoutCachedTop =135
+                    LayoutCachedWidth =856
+                    LayoutCachedHeight =365
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =856
+                    Top =135
+                    Width =350
+                    Height =230
+                    FontWeight =700
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="c02"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    ControlTipText ="вторник"
+                    GUID = Begin
+                        0x6e085fc81020bf4092513950e48caa1d
+                    End
+                    LayoutCachedLeft =856
+                    LayoutCachedTop =135
+                    LayoutCachedWidth =1206
+                    LayoutCachedHeight =365
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1206
+                    Top =135
+                    Width =350
+                    Height =230
+                    FontWeight =700
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="c03"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    ControlTipText ="среда"
+                    GUID = Begin
+                        0xbd8c72be9bb15b4f9807c160b61a01c9
+                    End
+                    LayoutCachedLeft =1206
+                    LayoutCachedTop =135
+                    LayoutCachedWidth =1556
+                    LayoutCachedHeight =365
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1556
+                    Top =135
+                    Width =350
+                    Height =230
+                    FontWeight =700
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="c04"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    ControlTipText ="четверг"
+                    GUID = Begin
+                        0xc738bb09d3749a47aec9bc01c648d02e
+                    End
+                    LayoutCachedLeft =1556
+                    LayoutCachedTop =135
+                    LayoutCachedWidth =1906
+                    LayoutCachedHeight =365
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1906
+                    Top =135
+                    Width =350
+                    Height =230
+                    FontWeight =700
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="c05"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    ControlTipText ="пятница"
+                    GUID = Begin
+                        0x7fc6cda56ec21b44833cba56f227a599
+                    End
+                    LayoutCachedLeft =1906
+                    LayoutCachedTop =135
+                    LayoutCachedWidth =2256
+                    LayoutCachedHeight =365
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2606
+                    Top =135
+                    Width =350
+                    Height =230
+                    FontWeight =700
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="c07"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    ControlTipText ="воскресенье"
+                    GUID = Begin
+                        0xfad7a9d564c7004289ec341cc9665a9d
+                    End
+                    LayoutCachedLeft =2606
+                    LayoutCachedTop =135
+                    LayoutCachedWidth =2956
+                    LayoutCachedHeight =365
+                End
+                Begin Line
+                    OverlapFlags =93
+                    Left =150
+                    Top =413
+                    Width =2850
+                    Name ="Line718"
+                    GUID = Begin
+                        0x9335fc3a80623048845b12023097e1dc
+                    End
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =506
+                    Top =455
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d11"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x31b01bd0486ca94aaf3e0290c7f70268
+                    End
+                    LayoutCachedLeft =506
+                    LayoutCachedTop =455
+                    LayoutCachedWidth =856
+                    LayoutCachedHeight =685
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =856
+                    Top =455
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d12"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xaf57f27bad1e774ab4304010351c62da
+                    End
+                    LayoutCachedLeft =856
+                    LayoutCachedTop =455
+                    LayoutCachedWidth =1206
+                    LayoutCachedHeight =685
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1206
+                    Top =455
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d13"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x534773e51458f14aa0382b86db1fa782
+                    End
+                    LayoutCachedLeft =1206
+                    LayoutCachedTop =455
+                    LayoutCachedWidth =1556
+                    LayoutCachedHeight =685
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1556
+                    Top =455
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d14"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xc9fdd8171a6d8f4c92af328387bcde92
+                    End
+                    LayoutCachedLeft =1556
+                    LayoutCachedTop =455
+                    LayoutCachedWidth =1906
+                    LayoutCachedHeight =685
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1906
+                    Top =455
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d15"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xc6340219f411f24c8fc8b41219bc7bb5
+                    End
+                    LayoutCachedLeft =1906
+                    LayoutCachedTop =455
+                    LayoutCachedWidth =2256
+                    LayoutCachedHeight =685
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2256
+                    Top =455
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d16"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xcd6e7939943ada4e9f483b0482763519
+                    End
+                    LayoutCachedLeft =2256
+                    LayoutCachedTop =455
+                    LayoutCachedWidth =2606
+                    LayoutCachedHeight =685
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2606
+                    Top =455
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d17"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x4f81cdf104880146ab03a7e684095031
+                    End
+                    LayoutCachedLeft =2606
+                    LayoutCachedTop =455
+                    LayoutCachedWidth =2956
+                    LayoutCachedHeight =685
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =506
+                    Top =685
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d21"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xc39ab74558ad9949a87d334027c5fc7c
+                    End
+                    LayoutCachedLeft =506
+                    LayoutCachedTop =685
+                    LayoutCachedWidth =856
+                    LayoutCachedHeight =915
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =856
+                    Top =685
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d22"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xdd8b57cc086ca245967d60c7db55d440
+                    End
+                    LayoutCachedLeft =856
+                    LayoutCachedTop =685
+                    LayoutCachedWidth =1206
+                    LayoutCachedHeight =915
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1206
+                    Top =685
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d23"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xc34f2f0f514bfa438b6724cae7c3d74d
+                    End
+                    LayoutCachedLeft =1206
+                    LayoutCachedTop =685
+                    LayoutCachedWidth =1556
+                    LayoutCachedHeight =915
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1556
+                    Top =685
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d24"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x35b8286acf687448b8ad3145980921d8
+                    End
+                    LayoutCachedLeft =1556
+                    LayoutCachedTop =685
+                    LayoutCachedWidth =1906
+                    LayoutCachedHeight =915
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1906
+                    Top =685
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d25"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xf90a3f746e055547a19698a00f11d199
+                    End
+                    LayoutCachedLeft =1906
+                    LayoutCachedTop =685
+                    LayoutCachedWidth =2256
+                    LayoutCachedHeight =915
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2256
+                    Top =685
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d26"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x9c81a3295e7f7a4dba48f6c269a0b8b2
+                    End
+                    LayoutCachedLeft =2256
+                    LayoutCachedTop =685
+                    LayoutCachedWidth =2606
+                    LayoutCachedHeight =915
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2606
+                    Top =685
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d27"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xa0f80bbd2a38304783d9f9ff6f2a35ed
+                    End
+                    LayoutCachedLeft =2606
+                    LayoutCachedTop =685
+                    LayoutCachedWidth =2956
+                    LayoutCachedHeight =915
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =506
+                    Top =915
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d31"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x3ab4ce963feefa40956c7e01937fc246
+                    End
+                    LayoutCachedLeft =506
+                    LayoutCachedTop =915
+                    LayoutCachedWidth =856
+                    LayoutCachedHeight =1145
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =856
+                    Top =915
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d32"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x24a733ef3ab72f449af85fce7a9dd059
+                    End
+                    LayoutCachedLeft =856
+                    LayoutCachedTop =915
+                    LayoutCachedWidth =1206
+                    LayoutCachedHeight =1145
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1206
+                    Top =915
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d33"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x6377622665edd74d924e51d55600d118
+                    End
+                    LayoutCachedLeft =1206
+                    LayoutCachedTop =915
+                    LayoutCachedWidth =1556
+                    LayoutCachedHeight =1145
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1556
+                    Top =915
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d34"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x85ab535ef5c1034f862754b89e18b8b3
+                    End
+                    LayoutCachedLeft =1556
+                    LayoutCachedTop =915
+                    LayoutCachedWidth =1906
+                    LayoutCachedHeight =1145
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1906
+                    Top =915
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d35"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xa1bfd2e89c79c248b940ae5ccd933923
+                    End
+                    LayoutCachedLeft =1906
+                    LayoutCachedTop =915
+                    LayoutCachedWidth =2256
+                    LayoutCachedHeight =1145
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2256
+                    Top =915
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d36"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xd8515c07c371d8498a7f7d5dc40c9984
+                    End
+                    LayoutCachedLeft =2256
+                    LayoutCachedTop =915
+                    LayoutCachedWidth =2606
+                    LayoutCachedHeight =1145
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2606
+                    Top =915
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d37"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x5603b3b778ce974aad947c6f2a0ddc10
+                    End
+                    LayoutCachedLeft =2606
+                    LayoutCachedTop =915
+                    LayoutCachedWidth =2956
+                    LayoutCachedHeight =1145
+                End
+                Begin Label
+                    OverlapFlags =93
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =506
+                    Top =1375
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d51"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x46cabe5c960760419e2bc9ad03c8cdb4
+                    End
+                    LayoutCachedLeft =506
+                    LayoutCachedTop =1375
+                    LayoutCachedWidth =856
+                    LayoutCachedHeight =1605
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =856
+                    Top =1145
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d42"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x524d3e753131714282f22feef537009d
+                    End
+                    LayoutCachedLeft =856
+                    LayoutCachedTop =1145
+                    LayoutCachedWidth =1206
+                    LayoutCachedHeight =1375
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =506
+                    Top =1145
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d41"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x3cf2ac48ae19b6448d8c202fa9197d66
+                    End
+                    LayoutCachedLeft =506
+                    LayoutCachedTop =1145
+                    LayoutCachedWidth =856
+                    LayoutCachedHeight =1375
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =856
+                    Top =1375
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d52"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x54fea7db96fb594fa5c7e61e60f63bad
+                    End
+                    LayoutCachedLeft =856
+                    LayoutCachedTop =1375
+                    LayoutCachedWidth =1206
+                    LayoutCachedHeight =1605
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1206
+                    Top =1145
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d43"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x259f390befaf0549b8afaed6569e529f
+                    End
+                    LayoutCachedLeft =1206
+                    LayoutCachedTop =1145
+                    LayoutCachedWidth =1556
+                    LayoutCachedHeight =1375
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1556
+                    Top =1145
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d44"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x4af5cb310b11974f9aa0cb3fe40ea294
+                    End
+                    LayoutCachedLeft =1556
+                    LayoutCachedTop =1145
+                    LayoutCachedWidth =1906
+                    LayoutCachedHeight =1375
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1556
+                    Top =1375
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d54"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xf043858e67e22c4a8d1f2e7ebc37200f
+                    End
+                    LayoutCachedLeft =1556
+                    LayoutCachedTop =1375
+                    LayoutCachedWidth =1906
+                    LayoutCachedHeight =1605
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1206
+                    Top =1375
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d53"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x1da9f7f92147894faffa90d2b258e422
+                    End
+                    LayoutCachedLeft =1206
+                    LayoutCachedTop =1375
+                    LayoutCachedWidth =1556
+                    LayoutCachedHeight =1605
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1906
+                    Top =1145
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d45"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x4366afacdc15104b955646cfd385c8d7
+                    End
+                    LayoutCachedLeft =1906
+                    LayoutCachedTop =1145
+                    LayoutCachedWidth =2256
+                    LayoutCachedHeight =1375
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1906
+                    Top =1375
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d55"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x3a4c7e38c5cd304c904335dc007255f8
+                    End
+                    LayoutCachedLeft =1906
+                    LayoutCachedTop =1375
+                    LayoutCachedWidth =2256
+                    LayoutCachedHeight =1605
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2256
+                    Top =1375
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d56"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x4bf95ebe52409443842ba7e6078f46b5
+                    End
+                    LayoutCachedLeft =2256
+                    LayoutCachedTop =1375
+                    LayoutCachedWidth =2606
+                    LayoutCachedHeight =1605
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2256
+                    Top =1145
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d46"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xe156c705165e1a44a4175653b5804587
+                    End
+                    LayoutCachedLeft =2256
+                    LayoutCachedTop =1145
+                    LayoutCachedWidth =2606
+                    LayoutCachedHeight =1375
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2606
+                    Top =1145
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d47"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x330f39c6f1828041bf4f69421bfe4339
+                    End
+                    LayoutCachedLeft =2606
+                    LayoutCachedTop =1145
+                    LayoutCachedWidth =2956
+                    LayoutCachedHeight =1375
+                End
+                Begin Label
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2606
+                    Top =1375
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d57"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xa42ed24d6d7aad4791293d0199b5e966
+                    End
+                    LayoutCachedLeft =2606
+                    LayoutCachedTop =1375
+                    LayoutCachedWidth =2956
+                    LayoutCachedHeight =1605
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2606
+                    Top =1605
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d67"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xb182a20ef0709c4f899f74acd0c19441
+                    End
+                    LayoutCachedLeft =2606
+                    LayoutCachedTop =1605
+                    LayoutCachedWidth =2956
+                    LayoutCachedHeight =1835
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =2256
+                    Top =1605
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d66"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x3ef5ac0d0d4dc34c923f9dc820ee8046
+                    End
+                    LayoutCachedLeft =2256
+                    LayoutCachedTop =1605
+                    LayoutCachedWidth =2606
+                    LayoutCachedHeight =1835
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1906
+                    Top =1605
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d65"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xb6cdd61312d19446919b69a90f6921cc
+                    End
+                    LayoutCachedLeft =1906
+                    LayoutCachedTop =1605
+                    LayoutCachedWidth =2256
+                    LayoutCachedHeight =1835
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1556
+                    Top =1605
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d64"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xc5f863eb54fbed44a9bc49433180c186
+                    End
+                    LayoutCachedLeft =1556
+                    LayoutCachedTop =1605
+                    LayoutCachedWidth =1906
+                    LayoutCachedHeight =1835
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =1206
+                    Top =1605
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d63"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x59fdb8be9dad2e4089269a15135e5ef9
+                    End
+                    LayoutCachedLeft =1206
+                    LayoutCachedTop =1605
+                    LayoutCachedWidth =1556
+                    LayoutCachedHeight =1835
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =856
+                    Top =1605
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d62"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x847d6677ffffa94186d00cdeba5a395b
+                    End
+                    LayoutCachedLeft =856
+                    LayoutCachedTop =1605
+                    LayoutCachedWidth =1206
+                    LayoutCachedHeight =1835
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =506
+                    Top =1605
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="d61"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0xc9f4382d392d1a4eac9d9bac6683d3fb
+                    End
+                    LayoutCachedLeft =506
+                    LayoutCachedTop =1605
+                    LayoutCachedWidth =856
+                    LayoutCachedHeight =1835
+                End
+                Begin Rectangle
+                    OverlapFlags =223
+                    Left =60
+                    Top =60
+                    Width =3010
+                    Height =1863
+                    Name ="boxGroup"
+                    GUID = Begin
+                        0x9bf0af2e9e2a064c835aca40e5d398f2
+                    End
+                End
+                Begin Label
+                    OverlapFlags =223
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =156
+                    Top =455
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="r10"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    Tag ="10"
+                    ControlTipText ="48"
+                    GUID = Begin
+                        0x09c3c55c6f58c149a21aab85dec1deec
+                    End
+                    LayoutCachedLeft =156
+                    LayoutCachedTop =455
+                    LayoutCachedWidth =506
+                    LayoutCachedHeight =685
+                End
+                Begin Label
+                    OverlapFlags =223
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =156
+                    Top =685
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="r20"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    Tag ="20"
+                    ControlTipText ="49"
+                    GUID = Begin
+                        0x95fb46c91ecd38409a0beb4d82548d9e
+                    End
+                    LayoutCachedLeft =156
+                    LayoutCachedTop =685
+                    LayoutCachedWidth =506
+                    LayoutCachedHeight =915
+                End
+                Begin Label
+                    OverlapFlags =223
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =156
+                    Top =915
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="r30"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    Tag ="30"
+                    ControlTipText ="50"
+                    GUID = Begin
+                        0xdb6dd9f28aea024ea42f248fd8035afd
+                    End
+                    LayoutCachedLeft =156
+                    LayoutCachedTop =915
+                    LayoutCachedWidth =506
+                    LayoutCachedHeight =1145
+                End
+                Begin Label
+                    OverlapFlags =223
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =156
+                    Top =1145
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="r40"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    Tag ="40"
+                    ControlTipText ="51"
+                    GUID = Begin
+                        0xfb44e97c42c3c84cb9d1cf33836d9822
+                    End
+                    LayoutCachedLeft =156
+                    LayoutCachedTop =1145
+                    LayoutCachedWidth =506
+                    LayoutCachedHeight =1375
+                End
+                Begin Label
+                    OverlapFlags =223
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =156
+                    Top =1375
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="r50"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    Tag ="50"
+                    ControlTipText ="52"
+                    GUID = Begin
+                        0x066f57438d5bf84ea7a8a23ca1b5a500
+                    End
+                    LayoutCachedLeft =156
+                    LayoutCachedTop =1375
+                    LayoutCachedWidth =506
+                    LayoutCachedHeight =1605
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =215
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =156
+                    Top =1605
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="r60"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    Tag ="60"
+                    GUID = Begin
+                        0xc406c364e13c0e4aa8a5b32f18aa787a
+                    End
+                    LayoutCachedLeft =156
+                    LayoutCachedTop =1605
+                    LayoutCachedWidth =506
+                    LayoutCachedHeight =1835
+                End
+                Begin Label
+                    OverlapFlags =215
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =156
+                    Top =135
+                    Width =350
+                    Height =230
+                    FontWeight =700
+                    BackColor =-2147483633
+                    ForeColor =-2147483640
+                    Name ="c00"
+                    OnClick ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    OnMouseDown ="[Event Procedure]"
+                    OnMouseUp ="[Event Procedure]"
+                    OnMouseMove ="[Event Procedure]"
+                    GUID = Begin
+                        0x618c463c5547e347bb466cd67f235f13
+                    End
+                    LayoutCachedLeft =156
+                    LayoutCachedTop =135
+                    LayoutCachedWidth =506
+                    LayoutCachedHeight =365
+                End
+                Begin Rectangle
+                    SpecialEffect =0
+                    BorderWidth =2
+                    OverlapFlags =215
+                    Left =1206
+                    Top =1145
+                    Width =350
+                    Height =230
+                    BackColor =-2147483633
+                    BorderColor =255
+                    Name ="boxMark"
+                    Tag ="BackColor=Light"
+                    GUID = Begin
+                        0x87df64f47d15d946bd2d4fd291f66cba
+                    End
+                    LayoutCachedLeft =1206
+                    LayoutCachedTop =1145
+                    LayoutCachedWidth =1556
+                    LayoutCachedHeight =1375
+                End
+            End
+        End
+        Begin FormFooter
+            Height =510
+            BackColor =-2147483633
+            Name ="ПримечаниеФормы"
+            Tag ="BackColor=Light"
+            GUID = Begin
+                0xc90eb3d0d4284a44bf43caef52314328
+            End
+            Begin
+                Begin CommandButton
+                    TabStop = NotDefault
+                    OverlapFlags =85
+                    TextFontFamily =34
+                    Left =75
+                    Top =72
+                    Width =834
+                    Height =344
+                    FontSize =8
+                    FontWeight =400
+                    TabIndex =2
+                    Name ="CmdToday"
+                    Caption ="Сегодня"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0x6f3c6f985fcdd041becaa6d2d84ff5c6
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin Line
+                    OverlapFlags =85
+                    SpecialEffect =5
+                    Left =57
+                    Top =15
+                    Width =3005
+                    Name ="linHorizontal003"
+                    GUID = Begin
+                        0xb0b1cf43955c3c48bed6bffc97a38d2f
+                    End
+                End
+                Begin Line
+                    OverlapFlags =85
+                    SpecialEffect =5
+                    Left =57
+                    Top =450
+                    Width =3005
+                    Name ="linHorizontal004"
+                    GUID = Begin
+                        0x0aefaa061bb05e41af85d96689e849bc
+                    End
+                End
+                Begin CommandButton
+                    Cancel = NotDefault
+                    OverlapFlags =85
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =2373
+                    Top =75
+                    Width =714
+                    Height =344
+                    FontSize =8
+                    FontWeight =400
+                    TabIndex =1
+                    ForeColor =-2147483630
+                    Name ="cmdCancel"
+                    Caption ="Отмена"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0xdbcac6f71888294e970c0eb838f8d05b
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    Default = NotDefault
+                    OverlapFlags =85
+                    TextFontCharSet =204
+                    TextFontFamily =34
+                    Left =1530
+                    Top =75
+                    Width =714
+                    Height =344
+                    FontSize =8
+                    FontWeight =400
+                    ForeColor =-2147483630
+                    Name ="cmdOK"
+                    Caption ="OK"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    GUID = Begin
+                        0x4ce4cc7046751746a58c32f93e86a376
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Option Explicit
+'=========================
+Private Const c_strModule As String = "Form_frmDROP_Date"
+'=========================
+' Описание      : Всплывающий календарик
+' Версия        : 1.0.9.453565668
+' Дата          : 05.03.2024 13:36:12
+' Автор         : Кашкин Р.В. (KashRus@gmail.com)
+' Примечание    : использует clsRelay для трансляции событий, clsContextMenu - для вывода контекстного меню, _
+'               : а также  функции из modDates для работы с меню и форматирования дат
+' v.1.0.9       : 22.03.2019 - Исправлена ошибка в нумерации недель в p_UpdateDays
+' v.1.0.7       : 20.03.2019 - Исправлен баг с неправильной сменой даты при отсутствии вспомогательных таблиц
+'=========================
+'Private Const m_strFormType = c_strDropType, m_strFormMode = c_strDateMode
+'=========================
+' из-за модальности окна ControlTipText с информацией о дне не выводится
+#Const UseCalendar = True ' использовать доп. таблицу справочных и выходных дней
+'=========================
+' для задания размеров формы при открытии окна
+Private Const c_lngFormHeight = 5 * cm, c_lngFormMinHeight = c_lngFormHeight, c_lngFormMaxHeight = c_lngFormHeight * 1.2
+Private Const c_lngFormWidth = 5.5 * cm, c_lngFormMinWidth = c_lngFormWidth, c_lngFormMaxWidth = c_lngFormWidth * 1.2
+'=========================
+Private m_varValue As Date              ' текущее значение
+Private m_lngModalResult As VbMsgBoxResult
+'-------------------------
+' для групповой обработки событий контролов
+Private WithEvents mRelay As clsRelay   ' для ретрансляции событий группы контролов в форму
+Attribute mRelay.VB_VarHelpID = -1
+Private colCtls As Collection           ' коллекция для хранения элементов clsControlEventsTransfer
+'-------------------------
+Private Const c_strDayPref = "d", c_strColPref = "c", c_strRowPref = "r"
+
+Private Const FirstDayOfWeek = vbMonday
+
+Private m_intYear As Integer, m_bytMonth As Byte, m_bytDay As Byte
+Private BegDate As Date, EndDate As Date ', CurDate As Date
+Private LastDay As Byte
+
+Private Const HeadGap As Long = 90      ' вертикальный отступ заголовков колонок от таблицы
+
+Private Const cMax = 7, rMax = 6
+Private Const cWidth = 350, cHeight = 230 ' 351 / 225
+
+Private Const MoveGap = 0.25 '0.1            ' смещение курсора на которое не реагируем
+'Private PrevX As Single, PrevY As Single
+'Private Const c_strFunUnHoverAll = "=UnHoverAll()"
+
+Private Row As Byte, Col As Byte, Sel As Byte
+Private Enum calObjType
+' типы обрабатываемых контролов календаря
+    calObjTypeUndef = 0 '
+    calObjTypeDay = 1 '
+    calObjTypeCol = 2 '
+    calObjTypeRow = 3 '
+End Enum
+
+'----------------------------
+'Private Sub Form_Load()
+'    Me.Visible = False
+'End Sub
+Private Sub Form_Open(Cancel As Integer): Call p_Init: End Sub
+Private Sub Form_Close(): Call p_Erase: End Sub
+Private Sub Form_Deactivate(): Me.Visible = False: End Sub
+Private Sub cmdOK_Click(): m_lngModalResult = vbOK: Me.Visible = False: End Sub
+Private Sub cmdCancel_Click(): m_lngModalResult = vbCancel: Me.Visible = False: End Sub
+Public Property Let Value(rData As Date): p_SetValue (rData): End Property
+Public Property Get Value() As Date: Value = m_varValue: End Property ' = DateSerial(m_intYear, m_bytMonth, m_bytDay):  p_SetValue CDate(m_varValue): End Property
+Public Property Get ModalResult() As VbMsgBoxResult: ModalResult = m_lngModalResult: End Property
+'----------------------------
+Private Sub p_Init()
+    On Error GoTo HandleError
+    InsideHeight = Section(acDetail).Height + Section(acHeader).Height + Section(acFooter).Height: InsideWidth = Me.Width
+'    On Error Resume Next
+'    Set mfr = New clsForm
+    Set colCtls = New Collection
+    Set mRelay = New clsRelay
+    
+    p_FillMonthes   ' заполняем список месяцев
+    p_InitControls  ' расставляем ячейки дат
+'    If IsSubForm(Me) Then
+'    ' если открыта как подформа - прячем кнопки
+'    End If
+    ' задаем события для формы и секций формы
+    ' необходимо чтобы снимать акцентирование
+    ' с контролов при выходе курсора за пределы
+    With Me
+        .KeyPreview = False
+'        .OnMouseMove = c_strCustomProc
+        .Section(acDetail).OnMouseMove = c_strCustomProc
+    End With
+    Value = Date
+    p_RedrawForm
+HandleExit:  Exit Sub
+HandleError: Err.Clear: Resume HandleExit
+End Sub
+Private Sub p_Erase()
+On Error Resume Next
+    DropTempCalendar ' удаляем временный календарь
+    Set colCtls = Nothing: Set mRelay = Nothing
+    Call SysCmd(acSysCmdSetStatus, vbNullString)
+    Call PictureData_SetIcon(Me.hwnd)
+End Sub
+Private Sub p_SetValue(rData As Date)
+Const cstrProcedure = "p_SetValue"
+' Dim PrevDate as Date, NewDate as Date
+    On Error GoTo HandleError
+' Если разница между старой и новой датами меньше дня календарь обновлять не надо
+    If DateDiff("d", rData, m_varValue) = 0 Then GoTo HandleExit
+   
+    m_bytDay = Day(rData)
+    m_bytMonth = Month(rData): fldMonth = m_bytMonth
+    m_intYear = Year(rData): fldYear = Format$(m_intYear, "###0")
+    
+    Caption = Format$(rData, "dddd, d mmmm yyyy г.")
+' отмечаем текущий день
+    'b = 1 * Pt
+Dim f As Byte: f = Weekday(DateSerial(m_intYear, m_bytMonth, 1), FirstDayOfWeek)
+    Call p_Click( _
+        Row:=(f + m_bytDay - FirstDayOfWeek) \ 7 + 1, _
+        Col:=Weekday(DateSerial(m_intYear, m_bytMonth, m_bytDay), FirstDayOfWeek))
+' Если разница между старой и новой датами меньше месяца не обновляем календарь
+    If DateDiff("m", rData, m_varValue) <> 0 Then p_UpdateDays
+    m_varValue = rData
+HandleExit:  Exit Sub
+HandleError: Resume HandleExit
+End Sub
+Private Function p_Error(Optional ErrCode As Long)
+On Error Resume Next
+    p_Error = ErrCode
+'    Err.Raise ErrCode
+'    Select Case Err
+'    Case 0:     txtValue = cInitValue ': bolErr = False: Exit Function
+'    End Select
+'    Err.Clear:
+End Function
+'----------------------------
+Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
+' не срабатывает событие
+    On Error GoTo HandleError
+    Select Case KeyCode
+    Case vbKeyLeft:     If Shift = 0 Then p_SetValue DateAdd("d", -1, m_varValue)
+    Case vbKeyRight:    If Shift = 0 Then p_SetValue DateAdd("d", 1, m_varValue)
+    Case vbKeyUp:       If Shift = 0 Then p_SetValue DateAdd("ww", -1, m_varValue)
+    Case vbKeyDown:     If Shift = 0 Then p_SetValue DateAdd("ww", 1, m_varValue)
+    Case vbKeyPageUp:   If Shift = 0 Then cmdPrevMonth_Click Else If Shift = 1 Then cmdPrevYear_Click
+    Case vbKeyPageDown: If Shift = 0 Then cmdNextMonth_Click Else If Shift = 1 Then cmdNextYear_Click
+    Case vbKeyHome:     If Shift = 0 Then cmdToday_Click
+    End Select
+HandleExit:  Exit Sub
+HandleError: Err.Clear: Resume HandleExit
+End Sub
+Private Sub Detail_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
+Static PrevX As Single, PrevY As Single
+    If Abs(x - PrevX) < MoveGap Or Abs(y - PrevY) < MoveGap Then GoTo HandleExit
+    ' если смещение больше порогового перерисовываем акцентирование
+    p_Hover Show:=False: PrevX = x: PrevY = y
+HandleExit:
+End Sub
+Private Sub cmdNextMonth_Click(): p_SetValue DateAdd("m", 1, m_varValue): End Sub
+Private Sub cmdPrevMonth_Click(): p_SetValue DateAdd("m", -1, m_varValue): End Sub
+Private Sub cmdNextYear_Click():  p_SetValue DateAdd("yyyy", 1, m_varValue): End Sub
+Private Sub cmdPrevYear_Click():  p_SetValue DateAdd("yyyy", -1, m_varValue): End Sub
+Private Sub cmdToday_Click():     p_SetValue Now: End Sub
+Private Sub fldMonth_AfterUpdate(): DateMonth = fldMonth: Me.SetFocus: End Sub
+Private Sub fldYear_AfterUpdate(): DateYear = fldYear: Me.SetFocus: End Sub
+Public Property Let DateYear(rData As Integer): m_intYear = rData: p_SetValue DateSerial(m_intYear, Month(m_varValue), Day(m_varValue)): End Property
+Public Property Get DateYear() As Integer: DateYear = m_intYear: End Property
+Public Property Let DateMonth(rData As Byte): m_bytMonth = rData: p_SetValue DateSerial(Year(m_varValue), m_bytMonth, Day(m_varValue)): End Property
+Public Property Get DateMonth() As Byte: DateMonth = m_bytMonth: End Property
+Public Property Let DateDay(rData As Byte): m_bytDay = rData:  p_SetValue DateSerial(Year(m_varValue), Month(m_varValue), m_bytDay): End Property
+Public Property Get DateDay() As Byte: DateDay = m_bytDay: End Property
+'----------------------------
+' для событий из clsControlEventsTransfer
+'----------------------------
+Private Sub mRelay_GetParent(PARENT As Object): Set PARENT = Me: End Sub
+Private Sub p_InitControl(ctl As Access.Control) ', Optional idx)
+' добавляем групповой обработчик по контролу
+Dim cTransf As clsControlEventsTransfer
+    Set cTransf = New clsControlEventsTransfer
+    cTransf.Init Index:=colCtls.Count, EventControl:=ctl, Relay:=mRelay
+    colCtls.Add cTransf
+End Sub
+Private Sub p_InitControls()
+' расставляем ячейки
+Dim i As Long
+Dim r As Byte, c As Byte
+Dim w As Long, h As Long, l As Long, t As Long
+Dim ctl As Access.Control ', cTransf As clsControlEventsTransfer
+Dim strCtlName As String
+Dim bytCtlType As calObjType
+    Set ctl = Me.Controls(c_strColPref & 0 & 0)
+    With ctl: w = cWidth: h = cHeight: l = .Left: t = .Top: End With
+'    WindowFreeze Me.hWnd
+' инициализируем коллекцию контролов
+' для которых будет задана групповая обработка событий
+    Set colCtls = New Collection
+    r = 0 ' индекс первой строки
+
+    On Error GoTo HandleNext
+    Do Until r > rMax
+        c = 0 ' индекс первой колонки
+        Do Until c > cMax
+        ' определяем тип контрола даты по номеру колонки и строки
+        ' формируем имя и позицию контрола на форме
+            If p_GetCtlTypeByPos(r, c, bytCtlType, strCtlName) Then GoTo HandleNext
+        ' получаем искомый контрол и позиционируем его на форме
+            Set ctl = Me.Controls(strCtlName)
+            With ctl
+        ' позициионируем контрол даты
+                .Width = w: .Height = h
+                Select Case bytCtlType
+                Case calObjTypeCol: .Left = l + c * w: .Top = t                   ' c00 до с07 - заголовки колонок
+                Case calObjTypeRow: .Left = l:         .Top = t + r * h + HeadGap ' r10 до r60 - заголовки строк
+                Case calObjTypeDay: .Left = l + c * w: .Top = t + r * h + HeadGap ' d11 до d67 - значения
+                Case Else: GoTo HandleNext
+                End Select
+            End With
+            p_InitControl ctl ' инициализация групповой обработки событий
+HandleNext:
+        Err.Clear
+            c = c + 1 ' следующая колонка
+        Loop
+        r = r + 1 ' следующая строка
+    Loop
+'    WindowUnFreeze
+End Sub
+Public Sub EventControl_Click( _
+    EventControl As Access.Control) 'As Integer
+' обработка события щелчок мышью для дат календаря
+Dim Row As Byte, Col As Byte, ctlType As calObjType
+Dim Result As Integer
+    With EventControl
+        p_GetCtlInfoByName .Name, Row, Col, ctlType
+        Select Case ctlType
+        Case calObjTypeCol: Call p_Click(Row, Col)  ' c00 до с07 - заголовки колонок
+        Case calObjTypeRow: Call p_Click(Row, Col)  ' r10 до r60 - заголовки строк
+        Case calObjTypeDay: Sel = .Caption          ' d11 до d67 - значения
+                            If Sel < 1 Or Sel > LastDay Then GoTo HandleExit
+                            DateDay = Sel: Call p_Click(Row, Col)
+        Case Else
+        End Select
+    End With
+HandleExit:
+End Sub
+Public Sub EventControl_DblClick( _
+    EventControl As Access.Control, _
+    Cancel As Integer) 'As Integer
+' обработка события двойной щелчок мышью для дат календаря
+Dim Row As Byte, Col As Byte, ctlType As calObjType
+Dim Result As Integer
+    Cancel = -1
+    With EventControl
+        p_GetCtlInfoByName .Name, Row, Col, ctlType
+        Select Case ctlType
+        Case calObjTypeCol ' c00 до с07 - заголовки колонок
+        Case calObjTypeRow ' r10 до r60 - заголовки строк
+        Case calObjTypeDay ' d11 до d67 - значения
+           Sel = .Caption: If Sel < 1 Or Sel > LastDay Then GoTo HandleExit
+           Call p_Click(Row, Col): DateDay = Sel: Cancel = 0: cmdOK_Click
+        Case Else
+        End Select
+    End With
+HandleExit:
+End Sub
+Public Sub EventControl_MouseMove( _
+    EventControl As Access.Control, _
+    Button As Integer, Shift As Integer, x As Single, y As Single) 'As Integer
+' обработка события мышь над контролом для дат календаря
+Dim Result As Integer
+Dim Row As Byte, Col As Byte, ctlType As calObjType
+Static PrevX As Single, PrevY As Single
+    If Abs(x - PrevX) < MoveGap Or Abs(y - PrevY) < MoveGap Then GoTo HandleExit
+    ' если смещение больше порогового перерисовываем акцентирование
+    With EventControl
+        p_GetCtlInfoByName .Name, Row, Col, ctlType
+        Select Case ctlType
+        Case calObjTypeCol: Call p_Hover(Show:=True, Row:=Row, Col:=Col) ' c00 до с07 - заголовки колонок
+        Case calObjTypeRow: Call p_Hover(Show:=True, Row:=Row, Col:=Col) ' r10 до r60 - заголовки строк
+        Case calObjTypeDay: Call p_Hover(Show:=True, Row:=Row, Col:=Col) ' d11 до d67 - значения
+        Case Else
+        End Select
+    End With
+    PrevX = x: PrevY = y
+HandleExit:
+End Sub
+Public Sub EventControl_MouseDown( _
+    EventControl As Access.Control, _
+    Button As Integer, Shift As Integer, x As Single, y As Single) 'As Integer
+' обработка события кнопка нажата для дат календаря
+Dim Row As Byte, Col As Byte, ctlType As calObjType
+Dim CalDate As Date ', DayType As eDateType, DayDesc As String
+Dim Result As Integer
+    ' если дата - отменяем контекстное меню
+    ' и выводим свое - с выбором типа даты
+    If Button <> acRightButton Then GoTo HandleExit
+    ' правый клик
+    With EventControl
+        p_GetCtlInfoByName .Name, Row, Col, ctlType
+        Select Case ctlType
+        Case calObjTypeCol: Call p_Hover(Show:=True, Row:=Row, Col:=Col)  ' c00 до с07 - заголовки колонок
+        Case calObjTypeRow: Call p_Hover(Show:=True, Row:=Row, Col:=Col)  ' r10 до r60 - заголовки строк
+        Case calObjTypeDay: CalDate = DateAdd("d", .Caption - 1, BegDate) ' d11 до d67 - значения
+           Call p_Hover(Show:=True, Row:=Row, Col:=Col): If DateInfoAsk(CalDate, EventControl) Then p_UpdateDays      ' после изменения надо обновить вывод
+        Case Else
+        End Select
+    End With
+HandleExit: 'PrevX = x: PrevY = y
+End Sub
+'----------------------------
+Private Function p_GetCtlInfoByName( _
+    ctlName As String, _
+    Optional Row As Byte, Optional Col As Byte, _
+    Optional ctlType As calObjType = calObjTypeUndef _
+    )
+' получаем тип и номера строки и колонки по имени контрола
+On Error GoTo HandleError
+    Row = 0: Col = 0
+    ctlType = calObjTypeUndef
+    Select Case VBA.Left$(ctlName, 1)
+    Case c_strColPref: ctlType = calObjTypeCol
+    Case c_strRowPref: ctlType = calObjTypeRow
+    Case c_strDayPref: ctlType = calObjTypeDay
+    Case Else:         GoTo HandleExit
+    End Select
+    Row = CByte(VBA.Mid$(ctlName, 2, 1))
+    Col = CByte(VBA.Mid$(ctlName, 3, 1))
+HandleExit:  Exit Function
+HandleError: Err.Clear: Resume HandleExit
+End Function
+
+Private Function p_GetCtlTypeByPos( _
+    Row As Byte, Col As Byte, _
+    Optional ctlType As calObjType = calObjTypeUndef, _
+    Optional ctlName As String)
+' получаем тип и имя контрола по номеру строки и колонки
+Dim Result As Integer
+    If Row = 0 And (Col >= 0 And Col <= cMax) Then
+        ctlType = calObjTypeCol: ctlName = c_strColPref & Row & Col: Result = 0    ' c00 до с07 - заголовки колонок
+    ElseIf Col = 0 And (Row > 0 And Row <= rMax) Then
+        ctlType = calObjTypeRow: ctlName = c_strRowPref & Row & Col: Result = 0    ' r10 до r60 - заголовки строк
+    ElseIf (Col > 0 And Col <= cMax) And (Row > 0 And Row <= rMax) Then
+        ctlType = calObjTypeDay: ctlName = c_strDayPref & Row & Col: Result = 0    ' d11 до d67 - значения
+    Else
+        ctlType = calObjTypeUndef: Result = -1
+    End If
+HandleExit:  p_GetCtlTypeByPos = Result: Exit Function
+HandleError: Err.Clear: Resume HandleExit
+End Function
+Private Function p_UpdateDays(Optional FirstDayOfWeek As VbDayOfWeek = vbMonday)
+' заполняет календарь
+Const c_strProcedure = "p_UpdateDays"
+' ошибка при нумеровании недель. первая неделя если начало месяца приходится на выходной день считается неверно.
+Dim Result As Boolean ':Result = False
+    On Error GoTo HandleError
+Dim r As Byte, c As Byte, d As Byte, f As Byte
+Dim ctlColor As Long '
+Dim strPrf As String * 1
+Dim strCap As String, strDsc As String, bolHlt As Boolean
+Dim eType As eDateType
+Dim lngCol As Long
+Dim bolVis As Boolean
+'Dim DateType As eDateType
+Dim strMessage As String, strComment As String
+    BegDate = DateSerial(m_intYear, m_bytMonth, 1)
+    EndDate = DateAdd("d", -1, DateAdd("m", 1, BegDate))
+    LastDay = Day(EndDate)                  ' номер последнего дня
+    d = 0                                   ' смещение относительно первого дня
+    f = Weekday(BegDate, FirstDayOfWeek)    ' столбец первого дня
+'    WindowFreeze Me.hWnd
+    r = 0   ' строка
+    Do      ' перебираем строки
+        c = 0   ' колонка
+        Do      ' перебираем колонки
+            If r = 1 And c = f Then d = 1    ' соответствует дате месяца
+            strCap = vbNullString: strDsc = vbNullString
+            If r = 0 And c > 0 Then ' если первая строка - это строка заголовков дней недели
+    ' день недели
+                bolVis = True
+                strPrf = c_strColPref
+                strCap = WeekdayName(c, True, FirstDayOfWeek)           ' день недели
+                strDsc = WeekdayName(c, False, FirstDayOfWeek)
+                Select Case FirstDayOfWeek + c
+                Case 8:                         lngCol = GetColorFromText(DateTypes(eDateTypeSatday, 4)):       bolHlt = True   ' суббота
+                Case 2, 9:                      lngCol = GetColorFromText(DateTypes(eDateTypeSunday, 4)):       bolHlt = True   ' воскресенье
+                Case Else:                      lngCol = GetColorFromText(DateTypes(eDateTypeWeekday, 4)):      bolHlt = False  ' рабочий
+                End Select
+            ElseIf r > 0 And c = 0 Then ' если первая колонка - это колонка заголовка номера недели
+    ' номер недели
+                bolVis = d <= LastDay ' выводим ячейку
+                strPrf = c_strRowPref
+                If bolVis Then
+                    lngCol = GetColorFromText("DarkGray")
+                    strCap = DatePart("ww", DateAdd("d", BegDate, d), , vbFirstJan1) ' номер недели
+                    strDsc = strCap
+                End If
+            ElseIf r > 0 And c > 0 Then ' поле даты
+    ' день месяца
+                strPrf = c_strDayPref
+                bolVis = (d >= 1) And (d <= LastDay) ' выводим ячейку
+                If bolVis Then
+                Dim strEventsId As String
+                    strCap = d
+                    eType = DateInfoGet(DateAdd("d", d - 1, BegDate), EventIds:=strEventsId, DateDesc:=strDsc)
+                    bolHlt = (eType <> eDateTypeWeekday) Or Len(strEventsId)    ' выделяем если это нерабочий день или в есть событие
+                    lngCol = GetColorFromText(DateTypes(eType, 4))              ' цвет даты в зависимости от типа
+                    d = d + 1
+                End If
+            Else
+                GoTo HandleNext
+            End If
+    ' Форматируем день месяца
+            With Me.Controls(strPrf & r & c)
+                If bolVis Then .Caption = strCap: .ControlTipText = strDsc: .ForeColor = lngCol: .FontBold = bolHlt
+                .Visible = bolVis
+            End With
+HandleNext: c = c + 1
+        Loop Until c > cMax
+        r = r + 1
+    Loop Until r > rMax
+'    WindowUnFreeze 'Me.hWnd
+    Result = True
+HandleExit:  p_UpdateDays = Result: Exit Function
+'HandleError: Stop: Err.Clear: Resume 0
+HandleError: Result = False: Err.Clear: Resume HandleExit
+End Function
+Private Function p_Click( _
+    Optional Row As Byte = 0, _
+    Optional Col As Byte = 0)
+' выделяет ячейку типа c_strDayPref в позиции (Row, Col)
+Dim ctlType As calObjType, ctlName As String
+Dim ctl As Access.Control ', box As Access.Control
+Dim l As Long, t As Long, w As Long, h  As Long
+Dim Typ As String
+'Const Gap = 50
+'    WindowFreeze Me.hWnd
+    Call p_GetCtlTypeByPos(Row, Col, ctlType, ctlName)
+    Set ctl = Me.Controls(ctlName)
+    Select Case ctlType
+     Case calObjTypeDay
+     ' день - выделяем ячейку "d[r;c]"
+        With ctl:       l = .Left:  t = .Top: w = .Width: h = .Height: End With
+        With boxMark:   .Width = w: .Height = h: .Left = l: .Top = t: .Visible = True: End With
+        boxLine.Visible = False
+     Case calObjTypeRow
+     ' строка - выделяем строку "r[r;0]:d[r;cMax]"
+        With ctl:       t = .Top:   h = .Height:  End With '- 2 * b
+        With boxGroup:  l = .Left:  w = .Width:     End With
+        With boxLine:   .Width = cWidth: .Height = cHeight: .Left = l:   .Top = t: .Width = w: .Height = h: .Visible = True: End With
+     Case calObjTypeCol
+     ' колонка - выделяем колонку "с[0;r]:d[rMax;r]"
+        With ctl:       l = .Left:  w = .Width:  End With
+        With boxGroup:  t = .Top:   h = .Height: End With
+        With boxLine:   .Width = cWidth: .Height = cHeight: .Left = l: .Top = t: .Width = w: .Height = h: .Visible = True: End With
+     Case Else: boxLine.Visible = False
+    End Select
+'    WindowUnFreeze 'Me.hWnd
+End Function
+Private Function p_Hover( _
+    Optional Show As Boolean = True, _
+    Optional Row As Byte = 0, _
+    Optional Col As Byte = 0)
+' акцентирует ячейку типа c_strDayPref в позиции (Row, Col)
+' если CtlType=calObjTypeUndef - снимает акцентирование у всех
+Dim r As Byte, c As Byte
+Dim ctlType As calObjType, ctlName As String
+Dim ctl As Access.Control
+Dim strStatus As String
+'    WindowFreeze Me.hWnd
+    strStatus = Space(1)
+    Call SysCmd(acSysCmdSetStatus, " ")
+    r = 0
+    Do ' перебираем строки
+        c = 0
+        Do ' перебираем колонки
+            If p_GetCtlTypeByPos(r, c, ctlType, ctlName) Then GoTo HandleNext
+            Set ctl = Me.Controls(ctlName)
+            With ctl
+            If Show And (c = Col And r = Row) Then
+            ' задано акцентировать и курсор над указаным элементом
+            ' определяем как его акцентировать
+                Select Case ctlType
+                Case calObjTypeRow ' акцентируем строку (неделя)
+'                    .SpecialEffect = 2  '
+'                    .BorderStyle = 2
+                    strStatus = VBA.Format$(m_varValue, "yyyy") & " - неделя №" & .ControlTipText
+                    Call SysCmd(acSysCmdSetStatus, strStatus)
+                Case calObjTypeCol ' акцентируем колонку (день недели)
+'                    .SpecialEffect = 2  '
+'                    .BorderStyle = 2
+                    strStatus = VBA.Format$(m_varValue, "mmmm yyyy") & " - " & .ControlTipText
+                    Call SysCmd(acSysCmdSetStatus, strStatus)
+                Case calObjTypeDay ' акцентируем день
+                    .SpecialEffect = 2: .BorderStyle = 2
+                    strStatus = VBA.Format$(DateSerial(Year(m_varValue), Month(m_varValue), .Caption), "dd mmmm yyyy") & " - " & .ControlTipText
+                    Call SysCmd(acSysCmdSetStatus, strStatus)
+                    '.BorderColor
+                Case Else ' снимаем акцентирование
+                    .SpecialEffect = 0: .BorderStyle = 0
+                End Select
+             Else
+             ' задано не акцентировать или курсор в другом месте - снимаем акцентирование
+                If .Visible Then .SpecialEffect = 0: .BorderStyle = 0 'Flat/Transparent
+            End If
+            End With
+HandleNext:
+            c = c + 1
+        Loop Until c > cMax
+        r = r + 1
+    Loop Until r > rMax
+'    WindowUnFreeze 'Me.hWnd
+End Function
+Private Function p_FillMonthes()
+Dim i As Byte
+Dim strMonthes '"1;'Январь';2;'Февраль';3;'Март';4;'Апрель';5;'Май';6;'Июнь';7;'Июль';8;'Август';9;'Сентябрь';10;'Октябрь';11;'Ноябрь';12;'Декабрь'"
+    strMonthes = vbNullString
+    For i = 1 To 12
+        strMonthes = strMonthes & c_strDelim & i & c_strDelim & "'" & MonthName(i) & "'"
+    Next i
+    strMonthes = Mid$(strMonthes, Len(c_strDelim) + 1)
+    fldMonth.RowSource = strMonthes
+End Function
+'------------
+' для clsForm
+'------------
+Private Sub p_RedrawForm()
+'' Разрешаем изменение размеров формы и всех подформ в ней
+'    With mfr
+'    ' фиксируем размер формы карточки
+'        InsideWidth = c_lngFormWidth
+'        InsideHeight = Section(acHeader).Height + Section(acDetail).Height + Section(acFooter).Height
+'    ' разрешаем изменение
+'        .ScaleForm = False
+'        .ScaleFonts = False
+'        .ScaleColumns = False
+'        .ScaleControls = scNo
+'        Set .Form = Me
+'    End With
+End Sub
+'Public Property Get FormType() As String
+'    FormType = m_strFormType
+'End Property
+'Public Property Get FormMode() As String
+'    FormMode = m_strFormMode
+'End Property
+'Public Property Get mForm() As clsForm
+'    Set mForm = mfr
+'End Property

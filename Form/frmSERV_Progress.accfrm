@@ -1,0 +1,430 @@
+Version =21
+VersionRequired =20
+Checksum =941955895
+Begin Form
+    PopUp = NotDefault
+    Modal = NotDefault
+    RecordSelectors = NotDefault
+    MaxButton = NotDefault
+    MinButton = NotDefault
+    ControlBox = NotDefault
+    ShortcutMenu = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    CloseButton = NotDefault
+    DividingLines = NotDefault
+    KeyPreview = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    ViewsAllowed =1
+    TabularCharSet =204
+    TabularFamily =0
+    BorderStyle =3
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =5670
+    DatasheetFontHeight =10
+    ItemSuffix =15
+    Left =6645
+    Top =3945
+    Right =12315
+    Bottom =6015
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x110187182c21e440
+    End
+    GUID = Begin
+        0x123ad8db7c68c8478b1ebf729d2622d6
+    End
+    NameMap = Begin
+        0x0acc0e5500000000000000000000000000000000000000000c00000005000000 ,
+        0x0000000000000000000000000000
+    End
+    Caption =" "
+    OnOpen ="[Event Procedure]"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0x1e0100001e0100001e0100001e01000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x000100000000000000000000000000000000000000000000e8e4d2f54f000000 ,
+        0x0104220b9c006c01036e07000100090000000000640001000100580202000100 ,
+        0x58020300000041340086c299f67f00002888cc99f67f00002000000000000000 ,
+        0x330f2aaf638e5802180000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000046500800 ,
+        0x4d53414343455353000000000000000000000000000000000000000000000000 ,
+        0xff3e03005802aa00ac00aa00ac00010000003100436f7572696572204e657700 ,
+        0x0000000000000000000000000000000000000000010001000200000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000009600 ,
+        0x4b002c0100800000
+    End
+    PrtDevNames = Begin
+        0x080015001f000100000000000000000000000000000000000000000000000046 ,
+        0x505231313a000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000
+    End
+    OnKeyDown ="[Event Procedure]"
+    AllowDatasheetView =0
+    FilterOnLoad =0
+    DatasheetGridlinesColor12 =12632256
+    PrtDevModeW = Begin
+        0x00009acedf01000002000002f87f000000000000000000003000000000000000 ,
+        0x0000000000000000280000284f000000a005d4f54f0000000e9c6299f67f0000 ,
+        0x0104220bdc006c01036e07000100090000000000640001000100580202000100 ,
+        0x5802030000004100340000000000000009031000000000000000000000000000 ,
+        0x500200000000000048020000000000000100000000000000000022bedf010000 ,
+        0x2500000000005802180000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000046500800 ,
+        0x4d53414343455353000000000000000000000000000000000000000000000000 ,
+        0xff3e03005802aa00ac00aa00ac00010000003100436f7572696572204e657700 ,
+        0x0000000000000000000000000000000000000000010001000200000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000009600 ,
+        0x4b002c0100800000
+    End
+    PrtDevNamesW = Begin
+        0x040011001b000100000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000046005000520031003100 ,
+        0x3a00000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontCharSet =204
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            TextFontCharSet =204
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+            BorderLineStyle =0
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            TextFontCharSet =204
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+            AsianLineBreak =255
+        End
+        Begin Subform
+            SpecialEffect =2
+            BorderLineStyle =0
+            Width =1701
+            Height =1701
+        End
+        Begin CustomControl
+            SpecialEffect =2
+            Width =4536
+            Height =2835
+        End
+        Begin FormHeader
+            Height =340
+            BackColor =-2147483633
+            Name ="ЗаголовокФормы"
+            GUID = Begin
+                0xa3ce9720b36287449f500d24d18244c4
+            End
+            Begin
+                Begin Label
+                    OverlapFlags =85
+                    TextFontCharSet =0
+                    Left =60
+                    Top =60
+                    Width =5586
+                    Height =240
+                    FontWeight =700
+                    Name ="lblCaptionText"
+                    Caption ="Caption Text"
+                    GUID = Begin
+                        0x6827f034e6e1b24ca7ab80c252aa7ed5
+                    End
+                End
+            End
+        End
+        Begin Section
+            CanGrow = NotDefault
+            Height =1418
+            BackColor =-2147483633
+            Name ="ОбластьДанных"
+            GUID = Begin
+                0x2e96b9e1b4ca5349ad992c025428bc01
+            End
+            Begin
+                Begin Label
+                    SpecialEffect =2
+                    BackStyle =1
+                    OverlapFlags =93
+                    TextFontCharSet =0
+                    Left =60
+                    Top =345
+                    Width =0
+                    Height =330
+                    BackColor =4259584
+                    Name ="lblMajorFlood"
+                    Caption =" "
+                    FontName ="MS Sans Serif"
+                    GUID = Begin
+                        0xc46fa0d5c32fb44da5863a0554ff170f
+                    End
+                End
+                Begin Label
+                    SpecialEffect =2
+                    OldBorderStyle =1
+                    BorderWidth =3
+                    OverlapFlags =95
+                    TextAlign =2
+                    Left =60
+                    Top =345
+                    Width =5586
+                    Height =330
+                    FontSize =10
+                    FontWeight =700
+                    ForeColor =16777215
+                    Name ="lblMajorPercent"
+                    Caption ="Major Bar Text"
+                    GUID = Begin
+                        0x49accb6ada498a459b992bfa2c0acf45
+                    End
+                End
+                Begin Label
+                    OverlapFlags =93
+                    TextFontCharSet =0
+                    Left =60
+                    Top =45
+                    Width =5586
+                    Height =240
+                    Name ="lblMajorText"
+                    Caption ="Major Bar Caption Text"
+                    GUID = Begin
+                        0x9d802f8ffa5fe74fb2364bc68d45e5a5
+                    End
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =215
+                    TextFontCharSet =0
+                    Left =60
+                    Top =45
+                    Width =5586
+                    Height =240
+                    Name ="lblMinorText"
+                    Caption ="Minor Bar Caption Text"
+                    GUID = Begin
+                        0xf11f79003ec8c74fb662b05c1afe678a
+                    End
+                End
+                Begin Label
+                    Visible = NotDefault
+                    SpecialEffect =2
+                    BackStyle =1
+                    OverlapFlags =95
+                    TextFontCharSet =0
+                    Left =60
+                    Top =345
+                    Width =0
+                    Height =330
+                    BackColor =4259584
+                    Name ="lblMinorFlood"
+                    Caption =" "
+                    FontName ="MS Sans Serif"
+                    GUID = Begin
+                        0x498e4b5209a7e04593e27eee5eb184d6
+                    End
+                End
+                Begin Label
+                    Visible = NotDefault
+                    SpecialEffect =2
+                    OldBorderStyle =1
+                    BorderWidth =3
+                    OverlapFlags =215
+                    TextAlign =2
+                    Left =60
+                    Top =345
+                    Width =5586
+                    Height =330
+                    FontSize =10
+                    FontWeight =700
+                    ForeColor =16777215
+                    Name ="lblMinorPercent"
+                    Caption ="Minor Bar Text"
+                    GUID = Begin
+                        0x261eaf680c11b34580cd975107f36819
+                    End
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextFontCharSet =0
+                    Left =60
+                    Top =720
+                    Width =5586
+                    Height =660
+                    Name ="lblDetailText"
+                    Caption ="Detail Text"
+                    GUID = Begin
+                        0xbe5c94cc4a633044b2b99b7b602a08fe
+                    End
+                End
+            End
+        End
+        Begin FormFooter
+            Height =454
+            BackColor =-2147483633
+            Name ="ПримечаниеФормы"
+            GUID = Begin
+                0xf33d3573d6d30d4185b0fc3e787f77ff
+            End
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =4795
+                    Top =60
+                    Width =851
+                    Height =340
+                    Name ="cmdCancel"
+                    Caption ="Отмена"
+                    OnClick ="[Event Procedure]"
+                    Tag ="FloatIt=Right"
+                    GUID = Begin
+                        0x8bea4da601f6544f9a46b90a2688a406
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Option Explicit
+'=========================
+Private Const c_strModule As String = "Form_frmSERV_Progress"
+'=========================
+' Описание      : Форма двухуровневого прогрессбара
+' Версия        : 1.5.1.453217041
+' Дата          : 30.01.2024 16:53:54
+' Автор         : Кашкин Р.В.
+' Примечание    : используется модулем clsProgress
+'=========================
+Private mbolInitialized As Boolean    ' признак инициализации формы
+Private mbytProgressCount As Byte     ' количество отображаемых прогрессбаров
+' счетчик меняется от 0 до 100
+Private Const m_lngMajorMin  As Long = 0, m_lngMinorMin As Long = 0
+Private Const m_lngMajorMax As Long = 100, m_lngMinorMax As Long = 100
+'
+Private m_lngWidthMax As Long           ' максимальная ширина контрола счетчика
+Private Const c_lngGap = 10             ' расстояние между контролами
+Private Const BorderWidth As Long = 30  ' для компенсации ширины бордера
+
+Public Enum eProgressType
+    eMajor = 1
+    eMinor = 2
+End Enum
+'Public Event Cancel(ExitProgress As Long)
+Private mCancel As Boolean
+Public Sub Init(Optional ProgressCount As Byte = 1)
+' инициализация формы прогрессбара
+' ProgressCount - количество прогрессбаров формы (1 или 2)
+Dim x As Long, y As Long, h As Long, w As Long
+Dim ctl As Access.Control, vis As Boolean
+Application.Echo False
+    mCancel = False
+    ' количество прогрессбаров
+    mbytProgressCount = 1: If ProgressCount > 1 Then mbytProgressCount = 2
+    x = c_lngGap: y = c_lngGap      ' позиция 0+отступ
+    w = Me.Width - 2 * c_lngGap     ' ширина
+    m_lngWidthMax = w               ' ширина прогрессбара
+    'm_lngMajorVal = m_lngMajorMin: m_lngMinorVal = m_lngMinorMin
+' настраиваем форму
+    h = mbytProgressCount * (lblMajorText.Height + lblMajorPercent.Height + 2 * c_lngGap) + lblDetailText.Height + 2 * c_lngGap
+    Me.Section(acDetail).Height = h
+    Me.InsideHeight = h + Me.Section(acHeader).Height + Me.Section(acFooter).Height ': Me.InsideWidth = w + 2 * c_lngGap
+    Me.InsideWidth = Me.Width ': Me.InsideWidth = w + 2 * c_lngGap
+' форматируем и размещаем элементы формы
+    ' позиционируем первый прогрессбар
+    Set ctl = lblMajorText:     With ctl: .Top = y: h = .Height: .Left = 3 * x: .Width = w - 4 * x: .Visible = True: End With
+    y = y + h + c_lngGap
+    Set ctl = lblMajorPercent:  With ctl: h = .Height: .Left = x: .Top = y: .Width = w: .Visible = True: End With
+    Set ctl = lblMajorFlood:    With ctl:  .Left = x: .Top = y: .Width = 0: .Height = h: .Visible = True: End With
+    ' позиционируем второй прогрессбар
+    vis = mbytProgressCount = 2 ' проверяем 1 или 2?
+    ' если выводим второй прогрессбар - продолжаем после последнего, если не выводим - прячем за первым
+    If vis Then y = y + h + c_lngGap Else y = c_lngGap
+    Set ctl = lblMinorText:     With ctl:  .Top = y: h = .Height: .Left = 3 * x: .Width = w - 4 * x:: .Visible = vis: End With
+    y = y + h + c_lngGap
+    Set ctl = lblMinorPercent:  With ctl: h = .Height: .Left = x: .Top = y: .Width = w:  .Visible = vis: End With
+    Set ctl = lblMinorFlood:    With ctl:  .Left = x: .Top = y: .Width = 0: .Height = h:  .Visible = vis: End With
+    ' позиционируем область детальной информации
+    y = y + h + c_lngGap
+    Set ctl = lblDetailText:    With ctl:  .Top = y: h = .Height: .Left = 3 * x: .Width = w - 4 * x: .Caption = vbNullString: .Visible = True:  End With
+' устанавливаем признак форма инициализирована
+    mbolInitialized = True
+Application.Echo True
+End Sub
+'-------------------------------
+Public Property Get FloodWidth() As Long
+    FloodWidth = m_lngWidthMax
+End Property
+Public Property Let Canceled(rData As Boolean)
+    mCancel = rData
+End Property
+Public Property Get Canceled() As Boolean
+    Canceled = mCancel
+End Property
+Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
+' обрабатываем нажатия клавиш например Esc-прерывание процесса
+    Select Case KeyCode
+    Case vbKeyEscape  ' Esc
+        cmdCancel_Click
+    End Select
+End Sub
+Private Sub cmdCancel_Click()
+' поднимаем событие отмена процесса
+'    RaiseEvent Cancel(m_lngMajorVal)
+    mCancel = True
+     ' если форма не инициализирована из класса clsProgress - закрываем ее
+    If Not mbolInitialized Then DoCmd.Close acForm, Me.Name
+'    Me.Visible = False
+End Sub
+
+Private Sub Form_Open(Cancel As Integer)
+    mbolInitialized = False
+End Sub

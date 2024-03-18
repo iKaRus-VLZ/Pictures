@@ -4,7 +4,7 @@ Description=""
 Help=""
 [Custom Properties]
 Support="KashRus@gmail.com"
-Version="2.24.3.453666188"
+Version="2.24.3.453694558"
 Author="Кашкин Р.В."
 [Database Properties]
 QueryTimeout=Integer:60

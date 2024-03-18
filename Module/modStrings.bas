@@ -1,13 +1,14 @@
 Attribute VB_Name = "modStrings"
 Option Base 0
+Option Explicit
 #Const APPTYPE = 0  ' 0=ACCESS, 1=EXCEL
 '=========================
 Private Const c_strModule As String = "modStrings"
 '=========================
 ' Описание      : Функции для работы со строками
 ' Автор         : Кашкин Р.В. (KashRus@gmail.com)
-' Версия        : 1.1.30.453666188
-' Дата          : 15.03.2024 14:51:04
+' Версия        : 1.1.30.453694557
+' Дата          : 18.03.2024 10:56:12
 ' Примечание    : сделано под Access x86, адаптировано под x64, но толком не тестировалось. _
 '               : для работы с Excel сделать APPTYPE=1
 ' v.1.1.30      : 12.03.2024 - изменения в GroupsGet - первая попытка переделать скобки под шаблоны (чтобы получить возможность разбирать двух- и более -звенные выражения вроде If .. Then .. End If)
@@ -1125,18 +1126,15 @@ Public Function GroupsGet(Source As String, _
 ' возвращает коллекцию групп содержащихся в строке (выражений заключенных в скобки)
 '-------------------------
 ' Source    - выражение содержащее скобки
-' cGroups   - (возвращаемое) коллекция содержимого скобок
-'             коллекция нужна для возможности использования результата соместно с функциями PlaceHoldersGet/Set
-'             индекс элемента соответствует уровню скобки в порядке разбора
-'             сначала идет элементарное (наиболее глубоко вложенное) выражение первого полного выражения в порядке разбора
-'             (имеющего закрытую конечную скобку), затем - следующее по порядку или предыдущее по уровню вложения и т.д.
-'             т.е. вычислять это можно перебором слева направо и подстановкой результата в итоговое выражение.
+' cGroups   - (возвращаемое) коллекция содержимого скобок индекс элемента соответствует уровню скобки в порядке разбора
 '             именованные индексы соответствуют порядковому номеру с префиксом Br
+'             коллекция нужна для возможности использования результата соместно с функциями PlaceHoldersGet/Set
 ' UsePlaceHolders - если True в Text, будут возвращены выражения содержащее подстановочные ссылки на соотв элементы массива результата
 '             вида: ([%1%])+([%2%]), где 1,2.. - индексы элементов коллекции cGroups хранящей содержимое скобок
 '             иначе - полное текстовое выражение содержащееся в скобках.
 ' Templates - строка или массив строк содержащий шаблоны допустимых групп
-'             т.к. скобки проверяются прямым перебором составные скобки надо ставить вначале
+'             т.к. скобки проверяются прямым перебором слева-направо, для более-менее корректной работы
+'             надо чтобы шаблоны были упорядочены по мере усложнения в порядке возможного срабатывания
 ' TermDelim - разделитель элементов (замещающий символ для обозначения извлекаемого элемента группы) в строке шаблона
 ' TempDelim - разделитель шаблонов в строке
 ' aGroups   - (возвращаемое) массив позиций элементов строки (уровней групп/границ групп/содержимого групп) нужно только если хотите отслеживать позиции в строке
@@ -1147,30 +1145,29 @@ Public Function GroupsGet(Source As String, _
 ' v.1.0.1       : 21.12.2022 - исправлены многочисленные ошибки. (всё еще сильно экспериментальная)
 ' v.1.0.0       : 24.03.2020 - исходная (очень кривая и глючная) версия
 '-------------------------
-' ToDo: - сейчас алгоритм проверяет первый сработавший шаблон, но элементы могут встречаться в разных шаблонах
-'         т.е. чтобы он правильно отработал шаблоны должны быть упорядочены от элементарных к более сложным
-'         иначе правильным может оказаться не первый и до него просто не дойдёт
-'       Варианты решения:
-'         первый путь - "ошибка-возврат": если выражение не удалось разобрать по текущему шаблону
-'           поднимаемся в стеке к его началу и продолжаем поиск следующего подходящего шаблона
-'         второй путь - "выбраковка": начиная разбор отбираем все подходящие шаблоны и
-'           по мере продвижения по тексту вычёркиваем несоответствующие вводу
-'       - сделать распознавание повторяющихся и необязательных элементов в шаблонах например (@[,@]) м.б. (@);(@,@),(@,@,@) и т.д.
-'-------------------------
 ' Примеры:
-' 1) strText = "((5+2)+3*(4+5)^4)-97"
-'    Call GroupsGet(strText, cGroup, True)
-' 2) strText = "Do: If True Then 1 Else 0 End If: Loop"
+' 1) strText = "Do: If True Then 1 Else 0 End If: Loop"
 '    strTemp = "If @ Then @ Else @ End If;Do: @: Loop"
 '    Call GroupsGet(strText, cGroup, True, strTemp)
-' Антипример:
-' 3) strText = "((5+2)+3*(4+5)^4)-97"
-'    strTemp = "@+@;@-@"
+' 2) strText = "((5+2)+3*(4+5)^4)-97"
 '    Call GroupsGet(strText, cGroup, True)
-'    Это ничего не даст - функция разбирает скобки, в том числе многозвенные, а здесь нет скобок - это задача парсера
 '-------------------------
-#Const TestErr = False  ' проверять ошибку несогласованных скобок
-Const cPref = "Br"      ' префикс именованного элемента коллекции
+' ToDo: - алгоритм срабатывает на первый подходящий шаблон, но элементы могут встречаться в разных шаблонах и правильным может оказаться не первый, - надо предусмотреть
+'         возможные решения:
+'           1) "ошибка-возврат" - при разборе по сработавшему шаблону после ошибки возвращаемся в стеке к началу выражения в строке и продолжаем разбор со следующего шаблона
+'               минус - ногократные проверки одних и тех же фрагментов
+'           2) "выбраковка" - при разборе формируем коллекцию всех сработавших на фрагмент шаблонов и вычёркиваем их по мере продвижения по шаблону
+'               минус - придется в стек загонять коллекции из пар номер шаблона/элемента
+'           3) "упорядочивание" - перед началом работы расположить шаблоны по мере их усложнения в порядке возможного срабатывания
+'               минус - непонятно по каким критериям (отобрать начинающиеся одинаково, расположить по возростанию длины элемента, .. ещё???)
+'               и не факт что это возможно для конкретного набора шаблонов, возможны неоднозначности из-за повторов и необязательных элементов
+'           думаю оптимально будет гибрид из 3 и 1.
+'           сначала элементарное упорядочивание правил (до разбора), чтобы уменьшить количество возвратов,
+'           а то что не исключили сортировкой отловим повторами при разборе
+'       - распознавание повторяющихся и необязательных элементов в шаблонах например (@[,@]) м.б. (@);(@,@),(@,@,@) и т.п.
+'-------------------------
+#Const TestErr = False          ' проверять ошибку несогласованных скобок
+Const cPref = "Br"              ' префикс именованного элемента коллекции
 Const errUnclosedExp = vbObjectError + 511
 Const errIncompleteExp = vbObjectError + 512
 Dim Result As Boolean ': Result = False
@@ -1178,13 +1175,11 @@ On Error GoTo HandleError
     If Len(Source) = 0 Then Result = True: GoTo HandleExit
 ' задаем допустимые шаблоны групп (скобок)
 Dim sTerm, sName As String
-Dim aTemp               ' массив массивов элементов шаблона
-Dim t As Long           ' индекс шаблона в массиве
+Dim aTemp                       ' массив массивов элементов шаблона
+Dim t As Long                   ' индекс шаблона в массиве
     If IsMissing(Templates) Then
 ' не задано - берём набор скобок по-умолчанию
-        aTemp = Array(Array("(", ")"), Array("[", "]"), Array("{", "}"), _
-                      Array("<", ">"), Array("%", "%"), _
-                      Array("'", "'"), Array("""", """"))
+        aTemp = Array(Array("(", ")"), Array("[", "]"), Array("{", "}"), Array("<", ">"), Array("%", "%"), Array("'", "'"), Array("""", """"))
     ElseIf IsArray(Templates) Then
 ' задано одномерным массивом (не проверяется)
         ReDim aTemp(LBound(aTemp), UBound(aTemp)): For t = LBound(aTemp) To UBound(aTemp): aTemp(t) = Split(Templates(t), TermDelim): Next t
@@ -1258,7 +1253,6 @@ Dim iBeg As Long, iEnd As Long, iLen As Long
 ' проверяем первый (открывающий) элемент всех шаблонов
         For t = LBound(aTemp) To UBound(aTemp)
             l = LBound(aTemp(t)): sTerm = aTemp(t)(l)
-            If Len(sTerm) = 0 Then GoTo HandleNextSym
             If sTerm = Mid(Source, i, Len(sTerm)) Then
             ' если открывающий элемент совпадает с текущим фрагментом строки
                 If l < UBound(aTemp(t)) Then
@@ -1301,13 +1295,32 @@ HandleNextSym: i = i + iLen    ' смещаем указатель в строке на следующий после п
     aGroups(g - 0) = -1               '(.TempItm) номер элемента в шаблоне
     sTerm = Source                      '
     sName = cPref & (g \ gStep): cGroups.Add sTerm, sName     ' добавляем в коллекцию
-    
-    Result = True: If Not UsePlaceHolders Then GoTo HandleExit
-' если надо создавать шаблоны разбора выражений в скобках
+    Result = True:
+' если надо создавать шаблоны разбора выражений в скобках - делаем это
+    If UsePlaceHolders Then Call p_GroupsPlaceHoldersSet(cGroups, aGroups)
+HandleExit:     GroupsGet = Result: Exit Function
+HandleError:    Select Case Err
+    Case errUnclosedExp:    Debug.Print "Ошибка! Незавершённое выражение """ & sTerm & """ в позиции " & i & " в строке: """ & Source & """"
+    Case errIncompleteExp:  Debug.Print "Ошибка! """ & sTerm & """ без """ & sName & """ в позиции " & i & " в строке: """ & Source & """"
+    Case Else: Stop: Resume 0
+    End Select
+    Result = False: Err.Clear: Resume HandleExit
+End Function
+Private Function p_GroupsPlaceHoldersSet(ByRef cGroups As Collection, aGroups) As Boolean
+' пересортирует коллекцию элементов разобранных групп заменяя элементы символами подстановки
+Dim Result As Boolean ': Result = False
+' вынесено в отдельную функцию для упрощения читаемости
+On Error GoTo HandleError
 Const cLBr = "[%", cRBr = "%]"  ' скобки для ссылок на элементы массива результата.
+Const cPref = "Br"              ' префикс именованного элемента коллекции
+Const gStep = 7                 ' шаг элементов массива позиций элементов
+Dim g As Long                   ' индекс элемента массива для хранения результата разбора
+Dim i As Long, j As Long, iMin As Long
+Dim iBeg As Long, iEnd As Long
 Dim jBeg As Long, jEnd As Long
 Dim iLvl As Long, jLvl As Long
-    i = g \ gStep: iMin = 1
+Dim sTerm, sName As String
+    i = UBound(aGroups) \ gStep: iMin = 1
     Do While i > iMin 'For i = i To 2 Step -1
 ' разбираем все нижестоящие элементы массива в обратном порядке
     ' элементы в массиве отсортированы так что наружные (те у которых Level меньше) будут выше
@@ -1315,7 +1328,7 @@ Dim iLvl As Long, jLvl As Long
     ' заменяем содержимое проверяемого элемента в разбираемом на символьный указатель
     ' смещаем позицию границы проверки в разбираемом элементе до границ неразобранного фрагмента
             j = iMin
-        ' текст фaGroupPos(g + 2)рагмента до разбора
+        ' текст фрагмента до разбора
             sName = cPref & i
             sTerm = cGroups(sName)
         ' уровень и границы разбираемого фрагмента в исходной строке
@@ -1355,16 +1368,9 @@ HandleNextJ: j = j + 1
         With cGroups: .Remove sName: .Add sTerm, sName, After:=i - 1: End With
 HandleNextI: i = i - 1
     Loop 'Next i
-
-HandleExit:     GroupsGet = Result: Exit Function
-HandleError:    Select Case Err
-    Case errUnclosedExp:    Debug.Print "Ошибка! Незавершённое выражение """ & sTerm & """ в позиции " & i & " в строке: """ & Source & """"
-    Case errIncompleteExp:  Debug.Print "Ошибка! """ & sTerm & """ без """ & sName & """ в позиции " & i & " в строке: """ & Source & """"
-    Case Else: Stop: Resume 0
-    End Select
-    Result = False: Err.Clear: Resume HandleExit
+HandleExit:  p_GroupsPlaceHoldersSet = Result: Exit Function
+HandleError: Result = False: Err.Clear: Resume HandleExit
 End Function
-
 Public Function GroupText(Source As String, idx As Long, _
     Optional Templates, Optional TermDelim = "@", Optional TempDelim = ";" _
     ) As String
@@ -1518,7 +1524,7 @@ Dim i As Long: i = 0
     Loop
 'HandleExit:  Set InStrAll = cResult: If bFound Then Set Found = cFound: Exit Function
 HandleExit:  InStrAll = aResult: If bFound Then Found = aFound: Exit Function
-HandleError: Erase Result: Err.Clear: Resume HandleExit
+HandleError: Erase aResult: Err.Clear: Resume HandleExit
 End Function
 Public Static Function InStrCount( _
     ByRef Text As String, _
@@ -1648,7 +1654,7 @@ Dim abText() As Byte, abTextOut() As Byte
 Dim ubText As Long
 
     If Width <= 0 Then CountLines = 0: Exit Function
-    If Len(Text) <= Width Then CountLines = 1: WordWrap01 = Text: Exit Function
+    If Len(Text) <= Width Then CountLines = 1: WordWrap = Text: Exit Function
     abText = StrConv(Text, vbFromUnicode): ubText = UBound(abText)
     ReDim abTextOut(ubText * 3)     'dim to potential max
     For i = 0 To ubText
@@ -2085,6 +2091,7 @@ Dim Result As String
 Dim i As Long, iMax As Long: i = LBound(Arr): iMax = UBound(Arr)
     On Error Resume Next
 ' переносим в коллекцию
+Dim Itm
     Do Until i > iMax
         Itm = Trim$(Arr(i))
         Col.Add Itm, c_idxPref & Itm: Err.Clear: i = i + 1
@@ -2152,7 +2159,7 @@ Dim aMax As Long: aMax = Tokenize(Source, aData(), Delims, aPos(), IncEmpty)
     If Pos < 0 Then Pos = aMax + Pos + 1
     If Pos < aMin Then Pos = aMin Else If Pos > aMax Then Pos = aMax
     ' блок разделителей до выбранного токена (слева)
-    cEnd = aPos(Pos - 1): If Pos = 1 Then cBeg = 1 Else sBeg = aPos(Pos - 2) + Len(aData(Pos - 2))
+    sEnd = aPos(Pos - 1): If Pos = 1 Then sBeg = 1 Else sBeg = aPos(Pos - 2) + Len(aData(Pos - 2))
     If sEnd > sBeg Then DelimsLeft = Mid$(Source, sBeg, sEnd - sBeg) Else DelimsLeft = vbNullString
     ' блок разделителей после выбранного токена (справа)
     sBeg = aPos(Pos - 1) + Len(aData(Pos - 1)): If Pos = aMax Then sEnd = Len(Source) Else sEnd = aPos(Pos)
@@ -2231,11 +2238,11 @@ Public Function TokenStringDel(Source As String, _
 Dim Result As String: Result = Source
     
     On Error GoTo HandleError
-    If Len(Source) = 0 Then Result = Data: Pos = 1: GoTo HandleExit
+    If Len(Source) = 0 Then Pos = 1: GoTo HandleExit
 Dim aData() As String, aPos() As Long
 Dim aMin As Long: aMin = 1
 Dim aMax As Long: aMax = Tokenize(Source, aData(), Delims, aPos(), IncEmpty)
-    sTemp = vbNullString
+Dim sTemp As String ':  sTemp = vbNullString
     If Pos < 0 Then Pos = aMax + Pos + 1
     If Pos < aMin Then Pos = aMin Else If Pos > aMax Then Pos = aMax
     If SubDelims Then
@@ -2363,8 +2370,7 @@ Dim Result As String: Result = Source
 ' пустое значение
     If Len(Data) = 0 Then Result = TaggedStringDel(Source, Tag): GoTo HandleExit
 ' пустая строка
-    If Len(Source) = 0 Then If Len(Tag) > 0 Then Result = Tag & TagDelim & Data: Pos = 1: GoTo HandleExit
-    
+    If Len(Source) = 0 Then If Len(Tag) > 0 Then Result = Tag & TagDelim & Data: GoTo HandleExit ': Pos = 1
 Dim sTemp As String
 Dim pLen As Long
 '' ищем по Tag
@@ -2475,8 +2481,9 @@ Dim Result As String: Result = Source
 '' ищем по Tag
 '    ' поиск наличия тэга с таким именем
         sBeg = 0: sEnd = 0 'Len(Result)
+Dim pLen As Long
         pLen = 1 'Len(Tag) + Len(TagDelim)
-        sTemp = Tag & TagDelim & Data   ' "Tag=Val"
+        'sTemp = Tag & TagDelim & Data   ' "Tag=Val"
         If StrComp(Left$(Source, Len(Tag) + Len(TagDelim)), Tag & TagDelim, Compare) = 0 Then ' Left$(tmpSource, Len(Tag) + Len(TagDelim)) = tmpTag & tmpTagDelim Then
         ' имя тэга найдено в начале строки ("Tag=...")
             sBeg = 1
@@ -2595,6 +2602,7 @@ Private Function p_GetSubstrBounds(ByRef Source As String, _
 ' Delim -   разделитель
 ' возвращает True если заданная позиция в границах строки, иначе False
 '-------------------------
+Dim Result As Boolean
     On Error GoTo HandleError
 Dim i As Long
     i = 1: sBeg = 1
@@ -2608,7 +2616,7 @@ Dim i As Long
             i = i + 1: If i > Pos Then Exit Do
             sBeg = sEnd + Len(Delim)
         Loop
-        Result = Pos <= i: If Not Result Then Pos = i  ' позиция выше верхней границы
+        Result = (Pos <= i): If Not Result Then Pos = i  ' позиция выше верхней границы
     Else
 ' позиция от конца
     ' Вариант 1: пробегаем всю строку с конца по разделителям, проверяя номер подстроки
@@ -2678,7 +2686,7 @@ Dim PIXEL_PER_INCH_X As Long: PIXEL_PER_INCH_X = GetDeviceCaps(tDC, LOGPIXELSX)
 ' разбиваем строку
     Call Tokenize(TextString, aWords, Separators)
     i = LBound(aWords): iMax = UBound(aWords)
-    Pos2 = 0: spLen = 1
+    spLen = 1
     'strRest = Text
     ' костыль: vbCrLf меняем на vbCr иначе делает двойной разрыв строки
     strRest = Replace(TextString, vbCrLf, vbCr)
@@ -2775,7 +2783,7 @@ Dim PIXEL_PER_INCH_X As Long: PIXEL_PER_INCH_X = GetDeviceCaps(tDC, LOGPIXELSX)
     
     Call Tokenize(TextString, aWords, Separators)
     i = LBound(aWords): iMax = UBound(aWords)
-    ii = 0: Pos2 = 0: spLen = 1
+    ii = 0: spLen = 1
     'strRest = Text
     ' костыль: vbCrLf меняем на vbCr иначе делает двойной разрыв строки
     strRest = Replace$(TextString, vbCrLf, vbCr)
@@ -3081,7 +3089,7 @@ Dim Result
         If Right$(strResult, Len(ReplaceWith)) = ReplaceWith Then strResult = Left$(strResult, Len(strResult) - Len(ReplaceWith))
         If Left$(strResult, Len(ReplaceWith)) = ReplaceWith Then strResult = Right$(strResult, Len(strResult) - Len(ReplaceWith))
         strResult = Trim$(strResult)
-        If Len(strResult) < 1 Then strResult = c_strEmptyString
+        If Len(strResult) < 1 Then strResult = vbNullString 'c_strEmptyString
         If IsArray(Source) Then
             Result(i) = strResult
             If i >= iMax Then Exit Do
@@ -3100,7 +3108,7 @@ Public Function GetCharType(Letter As String, Optional AlphaType As Byte = 0) As
 ' на выходе: 1-гласная,2-согласная,3-знак(ьъ),и т.д.,0-не определено
 ' AlphaType = 1-буква латинского алфавита, 2-буква русского алфавита, 3-цифра, 0-иной символ
 '-------------------------
-Dim Result As Byte: Result = 0: SymbType = 0
+Dim Result As Byte: Result = 0 ': SymbType = 0
 Dim sChar As String * 1: sChar = LCase$(Left$(Trim$(Letter), 1))
 
     If InStr(c_strSymbDigits, sChar) > 0 Then Result = SymbolTypeNumb:      AlphaType = AlphabetTypeUndef:      GoTo HandleExit
@@ -3739,7 +3747,7 @@ Dim Prev, sPrev As String, p As Integer, pMax As Integer: pMax = 0  ' предыдущий
             rOld = rMax              ' запоминаем предыдущее количество результатов (нужно для определения конца старой последовательности)
             rMax = rOld * (cMax + 1) ' определяем новое максимальное количество альтернативных результатов
         ' клонируем результирующую строку и строку позиций
-            For c = 1 To cMax: Result = Result & Delim & Result: Next
+Dim c As Long: For c = 1 To cMax: Result = Result & Delim & Result: Next
 HandleMakeResult:
         ' перебираем все результаты
             jBeg = 1: jEnd = 0  ' начало/конец текущего варианта кода в результирующей строке
@@ -4209,7 +4217,7 @@ Dim Result As String
     ' очищаем компоненты числа от разделителей разрядов и пробелов
     ' Replace вместо CLng потому что исходная задача -
     ' обрабатывать числа в том числе выходящие за ограничения типа Long
-    tmpSymPos = Nz(InStrRev(Number, cDecDelim), 0)
+Dim tmpSymPos As Long: tmpSymPos = Nz(InStrRev(Number, cDecDelim), 0)
     If (tmpSymPos > 0) Then
 ' десятичная дробь
     ' знаменатель десятичной дроби выводим если не задано обозначение дробной части
@@ -4244,7 +4252,7 @@ Dim Result As String
         If tmpSymPos > 0 Then
 ' натуральная дробь
             bolDenom = True ' ставим признак что это натуральная дробь
-            SubUnit = vbNullsting ' для натуральной дроби вспомогательная единица измерения не имеет смысла
+            SubUnit = vbNullString ' для натуральной дроби вспомогательная единица измерения не имеет смысла
             ' знаменатель
             strDenom = VBA.Mid$(Number, tmpSymPos + Len(cNatDelim))
             Number = VBA.Left$(Number, tmpSymPos - 1): tmpSymPos = Nz(InStrRev(Number, cWhlDelim), 0)
@@ -4637,7 +4645,7 @@ Dim Result As String
     Select Case WordType
     Case SpeechPartTypeNoun, _
          SpeechPartTypeAdject   ' существительные и прилагательные склоняем по правилам ниже
-    Case SpeechPartTypeNumber   ' числительные склоняем отдельно
+    Case SpeechPartTypeNumeral  ' числительные склоняем отдельно
         Result = p_NumDecline(Word, , NewCase, NewNumb, NewGend, , Animate): i = Len(Result): GoTo HandleExit
     Case Else: GoTo HandleExit  ' все остальные (необрабатываемые) - пропускаем
 '    Case SpeechPartTypePronoun ' местоимения
@@ -5147,13 +5155,14 @@ HandleText:
     ' проверяем номер слова по списку пропуска
         Select Case j - jMin + 1 ' номера текущего слова
         Case S1 To S2:  ' попадает в границы диапазона пропуска - пропускаем
-            newWord = strWord
+            'newWord = strWord
         Case Else:      ' не попадает - склоняем слово в строке
             tmpGender = NewGend
-            newWord = DeclineWord(strWord, NewCase, NewNumb, tmpGender, Animate, IsFio:=IIf(IsFio, j - jMin + 1, 0))
+            'newWord = DeclineWord(strWord, NewCase, NewNumb, tmpGender, Animate, IsFio:=IIf(IsFio, j - jMin + 1, 0))
+            strWord = DeclineWord(strWord, NewCase, NewNumb, tmpGender, Animate, IsFio:=IIf(IsFio, j - jMin + 1, 0))
         End Select
     ' добавляем в начало строки слово получившееся после склонения исходного
-        Result = newWord & Result
+        Result = strWord & Result 'Result = newWord & Result
     ' переходим к следующему слову
 HandleNext:
         j = j - 1
@@ -5161,16 +5170,8 @@ HandleNext:
     ' добавляем оставшиеся разделители
     Result = strTail & Result
     Erase aWords: Erase aSkip
-HandleExit:
-    DeclineWords = Result
-    Exit Function
-HandleError:
-    i = iMax: WordEnd = vbNullString
-'    Dbg.Error Err.Number, Err.Description, _
-'        COMMENT:="", _
-'        Source:=c_strModule, Procedure:=c_strProcedure ', LineNum :=Erl
-    Err.Clear
-    Resume HandleExit
+HandleExit:  DeclineWords = Result: Exit Function
+HandleError: i = iMax: Err.Clear: Resume HandleExit ': WordEnd = vbNullString
 End Function
 
 Private Function p_NumDecline( _
@@ -5574,12 +5575,12 @@ Private Function p_GetWordSpeechPartType(ByVal Word As String) As SpeechPartType
 ' определяет часть речи по окончанию слова (условно)
 '-------------------------
 ' не знаю зачем я это сделал, - разве так, на будущее...
-' может когда и перепишу процедуру склонения с учетом части речи
+' может когда и перепишу процедуру склонения с учётом части речи
 '-------------------------
 Dim Result As SpeechPartType
 
     On Error GoTo HandleError
-    Select Case WordWhole
+    Select Case Word
     ' местоимения
     Case "я", "ты", "он", "она", "оно", "то", "это", "тот", "этот", _
         "вы", "мы", "они", "те", "эти":
@@ -5589,7 +5590,7 @@ Dim Result As SpeechPartType
          "или", "еле", "над", "при", "под", "для", "через", "перед", "ввиду", "наподобие", "вроде", _
          "вблизи", "вглубь", "вдоль", "возле", "около", "среди", "вокруг", "внутри", "впереди", "после", _
          "насчет", "навстречу", "вслед", "вместо", "ввиду", "благодаря", "вследствие"
-            Result = SpeechPartTypePretext
+            Result = SpeechPartTypePreposition
     ' существительные на -ть и ая,ие и т.п.
     Case "мать", "рать", "тать", "зять", "суть", "путь", "муть", "нежить", "пажить", "сыть", "нить", "лапоть", "копоть", _
          "стая" ', "событие", "предложение", "поручение", "последствие", "преследование", "лезвие", _
@@ -5605,7 +5606,7 @@ Dim Result As SpeechPartType
     ' числительные
         Dim tmp: For Each tmp In p_NumWordsArray
             If Word = tmp Then _
-            Result = SpeechPartTypeNumber: GoTo HandleExit
+            Result = SpeechPartTypeNumeral: GoTo HandleExit
         Next tmp
         Select Case Right$(Word, 3)
     ' глаголы
@@ -5810,7 +5811,8 @@ Dim i As Long, iMax As Long
     Next i
     p_GetCollKeys = Result
 End Function
-Private Function p_HFontByControl(Optional ctl As Variant, Optional FontName, Optional FontSize, Optional FontColor, Optional FontWeight, Optional FontUnderline, Optional FontStrikeOut, Optional FontItalic, Optional hdc As LongPtr = 0) As LongPtr
+Private Function p_HFontByControl(Optional ctl As Variant, Optional FontName, Optional FontSize, _
+    Optional FontColor, Optional FontWeight, Optional FontUnderline, Optional FontStrikeOut, Optional FontItalic, Optional hdc As LongPtr = 0) As LongPtr
 ' создает hFont из параметров контрола
 '-------------------------
     'If Not TypeOf ctl Is Access.Control Then Err.Raise vbObjectError + 512
@@ -5830,7 +5832,7 @@ On Error GoTo HandleError
     'fSize = -Int(fSize * GetDeviceCaps(tDC, LOGPIXELSY) / PointsPerInch)
     fSize = -MulDiv(fSize, GetDeviceCaps(tDC, LOGPIXELSY), PointsPerInch)
     hFont = CreateFont(fSize, 0, 0, 0, _
-        fWeight, fItalic, fUnderline, fStrikeOut, _
+        fWeight, fItalic, fUnderline, 0, _
         RUSSIAN_CHARSET, 0, 0, ANTIALIASED_QUALITY, 0, fName)  ' PROOF_QUALITY | CLEARTYPE_QUALITY | ANTIALIASED_QUALITY
     If hdc = 0 Then ReleaseDC 0, tDC
 HandleExit:  p_HFontByControl = hFont: Exit Function

@@ -21,6 +21,9 @@ Private Const c_strModule As String = "clsContextMenu"
 '               : если OnAction не задан - использует clsContextMenuControl дл€ обработки событий контролов _
 '               : »спользует Microsof Office Object Library
 '=========================
+' ѕример использовани€ класса:
+'=========================
+'=========================
 Private Const cstrMenuName = "~tmpMenu"
 Private Const NOERROR As Long = 0
 Private mValue

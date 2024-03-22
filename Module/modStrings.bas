@@ -7,8 +7,8 @@ Private Const c_strModule As String = "modStrings"
 '=========================
 ' ќписание      : ‘ункции дл€ работы со строками
 ' јвтор         :  ашкин –.¬. (KashRus@gmail.com)
-' ¬ерси€        : 1.1.30.453694557
-' ƒата          : 18.03.2024 10:56:12
+' ¬ерси€        : 1.1.30.453724598
+' ƒата          : 21.03.2024 11:02:07
 ' ѕримечание    : сделано под Access x86, адаптировано под x64, но толком не тестировалось. _
 '               : дл€ работы с Excel сделать APPTYPE=1
 ' v.1.1.30      : 12.03.2024 - изменени€ в GroupsGet - перва€ попытка переделать скобки под шаблоны (чтобы получить возможность разбирать двух- и более -звенные выражени€ вроде If .. Then .. End If)
@@ -913,7 +913,7 @@ HandleExit:  PlaceHoldersGet = Result: Exit Function
 HandleError: Result = False: Err.Clear: Resume HandleExit
 End Function
 Private Function p_FindNamedPlaceHolder(ByRef Source As String, _
-    Optional ByRef Name As String, _
+    Optional ByRef NAME As String, _
     Optional ByRef sBeg As Long = 1, Optional ByRef sEnd As Long = 0, _
     Optional LBr As String = "[%", Optional RBr As String = "%]") As Boolean
 ' ищет в строке именную переменную, ограниченную разделител€ми, возвращает еЄ им€ и границы
@@ -933,7 +933,7 @@ Dim pBeg As Long, pEnd As Long
     ' ищем в выражении правую скобку
     pEnd = InStr(pBeg, Source, RBr): If pEnd = 0 Then GoTo HandleExit Else sEnd = pEnd + Len(RBr)
     ' получаем строку между скобками
-    Name = Mid$(Source, pBeg, pEnd - pBeg)
+    NAME = Mid$(Source, pBeg, pEnd - pBeg)
     Result = True 'Len(Name) > 0
 HandleExit:  p_FindNamedPlaceHolder = Result: Exit Function
 HandleError: Result = False: Err.Clear: Resume HandleExit
@@ -4357,9 +4357,9 @@ HandleUnits:
             strWord = DeclineWord(strWord, tmpCase, tmpNumb, tmpGend, Animate): If tmpGend <> DeclineGendUndef Then NewGend = tmpGend
             If Len(Result) > 0 Then Result = strWord & strDelim & Result Else Result = strWord
         End If
-        
-        ' род числительного - по роду ед.измерени€/разр€да/если не определен - жен.род
-        If tmpGend = DeclineGendUndef Then If NewGend = DeclineGendUndef Then tmpGend = DeclineGendFem Else tmpGend = NewGend
+        ' род числительного - по роду ед.измерени€/разр€да/если не определен - муж.род (двадцать один), жен.род (одна цела€ две сотых)
+        If tmpGend = DeclineGendUndef Then If NewGend = DeclineGendUndef Then tmpGend = DeclineGendMale Else tmpGend = NewGend
+        'If tmpGend = DeclineGendUndef Then If NewGend = DeclineGendUndef Then tmpGend = DeclineGendFem Else tmpGend = NewGend
         Do
 ' делим часть числа на триплеты разр€дов (перебираем цифры справа по 3).
 ' первый уже получен и находитс€ в intTrip, в bytTrip - пор€дковый номер текущего триплета
@@ -5882,4 +5882,6 @@ Private Function Nz(p1, Optional p2) As Variant
 ' You will get True True
 End Function
 #End If
+
+
 

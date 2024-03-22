@@ -6,8 +6,8 @@ Public IsDebug As Boolean
 Private Const c_strModule As String = "modPictureData"
 '=========================
 ' Описание      : модуль для работы с PictureData и BLOB полями
-' Версия        : 1.4.2.453644466
-' Дата          : 13.03.2024 10:43:06
+' Версия        : 1.4.2.453723624
+' Дата          : 21.03.2024 8:41:51
 ' Автор         : Кашкин Р.В. (KashRus@gmail.com)
 ' Примечание    : для вывода изображений использует дополнительные библиотеки в зависимости от ObjectDataType
 '               : проект должен содержать clsTransform - класс для трансформации координат _
@@ -156,18 +156,18 @@ Private Const FILE_ATTRIBUTE_NORMAL = &H80&
 
 ' === Declare Enums ===
 #If ObjectDataType = 0 Then     'FI
-Public Enum eAlignText
-    TA_LEFT = 0                 'Опорная точка находится на левой кромке рабочего прямоугольника.
-    TA_RIGHT = 2                'Опорная точка находится на правой кромке рабочего прямоугольника.
-    TA_CENTER = 6               'Опорная точка выравнивается горизонтально по центру рабочего прямоугольника.
-    TA_TOP = 0                  'Опорная точка на верхней кромке рабочего прямоугольника.
-    TA_BOTTOM = 8               'Опорная точка на нижней кромке рабочего прямоугольника.
-    TA_BASELINE = 24            'Опорная точка находится на базовой линии текста.
-    TA_RTLREADING = 256         'Редакция Windows на языках Ближнего Востока: Текст размечается для порядка чтения справа налево , в противоположность порядку чтения по умолчанию слева направо. Это применяется только тогда, когда шрифт, выбранный в контекст устройства предназначен или для Еврейского или для Арабского языка.
-'    TA_NOUPDATECP  ' Текущая позиция не модифицируется после каждого вызова вывода текста.
-'    TA_UPDATECP    ' Текущая позиция модифицируется после каждого вызова вывода текста.
-'    TA_MASK  = (TA_BASELINE + TA_CENTER + TA_UPDATECP)
-End Enum
+'Public Enum eAlignText
+'    TA_LEFT = 0                 'Опорная точка находится на левой кромке рабочего прямоугольника.
+'    TA_RIGHT = 2                'Опорная точка находится на правой кромке рабочего прямоугольника.
+'    TA_CENTER = 6               'Опорная точка выравнивается горизонтально по центру рабочего прямоугольника.
+'    TA_TOP = 0                  'Опорная точка на верхней кромке рабочего прямоугольника.
+'    TA_BOTTOM = 8               'Опорная точка на нижней кромке рабочего прямоугольника.
+'    TA_BASELINE = 24            'Опорная точка находится на базовой линии текста.
+'    TA_RTLREADING = 256         'Редакция Windows на языках Ближнего Востока: Текст размечается для порядка чтения справа налево , в противоположность порядку чтения по умолчанию слева направо. Это применяется только тогда, когда шрифт, выбранный в контекст устройства предназначен или для Еврейского или для Арабского языка.
+''    TA_NOUPDATECP  ' Текущая позиция не модифицируется после каждого вызова вывода текста.
+''    TA_UPDATECP    ' Текущая позиция модифицируется после каждого вызова вывода текста.
+''    TA_MASK  = (TA_BASELINE + TA_CENTER + TA_UPDATECP)
+'End Enum
 #ElseIf ObjectDataType = 1 Then 'LV
 Public Enum eConstants          'See SourceIconSizes
     HIGH_COLOR = &HFFFF00
@@ -1378,14 +1378,13 @@ End Function
 Public Function PictureData_SetToControl( _
     ByRef ObjectControl As Object, Optional ByRef ObjectData As Variant, _
     Optional Alignment As eAlign = eCenter, _
-    Optional Description As String, Optional Comment As String, _
     Optional PictSizeMode As eObjSizeMode = apObjSizeZoomDown, _
     Optional PictLeft, Optional PictTop, Optional PictWidth, Optional PictHeight, _
     Optional PictAngle As Single = 0!, Optional PictOpacity As Single = 100!, _
     Optional GrayScale As Boolean = False, _
     Optional TextString As String, _
     Optional TextPlacement As ePlace = ePlaceOnRight, _
-    Optional TextAlignment As eAlignText = TA_LEFT, _
+    Optional TextAlignment As eAlignText = 0, _
     Optional TextLeft, Optional ByRef TextTop, Optional ByRef TextWidth, Optional ByRef TextHeight, _
     Optional TextAngle As Single = 0!, Optional TextOpacity As Single = 100!, _
     Optional FontName, Optional FontSize, Optional FontColor, Optional FontWeight, Optional FontItalic, Optional FontUnderline, Optional FontStrikeOut, _
@@ -1435,6 +1434,8 @@ Const c_strProcedure = "PictureData_SetToControl"
 ' + ObjectData = FIBITMAP ??? как проверить наличие является ли код указателем на картинку FreeImage ???
 '-------------------------
 ' Дополнительные параметры:
+Const cPosLimit = 1             ' позиция ниже этого значения считается заданной относительно размера контрола
+Const cSizLimit = 3             ' размер ниже этого значения считается заданным относительно размера контрола
 Dim Offsize As Long             '(px) разница между размером контрола и размером изображения на нём.
 Dim Offset As Long              '(не используется) '(px) величина отступа картинки от границы контрола. граница контрола может перекрывать изображение этот параметр призван компенсироватьналожение
 Dim Indent As Long: Indent = 3  '(px) величина отступа текста от картинки
@@ -1448,7 +1449,7 @@ On Error GoTo HandleError
     If Not FreeImage_IsAvailable Then FreeImage_LoadLibrary (True) 'False
 #End If                             'ObjectDataType
 '-------------
-' 0. Проверяем переданный контрол и настраиваем костыли
+' 0. Проверяем переданный контрол и настраиваем костыли и опущенные параметры
 '-------------
 Dim lBackColor As Long, bUseBackColor As Boolean  '
 ' lBackColor - цвет для замещения прозрачного фона (нужен в Access.CommandButton и StdPicture)
@@ -1539,10 +1540,10 @@ Dim rXo As Single, rYo As Single: rXo = rXb: rYo = rYb                      ' на
 HandlePict:
 With Trans
 ' Заданные размеры изображения на контроле, если не заданы - берём размеры контрола
-    If Not IsNumeric(PictWidth) Then Wp = Wb Else If PictWidth = 0 Then Wp = Wb Else Wp = IIf(Abs(PictWidth) > 1, PictWidth, PictWidth * Wb)
-    If Not IsNumeric(PictHeight) Then Hp = Hb Else If PictHeight = 0 Then Hp = Hb Else Hp = IIf(Abs(PictHeight) > 1, PictHeight, PictHeight * Hb)
-    If IsNumeric(PictLeft) Then dXp = IIf(Abs(PictLeft) >= 1, PictLeft, PictLeft * Wb)
-    If IsNumeric(PictTop) Then dYp = IIf(Abs(PictTop) >= 1, PictTop, PictTop * Hb)
+    If Not IsNumeric(PictWidth) Then Wp = Wb Else If PictWidth = 0 Then Wp = Wb Else Wp = IIf(Abs(PictWidth) > cSizLimit, PictWidth, PictWidth * Wb)
+    If Not IsNumeric(PictHeight) Then Hp = Hb Else If PictHeight = 0 Then Hp = Hb Else Hp = IIf(Abs(PictHeight) > cSizLimit, PictHeight, PictHeight * Hb)
+    If IsNumeric(PictLeft) Then dXp = IIf(Abs(PictLeft) >= cPosLimit, PictLeft, PictLeft * Wb)
+    If IsNumeric(PictTop) Then dYp = IIf(Abs(PictTop) >= cPosLimit, PictTop, PictTop * Hb)
 ' Получаем Bitmap подходящих размеров
     #If ObjectDataType = 0 Then     'FI
 Dim fiPict As LongPtr
@@ -1614,10 +1615,10 @@ HandleText:
     If IsNumeric(FontSize) Then FontSize = Abs(FontSize): If FontSize < 1 Then FontSize = FontSize * p_Min(Wb, Hb)  ' /pt
 Dim hFont As LongPtr: hFont = CreateHFont(FontName, FontSize, FontWeight, FontItalic, FontUnderline, FontStrikeOut) ': If hFont=0 then GoTo HandleComposite
 ' Заданные размеры области текста на контроле, если не заданы - рассчитываем исходя из свободного места и выравнивания
-    If IsNumeric(TextWidth) Then Wt = IIf(Abs(TextWidth) > 1, TextWidth, TextWidth * Wb)
-    If IsNumeric(TextHeight) Then Ht = IIf(Abs(TextHeight) > 1, TextHeight, TextHeight * Hb)
-    If IsNumeric(TextLeft) Then dXt = IIf(Abs(TextLeft) >= 1, TextLeft, TextLeft * Wb)
-    If IsNumeric(TextTop) Then dYt = IIf(Abs(TextTop) >= 1, TextTop, TextTop * Hb)
+    If IsNumeric(TextWidth) Then Wt = IIf(Abs(TextWidth) > cSizLimit, TextWidth, TextWidth * Wb)
+    If IsNumeric(TextHeight) Then Ht = IIf(Abs(TextHeight) > cSizLimit, TextHeight, TextHeight * Hb)
+    If IsNumeric(TextLeft) Then dXt = IIf(Abs(TextLeft) >= cPosLimit, TextLeft, TextLeft * Wb)
+    If IsNumeric(TextTop) Then dYt = IIf(Abs(TextTop) >= cPosLimit, TextTop, TextTop * Hb)
 ' Координаты точки привязки на тексте после поворота (в координатах контрола).
     #If ObjectDataType = 0 Then     'FI
     If fiPict = 0 Then

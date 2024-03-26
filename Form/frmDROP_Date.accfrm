@@ -1,6 +1,6 @@
 Version =20
 VersionRequired =20
-Checksum =-1031695356
+Checksum =-1411609412
 Begin Form
     AutoResize = NotDefault
     RecordSelectors = NotDefault
@@ -64,9 +64,13 @@ Begin Form
     OnKeyDown ="[Event Procedure]"
     OnDeactivate ="[Event Procedure]"
     AllowDatasheetView =0
-    FilterOnLoad =0
-    AllowLayoutView =0
-    PrtDevModeW = Begin
+    UnknownProp = {305 ,452 ,1 ,1 ,1 } Begin
+        0x00
+    End
+    UnknownProp = {395 ,563 ,1 ,1 ,1 } Begin
+        0x00
+    End
+    UnknownProp = {419 ,678 ,11 ,0 ,584 } Begin
         0x0000000000000000000000000000000000000000000000000000000000000000 ,
         0x0000000000000000000000000000000000000000000000000000000000000000 ,
         0x0104220bdc006c0103df00000100090000000000640001000700580201000100 ,
@@ -87,12 +91,11 @@ Begin Form
         0x0000000000000000000000000000000000000000000000000000000000009600 ,
         0x4b002c0100800000
     End
-    PrtDevNamesW = Begin
+    UnknownProp = {420 ,679 ,11 ,0 ,68 } Begin
         0x040011001b000100000000000000000000000000000000000000000000000000 ,
         0x0000000000000000000000000000000000000000000046005000520031003100 ,
         0x3a000000
     End
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0
@@ -111,7 +114,9 @@ Begin Form
         End
         Begin CommandButton
             TextFontFamily =2
-            BorderLineStyle =0
+            UnknownProp = {324 ,11 ,2 ,1 ,1 } Begin
+                0x00
+            End
         End
         Begin TextBox
             SpecialEffect =2
@@ -128,7 +133,9 @@ Begin Form
         End
         Begin ToggleButton
             TextFontFamily =2
-            BorderLineStyle =0
+            UnknownProp = {321 ,11 ,2 ,1 ,1 } Begin
+                0x00
+            End
         End
         Begin FormHeader
             Height =637
@@ -174,12 +181,24 @@ Begin Form
                     GUID = Begin
                         0x90097ebd09a898419384793ba3425462
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     AutoRepeat = NotDefault
@@ -216,12 +235,24 @@ Begin Form
                     GUID = Begin
                         0x6a02a9740e95d247bfc0128e4cdd1814
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     AutoRepeat = NotDefault
@@ -257,12 +288,24 @@ Begin Form
                     GUID = Begin
                         0x2eca8cfd7d719e49ba0d342fe89912af
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     AutoRepeat = NotDefault
@@ -298,12 +341,24 @@ Begin Form
                     GUID = Begin
                         0x2b1844dd8416fc4fad0c68b898cdf438
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin TextBox
                     TabStop = NotDefault
@@ -326,8 +381,12 @@ Begin Form
                     GUID = Begin
                         0x69b0db41a768ae4c82cc2ee5ed78d7ac
                     End
-
-                    ForeThemeColorIndex =0
+                    UnknownProp = {299 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {320 ,622 ,4 ,0 ,4 } Begin
+                        0x00000000
+                    End
                 End
                 Begin Line
                     OverlapFlags =85
@@ -378,8 +437,12 @@ Begin Form
                     AfterUpdate ="[Event Procedure]"
                     FontName ="Impact"
                     Tag ="FontColor=Dark"
-
-                    ForeThemeColorIndex =0
+                    UnknownProp = {306 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {330 ,622 ,4 ,0 ,4 } Begin
+                        0x00000000
+                    End
                 End
             End
         End
@@ -430,10 +493,18 @@ Begin Form
                     GUID = Begin
                         0x9052aa25d5f78c499b9c7b29bacc1c34
                     End
-                    LayoutCachedLeft =2256
-                    LayoutCachedTop =135
-                    LayoutCachedWidth =2606
-                    LayoutCachedHeight =365
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x6d010000
+                    End
                 End
                 Begin Label
                     OverlapFlags =93
@@ -456,10 +527,18 @@ Begin Form
                     GUID = Begin
                         0x493d30fe855eb649bcd1c480647b9e46
                     End
-                    LayoutCachedLeft =506
-                    LayoutCachedTop =135
-                    LayoutCachedWidth =856
-                    LayoutCachedHeight =365
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x6d010000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -482,10 +561,18 @@ Begin Form
                     GUID = Begin
                         0x6e085fc81020bf4092513950e48caa1d
                     End
-                    LayoutCachedLeft =856
-                    LayoutCachedTop =135
-                    LayoutCachedWidth =1206
-                    LayoutCachedHeight =365
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x6d010000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -508,10 +595,18 @@ Begin Form
                     GUID = Begin
                         0xbd8c72be9bb15b4f9807c160b61a01c9
                     End
-                    LayoutCachedLeft =1206
-                    LayoutCachedTop =135
-                    LayoutCachedWidth =1556
-                    LayoutCachedHeight =365
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x6d010000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -534,10 +629,18 @@ Begin Form
                     GUID = Begin
                         0xc738bb09d3749a47aec9bc01c648d02e
                     End
-                    LayoutCachedLeft =1556
-                    LayoutCachedTop =135
-                    LayoutCachedWidth =1906
-                    LayoutCachedHeight =365
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x6d010000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -560,10 +663,18 @@ Begin Form
                     GUID = Begin
                         0x7fc6cda56ec21b44833cba56f227a599
                     End
-                    LayoutCachedLeft =1906
-                    LayoutCachedTop =135
-                    LayoutCachedWidth =2256
-                    LayoutCachedHeight =365
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x6d010000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -586,10 +697,18 @@ Begin Form
                     GUID = Begin
                         0xfad7a9d564c7004289ec341cc9665a9d
                     End
-                    LayoutCachedLeft =2606
-                    LayoutCachedTop =135
-                    LayoutCachedWidth =2956
-                    LayoutCachedHeight =365
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x8c0b0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x6d010000
+                    End
                 End
                 Begin Line
                     OverlapFlags =93
@@ -621,10 +740,18 @@ Begin Form
                     GUID = Begin
                         0x31b01bd0486ca94aaf3e0290c7f70268
                     End
-                    LayoutCachedLeft =506
-                    LayoutCachedTop =455
-                    LayoutCachedWidth =856
-                    LayoutCachedHeight =685
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xc7010000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -646,10 +773,18 @@ Begin Form
                     GUID = Begin
                         0xaf57f27bad1e774ab4304010351c62da
                     End
-                    LayoutCachedLeft =856
-                    LayoutCachedTop =455
-                    LayoutCachedWidth =1206
-                    LayoutCachedHeight =685
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xc7010000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -671,10 +806,18 @@ Begin Form
                     GUID = Begin
                         0x534773e51458f14aa0382b86db1fa782
                     End
-                    LayoutCachedLeft =1206
-                    LayoutCachedTop =455
-                    LayoutCachedWidth =1556
-                    LayoutCachedHeight =685
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xc7010000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -696,10 +839,18 @@ Begin Form
                     GUID = Begin
                         0xc9fdd8171a6d8f4c92af328387bcde92
                     End
-                    LayoutCachedLeft =1556
-                    LayoutCachedTop =455
-                    LayoutCachedWidth =1906
-                    LayoutCachedHeight =685
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xc7010000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -720,10 +871,18 @@ Begin Form
                     GUID = Begin
                         0xc6340219f411f24c8fc8b41219bc7bb5
                     End
-                    LayoutCachedLeft =1906
-                    LayoutCachedTop =455
-                    LayoutCachedWidth =2256
-                    LayoutCachedHeight =685
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xc7010000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -744,10 +903,18 @@ Begin Form
                     GUID = Begin
                         0xcd6e7939943ada4e9f483b0482763519
                     End
-                    LayoutCachedLeft =2256
-                    LayoutCachedTop =455
-                    LayoutCachedWidth =2606
-                    LayoutCachedHeight =685
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xc7010000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -768,10 +935,18 @@ Begin Form
                     GUID = Begin
                         0x4f81cdf104880146ab03a7e684095031
                     End
-                    LayoutCachedLeft =2606
-                    LayoutCachedTop =455
-                    LayoutCachedWidth =2956
-                    LayoutCachedHeight =685
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xc7010000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x8c0b0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -792,10 +967,18 @@ Begin Form
                     GUID = Begin
                         0xc39ab74558ad9949a87d334027c5fc7c
                     End
-                    LayoutCachedLeft =506
-                    LayoutCachedTop =685
-                    LayoutCachedWidth =856
-                    LayoutCachedHeight =915
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -816,10 +999,18 @@ Begin Form
                     GUID = Begin
                         0xdd8b57cc086ca245967d60c7db55d440
                     End
-                    LayoutCachedLeft =856
-                    LayoutCachedTop =685
-                    LayoutCachedWidth =1206
-                    LayoutCachedHeight =915
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -840,10 +1031,18 @@ Begin Form
                     GUID = Begin
                         0xc34f2f0f514bfa438b6724cae7c3d74d
                     End
-                    LayoutCachedLeft =1206
-                    LayoutCachedTop =685
-                    LayoutCachedWidth =1556
-                    LayoutCachedHeight =915
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -864,10 +1063,18 @@ Begin Form
                     GUID = Begin
                         0x35b8286acf687448b8ad3145980921d8
                     End
-                    LayoutCachedLeft =1556
-                    LayoutCachedTop =685
-                    LayoutCachedWidth =1906
-                    LayoutCachedHeight =915
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -888,10 +1095,18 @@ Begin Form
                     GUID = Begin
                         0xf90a3f746e055547a19698a00f11d199
                     End
-                    LayoutCachedLeft =1906
-                    LayoutCachedTop =685
-                    LayoutCachedWidth =2256
-                    LayoutCachedHeight =915
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -912,10 +1127,18 @@ Begin Form
                     GUID = Begin
                         0x9c81a3295e7f7a4dba48f6c269a0b8b2
                     End
-                    LayoutCachedLeft =2256
-                    LayoutCachedTop =685
-                    LayoutCachedWidth =2606
-                    LayoutCachedHeight =915
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -936,10 +1159,18 @@ Begin Form
                     GUID = Begin
                         0xa0f80bbd2a38304783d9f9ff6f2a35ed
                     End
-                    LayoutCachedLeft =2606
-                    LayoutCachedTop =685
-                    LayoutCachedWidth =2956
-                    LayoutCachedHeight =915
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x8c0b0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -960,10 +1191,18 @@ Begin Form
                     GUID = Begin
                         0x3ab4ce963feefa40956c7e01937fc246
                     End
-                    LayoutCachedLeft =506
-                    LayoutCachedTop =915
-                    LayoutCachedWidth =856
-                    LayoutCachedHeight =1145
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -984,10 +1223,18 @@ Begin Form
                     GUID = Begin
                         0x24a733ef3ab72f449af85fce7a9dd059
                     End
-                    LayoutCachedLeft =856
-                    LayoutCachedTop =915
-                    LayoutCachedWidth =1206
-                    LayoutCachedHeight =1145
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1008,10 +1255,18 @@ Begin Form
                     GUID = Begin
                         0x6377622665edd74d924e51d55600d118
                     End
-                    LayoutCachedLeft =1206
-                    LayoutCachedTop =915
-                    LayoutCachedWidth =1556
-                    LayoutCachedHeight =1145
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1032,10 +1287,18 @@ Begin Form
                     GUID = Begin
                         0x85ab535ef5c1034f862754b89e18b8b3
                     End
-                    LayoutCachedLeft =1556
-                    LayoutCachedTop =915
-                    LayoutCachedWidth =1906
-                    LayoutCachedHeight =1145
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1056,10 +1319,18 @@ Begin Form
                     GUID = Begin
                         0xa1bfd2e89c79c248b940ae5ccd933923
                     End
-                    LayoutCachedLeft =1906
-                    LayoutCachedTop =915
-                    LayoutCachedWidth =2256
-                    LayoutCachedHeight =1145
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1080,10 +1351,18 @@ Begin Form
                     GUID = Begin
                         0xd8515c07c371d8498a7f7d5dc40c9984
                     End
-                    LayoutCachedLeft =2256
-                    LayoutCachedTop =915
-                    LayoutCachedWidth =2606
-                    LayoutCachedHeight =1145
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1104,10 +1383,18 @@ Begin Form
                     GUID = Begin
                         0x5603b3b778ce974aad947c6f2a0ddc10
                     End
-                    LayoutCachedLeft =2606
-                    LayoutCachedTop =915
-                    LayoutCachedWidth =2956
-                    LayoutCachedHeight =1145
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x8c0b0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
                 End
                 Begin Label
                     OverlapFlags =93
@@ -1128,10 +1415,18 @@ Begin Form
                     GUID = Begin
                         0x46cabe5c960760419e2bc9ad03c8cdb4
                     End
-                    LayoutCachedLeft =506
-                    LayoutCachedTop =1375
-                    LayoutCachedWidth =856
-                    LayoutCachedHeight =1605
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1152,10 +1447,18 @@ Begin Form
                     GUID = Begin
                         0x524d3e753131714282f22feef537009d
                     End
-                    LayoutCachedLeft =856
-                    LayoutCachedTop =1145
-                    LayoutCachedWidth =1206
-                    LayoutCachedHeight =1375
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1176,10 +1479,18 @@ Begin Form
                     GUID = Begin
                         0x3cf2ac48ae19b6448d8c202fa9197d66
                     End
-                    LayoutCachedLeft =506
-                    LayoutCachedTop =1145
-                    LayoutCachedWidth =856
-                    LayoutCachedHeight =1375
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1200,10 +1511,18 @@ Begin Form
                     GUID = Begin
                         0x54fea7db96fb594fa5c7e61e60f63bad
                     End
-                    LayoutCachedLeft =856
-                    LayoutCachedTop =1375
-                    LayoutCachedWidth =1206
-                    LayoutCachedHeight =1605
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1224,10 +1543,18 @@ Begin Form
                     GUID = Begin
                         0x259f390befaf0549b8afaed6569e529f
                     End
-                    LayoutCachedLeft =1206
-                    LayoutCachedTop =1145
-                    LayoutCachedWidth =1556
-                    LayoutCachedHeight =1375
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1248,10 +1575,18 @@ Begin Form
                     GUID = Begin
                         0x4af5cb310b11974f9aa0cb3fe40ea294
                     End
-                    LayoutCachedLeft =1556
-                    LayoutCachedTop =1145
-                    LayoutCachedWidth =1906
-                    LayoutCachedHeight =1375
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1272,10 +1607,18 @@ Begin Form
                     GUID = Begin
                         0xf043858e67e22c4a8d1f2e7ebc37200f
                     End
-                    LayoutCachedLeft =1556
-                    LayoutCachedTop =1375
-                    LayoutCachedWidth =1906
-                    LayoutCachedHeight =1605
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1296,10 +1639,18 @@ Begin Form
                     GUID = Begin
                         0x1da9f7f92147894faffa90d2b258e422
                     End
-                    LayoutCachedLeft =1206
-                    LayoutCachedTop =1375
-                    LayoutCachedWidth =1556
-                    LayoutCachedHeight =1605
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1320,10 +1671,18 @@ Begin Form
                     GUID = Begin
                         0x4366afacdc15104b955646cfd385c8d7
                     End
-                    LayoutCachedLeft =1906
-                    LayoutCachedTop =1145
-                    LayoutCachedWidth =2256
-                    LayoutCachedHeight =1375
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1344,10 +1703,18 @@ Begin Form
                     GUID = Begin
                         0x3a4c7e38c5cd304c904335dc007255f8
                     End
-                    LayoutCachedLeft =1906
-                    LayoutCachedTop =1375
-                    LayoutCachedWidth =2256
-                    LayoutCachedHeight =1605
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1368,10 +1735,18 @@ Begin Form
                     GUID = Begin
                         0x4bf95ebe52409443842ba7e6078f46b5
                     End
-                    LayoutCachedLeft =2256
-                    LayoutCachedTop =1375
-                    LayoutCachedWidth =2606
-                    LayoutCachedHeight =1605
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1392,10 +1767,18 @@ Begin Form
                     GUID = Begin
                         0xe156c705165e1a44a4175653b5804587
                     End
-                    LayoutCachedLeft =2256
-                    LayoutCachedTop =1145
-                    LayoutCachedWidth =2606
-                    LayoutCachedHeight =1375
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1416,10 +1799,18 @@ Begin Form
                     GUID = Begin
                         0x330f39c6f1828041bf4f69421bfe4339
                     End
-                    LayoutCachedLeft =2606
-                    LayoutCachedTop =1145
-                    LayoutCachedWidth =2956
-                    LayoutCachedHeight =1375
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x8c0b0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
                 End
                 Begin Label
                     OverlapFlags =95
@@ -1440,10 +1831,18 @@ Begin Form
                     GUID = Begin
                         0xa42ed24d6d7aad4791293d0199b5e966
                     End
-                    LayoutCachedLeft =2606
-                    LayoutCachedTop =1375
-                    LayoutCachedWidth =2956
-                    LayoutCachedHeight =1605
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x8c0b0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -1465,10 +1864,18 @@ Begin Form
                     GUID = Begin
                         0xb182a20ef0709c4f899f74acd0c19441
                     End
-                    LayoutCachedLeft =2606
-                    LayoutCachedTop =1605
-                    LayoutCachedWidth =2956
-                    LayoutCachedHeight =1835
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x8c0b0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x2b070000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -1490,10 +1897,18 @@ Begin Form
                     GUID = Begin
                         0x3ef5ac0d0d4dc34c923f9dc820ee8046
                     End
-                    LayoutCachedLeft =2256
-                    LayoutCachedTop =1605
-                    LayoutCachedWidth =2606
-                    LayoutCachedHeight =1835
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x2e0a0000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x2b070000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -1515,10 +1930,18 @@ Begin Form
                     GUID = Begin
                         0xb6cdd61312d19446919b69a90f6921cc
                     End
-                    LayoutCachedLeft =1906
-                    LayoutCachedTop =1605
-                    LayoutCachedWidth =2256
-                    LayoutCachedHeight =1835
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xd0080000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x2b070000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -1540,10 +1963,18 @@ Begin Form
                     GUID = Begin
                         0xc5f863eb54fbed44a9bc49433180c186
                     End
-                    LayoutCachedLeft =1556
-                    LayoutCachedTop =1605
-                    LayoutCachedWidth =1906
-                    LayoutCachedHeight =1835
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x72070000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x2b070000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -1565,10 +1996,18 @@ Begin Form
                     GUID = Begin
                         0x59fdb8be9dad2e4089269a15135e5ef9
                     End
-                    LayoutCachedLeft =1206
-                    LayoutCachedTop =1605
-                    LayoutCachedWidth =1556
-                    LayoutCachedHeight =1835
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x2b070000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -1590,10 +2029,18 @@ Begin Form
                     GUID = Begin
                         0x847d6677ffffa94186d00cdeba5a395b
                     End
-                    LayoutCachedLeft =856
-                    LayoutCachedTop =1605
-                    LayoutCachedWidth =1206
-                    LayoutCachedHeight =1835
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x2b070000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -1615,10 +2062,18 @@ Begin Form
                     GUID = Begin
                         0xc9f4382d392d1a4eac9d9bac6683d3fb
                     End
-                    LayoutCachedLeft =506
-                    LayoutCachedTop =1605
-                    LayoutCachedWidth =856
-                    LayoutCachedHeight =1835
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0x58030000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x2b070000
+                    End
                 End
                 Begin Rectangle
                     OverlapFlags =223
@@ -1652,10 +2107,18 @@ Begin Form
                     GUID = Begin
                         0x09c3c55c6f58c149a21aab85dec1deec
                     End
-                    LayoutCachedLeft =156
-                    LayoutCachedTop =455
-                    LayoutCachedWidth =506
-                    LayoutCachedHeight =685
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x9c000000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xc7010000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
                 End
                 Begin Label
                     OverlapFlags =223
@@ -1678,10 +2141,18 @@ Begin Form
                     GUID = Begin
                         0x95fb46c91ecd38409a0beb4d82548d9e
                     End
-                    LayoutCachedLeft =156
-                    LayoutCachedTop =685
-                    LayoutCachedWidth =506
-                    LayoutCachedHeight =915
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x9c000000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0xad020000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
                 End
                 Begin Label
                     OverlapFlags =223
@@ -1704,10 +2175,18 @@ Begin Form
                     GUID = Begin
                         0xdb6dd9f28aea024ea42f248fd8035afd
                     End
-                    LayoutCachedLeft =156
-                    LayoutCachedTop =915
-                    LayoutCachedWidth =506
-                    LayoutCachedHeight =1145
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x9c000000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x93030000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
                 End
                 Begin Label
                     OverlapFlags =223
@@ -1730,10 +2209,18 @@ Begin Form
                     GUID = Begin
                         0xfb44e97c42c3c84cb9d1cf33836d9822
                     End
-                    LayoutCachedLeft =156
-                    LayoutCachedTop =1145
-                    LayoutCachedWidth =506
-                    LayoutCachedHeight =1375
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x9c000000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
                 End
                 Begin Label
                     OverlapFlags =223
@@ -1756,10 +2243,18 @@ Begin Form
                     GUID = Begin
                         0x066f57438d5bf84ea7a8a23ca1b5a500
                     End
-                    LayoutCachedLeft =156
-                    LayoutCachedTop =1375
-                    LayoutCachedWidth =506
-                    LayoutCachedHeight =1605
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x9c000000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -1782,10 +2277,18 @@ Begin Form
                     GUID = Begin
                         0xc406c364e13c0e4aa8a5b32f18aa787a
                     End
-                    LayoutCachedLeft =156
-                    LayoutCachedTop =1605
-                    LayoutCachedWidth =506
-                    LayoutCachedHeight =1835
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x9c000000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x45060000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x2b070000
+                    End
                 End
                 Begin Label
                     OverlapFlags =215
@@ -1807,10 +2310,18 @@ Begin Form
                     GUID = Begin
                         0x618c463c5547e347bb466cd67f235f13
                     End
-                    LayoutCachedLeft =156
-                    LayoutCachedTop =135
-                    LayoutCachedWidth =506
-                    LayoutCachedHeight =365
+                    UnknownProp = {282 ,586 ,3 ,4 ,4 } Begin
+                        0x9c000000
+                    End
+                    UnknownProp = {283 ,587 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {284 ,588 ,3 ,4 ,4 } Begin
+                        0xfa010000
+                    End
+                    UnknownProp = {285 ,589 ,3 ,4 ,4 } Begin
+                        0x6d010000
+                    End
                 End
                 Begin Rectangle
                     SpecialEffect =0
@@ -1827,10 +2338,18 @@ Begin Form
                     GUID = Begin
                         0x87df64f47d15d946bd2d4fd291f66cba
                     End
-                    LayoutCachedLeft =1206
-                    LayoutCachedTop =1145
-                    LayoutCachedWidth =1556
-                    LayoutCachedHeight =1375
+                    UnknownProp = {281 ,586 ,3 ,4 ,4 } Begin
+                        0xb6040000
+                    End
+                    UnknownProp = {282 ,587 ,3 ,4 ,4 } Begin
+                        0x79040000
+                    End
+                    UnknownProp = {283 ,588 ,3 ,4 ,4 } Begin
+                        0x14060000
+                    End
+                    UnknownProp = {284 ,589 ,3 ,4 ,4 } Begin
+                        0x5f050000
+                    End
                 End
             End
         End
@@ -1861,12 +2380,24 @@ Begin Form
                     GUID = Begin
                         0x6f3c6f985fcdd041becaa6d2d84ff5c6
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin Line
                     OverlapFlags =85
@@ -1910,12 +2441,24 @@ Begin Form
                     GUID = Begin
                         0xdbcac6f71888294e970c0eb838f8d05b
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     Default = NotDefault
@@ -1936,12 +2479,24 @@ Begin Form
                     GUID = Begin
                         0x4ce4cc7046751746a58c32f93e86a376
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
             End
         End

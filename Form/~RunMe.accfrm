@@ -1,6 +1,6 @@
 Version =20
 VersionRequired =20
-Checksum =-1654173464
+Checksum =-1589361586
 Begin Form
     RecordSelectors = NotDefault
     MaxButton = NotDefault
@@ -300,9 +300,13 @@ Begin Form
         0x444f54345f30303100
     End
     AllowDatasheetView =0
-    FilterOnLoad =0
-    DatasheetGridlinesColor12 =12632256
-    PrtDevModeW = Begin
+    UnknownProp = {305 ,452 ,1 ,1 ,1 } Begin
+        0x00
+    End
+    UnknownProp = {400 ,582 ,4 ,4 ,4 } Begin
+        0xc0c0c000
+    End
+    UnknownProp = {419 ,678 ,11 ,0 ,584 } Begin
         0x0000000000000000000000000000000000000000000000000000000000000000 ,
         0x0000000000000000000000000000000000000000000000000000000000000000 ,
         0x0104220bdc006c01036e07000100090000000000640001000100580202000100 ,
@@ -323,12 +327,11 @@ Begin Form
         0x0000000000000000000000000000000000000000000000000000000000009600 ,
         0x4b002c0100800000
     End
-    PrtDevNamesW = Begin
+    UnknownProp = {420 ,679 ,11 ,0 ,68 } Begin
         0x040011001b000100000000000000000000000000000000000000000000000000 ,
         0x0000000000000000000000000000000000000000000046005000520031003100 ,
         0x3a000000
     End
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0
@@ -346,7 +349,9 @@ Begin Form
             FontWeight =400
             ForeColor =-2147483630
             FontName ="Tahoma"
-            BorderLineStyle =0
+            UnknownProp = {324 ,11 ,2 ,1 ,1 } Begin
+                0x00
+            End
         End
         Begin TextBox
             FELineBreak = NotDefault
@@ -397,7 +402,9 @@ Begin Form
                     GUID = Begin
                         0x6fec1522f84f944da20149ea28d6388f
                     End
-                    ForeThemeColorIndex =0
+                    UnknownProp = {298 ,622 ,4 ,0 ,4 } Begin
+                        0x00000000
+                    End
                 End
                 Begin Line
                     OverlapFlags =87
@@ -435,12 +442,24 @@ Begin Form
                     GUID = Begin
                         0x209daa4ab65daf42a6d10c44db6e6bde
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -469,12 +488,24 @@ Begin Form
                     GUID = Begin
                         0x8716b2ea79087f47817664bc0da59aad
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -503,12 +534,24 @@ Begin Form
                     GUID = Begin
                         0x8459c95acf5be14c9a75614d100f4c0d
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -575,12 +618,24 @@ Begin Form
                     GUID = Begin
                         0x0bc923d30f0db848a5e00087f91a8418
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -622,12 +677,24 @@ Begin Form
                     GUID = Begin
                         0x38616f222ff2ef4b8afc5e17280498cc
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -669,12 +736,24 @@ Begin Form
                     GUID = Begin
                         0x9b438936cb1f4641a29951cf996c0beb
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -716,12 +795,24 @@ Begin Form
                     GUID = Begin
                         0xf7a95b2c450f794bb6c5dcc513c2106c
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -763,12 +854,24 @@ Begin Form
                     GUID = Begin
                         0x073c8500d9891346adf3d2759abadcc8
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -810,12 +913,24 @@ Begin Form
                     GUID = Begin
                         0x01f6532daf2e5442acce85823ee2c888
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin Label
                     Visible = NotDefault
@@ -859,12 +974,24 @@ Begin Form
                     GUID = Begin
                         0x11ec8b71813355449edc762a2d8b8ce5
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin Label
                     OverlapFlags =223

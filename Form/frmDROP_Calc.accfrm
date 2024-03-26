@@ -1,6 +1,6 @@
 Version =20
 VersionRequired =20
-Checksum =1018563486
+Checksum =-594678526
 Begin Form
     AutoResize = NotDefault
     Modal = NotDefault
@@ -67,9 +67,13 @@ Begin Form
     OnKeyDown ="[Event Procedure]"
     OnDeactivate ="[Event Procedure]"
     AllowDatasheetView =0
-    FilterOnLoad =0
-    AllowLayoutView =0
-    PrtDevModeW = Begin
+    UnknownProp = {305 ,452 ,1 ,1 ,1 } Begin
+        0x00
+    End
+    UnknownProp = {395 ,563 ,1 ,1 ,1 } Begin
+        0x00
+    End
+    UnknownProp = {419 ,678 ,11 ,0 ,584 } Begin
         0x00000803000000000200000200000000808d3609000000000000000000000000 ,
         0x88070803000000003a00003a000000008807080300000000301c650100000000 ,
         0x0104220bdc006c0103df00000100090000000000640001000700580201000100 ,
@@ -90,12 +94,11 @@ Begin Form
         0x0000000000000000000000000000000000000000000000000000000000009600 ,
         0x4b002c0100800000
     End
-    PrtDevNamesW = Begin
+    UnknownProp = {420 ,679 ,11 ,0 ,76 } Begin
         0x040011001b000100000000000000000000000000000000000000000000000000 ,
         0x0000000000000000000000000000000000000000000046005000520031003100 ,
         0x3a0000000000000000000000
     End
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0
@@ -115,7 +118,9 @@ Begin Form
         End
         Begin CommandButton
             TextFontFamily =2
-            BorderLineStyle =0
+            UnknownProp = {324 ,11 ,2 ,1 ,1 } Begin
+                0x00
+            End
         End
         Begin TextBox
             FELineBreak = NotDefault
@@ -167,7 +172,9 @@ Begin Form
                     GUID = Begin
                         0xcf2b1c2dfc0d6d469ed815c26a7d6889
                     End
-
+                    UnknownProp = {299 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
                 End
                 Begin Line
                     OverlapFlags =85
@@ -247,16 +254,36 @@ Begin Form
                     GUID = Begin
                         0xe0b75d11449a084593debd350df838c9
                     End
-
-                    LayoutCachedLeft =614
-                    LayoutCachedTop =884
-                    LayoutCachedWidth =954
-                    LayoutCachedHeight =1224
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x66020000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0x74030000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xba030000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0xc8040000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -277,16 +304,36 @@ Begin Form
                     GUID = Begin
                         0xdca0715345d76844af917cce00c6dee1
                     End
-
-                    LayoutCachedLeft =989
-                    LayoutCachedTop =884
-                    LayoutCachedWidth =1329
-                    LayoutCachedHeight =1224
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0xdd030000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0x74030000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0x31050000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0xc8040000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -307,16 +354,36 @@ Begin Form
                     GUID = Begin
                         0x6d6a5738bea7ad4d91647b97137bf340
                     End
-
-                    LayoutCachedLeft =1364
-                    LayoutCachedTop =884
-                    LayoutCachedWidth =1704
-                    LayoutCachedHeight =1224
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x54050000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0x74030000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xa8060000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0xc8040000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -337,16 +404,36 @@ Begin Form
                     GUID = Begin
                         0x3f3566ab1319e2428c5f6c6a52f0cb66
                     End
-
-                    LayoutCachedLeft =614
-                    LayoutCachedTop =509
-                    LayoutCachedWidth =954
-                    LayoutCachedHeight =849
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x66020000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0xfd010000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xba030000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0x51030000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -367,16 +454,36 @@ Begin Form
                     GUID = Begin
                         0xb4f416bfc32d764f832c0a38cbaadc09
                     End
-
-                    LayoutCachedLeft =989
-                    LayoutCachedTop =509
-                    LayoutCachedWidth =1329
-                    LayoutCachedHeight =849
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0xdd030000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0xfd010000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0x31050000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0x51030000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -397,16 +504,36 @@ Begin Form
                     GUID = Begin
                         0x4e194c8c1fb0bb4199767d5a25824890
                     End
-
-                    LayoutCachedLeft =1364
-                    LayoutCachedTop =509
-                    LayoutCachedWidth =1704
-                    LayoutCachedHeight =849
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x54050000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0xfd010000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xa8060000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0x51030000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -426,16 +553,36 @@ Begin Form
                     GUID = Begin
                         0x1833120cc4c1374887e58a545b4c0a92
                     End
-
-                    LayoutCachedLeft =614
-                    LayoutCachedTop =134
-                    LayoutCachedWidth =954
-                    LayoutCachedHeight =474
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x66020000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0x86000000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xba030000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0xda010000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -456,16 +603,36 @@ Begin Form
                     GUID = Begin
                         0x4559c04b2b48294db8076df0bcde8eb9
                     End
-
-                    LayoutCachedLeft =989
-                    LayoutCachedTop =134
-                    LayoutCachedWidth =1329
-                    LayoutCachedHeight =474
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0xdd030000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0x86000000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0x31050000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0xda010000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -486,16 +653,36 @@ Begin Form
                     GUID = Begin
                         0x5e7c86c99c099847a2110f6553f60a54
                     End
-
-                    LayoutCachedLeft =1364
-                    LayoutCachedTop =134
-                    LayoutCachedWidth =1704
-                    LayoutCachedHeight =474
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x54050000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0x86000000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xa8060000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0xda010000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -516,16 +703,36 @@ Begin Form
                     GUID = Begin
                         0x2ffb8a1e042cd84cb9f060d3103171ae
                     End
-
-                    LayoutCachedLeft =614
-                    LayoutCachedTop =1259
-                    LayoutCachedWidth =954
-                    LayoutCachedHeight =1599
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x66020000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0xeb040000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xba030000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0x3f060000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -546,16 +753,36 @@ Begin Form
                     GUID = Begin
                         0x8c091aaf5cfbc3479f0eb90da7bea03b
                     End
-
-                    LayoutCachedLeft =989
-                    LayoutCachedTop =1259
-                    LayoutCachedWidth =1329
-                    LayoutCachedHeight =1599
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0xdd030000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0xeb040000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0x31050000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0x3f060000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -577,16 +804,36 @@ Begin Form
                     GUID = Begin
                         0x934c01ebc54e4e40a0c7d0e339943ca8
                     End
-
-                    LayoutCachedLeft =2280
-                    LayoutCachedTop =885
-                    LayoutCachedWidth =2620
-                    LayoutCachedHeight =1600
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0xe8080000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0x75030000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0x3c0a0000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0x40060000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -607,16 +854,36 @@ Begin Form
                     GUID = Begin
                         0xfb04a47ced535a4a8162e43606c34a81
                     End
-
-                    LayoutCachedLeft =2280
-                    LayoutCachedTop =510
-                    LayoutCachedWidth =2620
-                    LayoutCachedHeight =850
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0xe8080000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0xfe010000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0x3c0a0000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0x52030000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =93
@@ -632,16 +899,36 @@ Begin Form
                     GUID = Begin
                         0x0cd8fedd0005e04ba124828f12c587f8
                     End
-
-                    LayoutCachedLeft =2280
-                    LayoutCachedTop =135
-                    LayoutCachedWidth =2620
-                    LayoutCachedHeight =475
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0xe8080000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0x3c0a0000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0xdb010000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin Rectangle
                     SpecialEffect =2
@@ -693,16 +980,36 @@ Begin Form
                     GUID = Begin
                         0x71820b49c0df1a4d930b191b9001ea8b
                     End
-
-                    LayoutCachedLeft =1364
-                    LayoutCachedTop =1259
-                    LayoutCachedWidth =1704
-                    LayoutCachedHeight =1599
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x54050000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0xeb040000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xa8060000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0x3f060000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =215
@@ -718,16 +1025,36 @@ Begin Form
                     GUID = Begin
                         0xbb8f7d89a3548a42852145f77316be1f
                     End
-
-                    LayoutCachedLeft =135
-                    LayoutCachedTop =884
-                    LayoutCachedWidth =475
-                    LayoutCachedHeight =1224
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0x74030000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xdb010000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0xc8040000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =215
@@ -743,16 +1070,36 @@ Begin Form
                     GUID = Begin
                         0x596da45ae1c9aa40b707be2d32f578a5
                     End
-
-                    LayoutCachedLeft =135
-                    LayoutCachedTop =509
-                    LayoutCachedWidth =475
-                    LayoutCachedHeight =849
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0xfd010000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xdb010000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0x51030000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =215
@@ -768,16 +1115,36 @@ Begin Form
                     GUID = Begin
                         0x75f2a85fea7c8949936e69073559d135
                     End
-
-                    LayoutCachedLeft =135
-                    LayoutCachedTop =1259
-                    LayoutCachedWidth =475
-                    LayoutCachedHeight =1599
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0xeb040000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xdb010000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0x3f060000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =215
@@ -793,16 +1160,36 @@ Begin Form
                     GUID = Begin
                         0xa5cd783d1252ab4e9b9512aeb52c45e0
                     End
-
-                    LayoutCachedLeft =1905
-                    LayoutCachedTop =885
-                    LayoutCachedWidth =2245
-                    LayoutCachedHeight =1225
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x71070000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0x75030000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xc5080000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0xc9040000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =215
@@ -818,16 +1205,36 @@ Begin Form
                     GUID = Begin
                         0x1ed90ca86511b24db58a7fd6894a6646
                     End
-
-                    LayoutCachedLeft =1905
-                    LayoutCachedTop =510
-                    LayoutCachedWidth =2245
-                    LayoutCachedHeight =850
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x71070000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0xfe010000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xc5080000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0x52030000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =215
@@ -843,16 +1250,36 @@ Begin Form
                     GUID = Begin
                         0x60373e2697216846b07c315857825471
                     End
-
-                    LayoutCachedLeft =1905
-                    LayoutCachedTop =1260
-                    LayoutCachedWidth =2245
-                    LayoutCachedHeight =1600
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x71070000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0xec040000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xc5080000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0x40060000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =215
@@ -868,16 +1295,36 @@ Begin Form
                     GUID = Begin
                         0x94ec6b0f446b1a4caafb96cdea337543
                     End
-
-                    LayoutCachedLeft =135
-                    LayoutCachedTop =134
-                    LayoutCachedWidth =475
-                    LayoutCachedHeight =474
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0x86000000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xdb010000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0xda010000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     OverlapFlags =215
@@ -893,16 +1340,36 @@ Begin Form
                     GUID = Begin
                         0x5da75fc32ca6a9419a390494fc5c0f03
                     End
-
-                    LayoutCachedLeft =1905
-                    LayoutCachedTop =135
-                    LayoutCachedWidth =2245
-                    LayoutCachedHeight =475
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {293 ,586 ,3 ,4 ,4 } Begin
+                        0x71070000
+                    End
+                    UnknownProp = {294 ,587 ,3 ,4 ,4 } Begin
+                        0x87000000
+                    End
+                    UnknownProp = {295 ,588 ,3 ,4 ,4 } Begin
+                        0xc5080000
+                    End
+                    UnknownProp = {296 ,589 ,3 ,4 ,4 } Begin
+                        0xdb010000
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {360 ,736 ,1 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
             End
         End
@@ -957,11 +1424,21 @@ Begin Form
                     GUID = Begin
                         0x4523ae5b02220346a95f555795b66464
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
                 Begin CommandButton
                     Default = NotDefault
@@ -983,11 +1460,21 @@ Begin Form
                     GUID = Begin
                         0x5b5c9adc30782f48adb59728dc5ce125
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
             End
         End

@@ -1,6 +1,6 @@
 Version =20
 VersionRequired =20
-Checksum =1647480797
+Checksum =1911939656
 Begin Form
     PopUp = NotDefault
     RecordSelectors = NotDefault
@@ -292,10 +292,16 @@ Begin Form
         0x0000000000000000000000000000000000000000000000000000000000000000 ,
         0x444f54345f30303100
     End
-    FilterOnLoad =0
-    AllowLayoutView =0
-    DatasheetGridlinesColor12 =12632256
-    PrtDevModeW = Begin
+    UnknownProp = {305 ,452 ,1 ,1 ,1 } Begin
+        0x00
+    End
+    UnknownProp = {395 ,563 ,1 ,1 ,1 } Begin
+        0x00
+    End
+    UnknownProp = {400 ,582 ,4 ,4 ,4 } Begin
+        0xc0c0c000
+    End
+    UnknownProp = {419 ,678 ,11 ,0 ,5932 } Begin
         0x0000000000000000000000000000000000000000000000000000000000000000 ,
         0x74006f0020005000440046000000000000000000000000000000000000000000 ,
         0x01040306dc005016032f0100010009009a0b3408640001000f00580202000100 ,
@@ -483,13 +489,12 @@ Begin Form
         0x0000000000000000000000000000000000000000000000000000000000000000 ,
         0x000000000000000000000000
     End
-    PrtDevNamesW = Begin
+    UnknownProp = {420 ,679 ,11 ,0 ,124 } Begin
         0x04001b0032000100000000000000000000000000000000000000000000000000 ,
         0x0000000000000000000000000000000000000000000000000000000000000000 ,
         0x0000000000000000000000000000000000000000000000000000000000000000 ,
         0x0000000050004f0052005400500052004f004d00500054003a000000
     End
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Image
             BackStyle =0
@@ -506,7 +511,9 @@ Begin Form
             FontWeight =400
             ForeColor =-2147483630
             FontName ="Tahoma"
-            BorderLineStyle =0
+            UnknownProp = {324 ,11 ,2 ,1 ,1 } Begin
+                0x00
+            End
         End
         Begin Section
             Height =113
@@ -557,11 +564,21 @@ Begin Form
                     GUID = Begin
                         0x494f465b879b01458c9a71a36d1a2c40
                     End
-
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
+                    UnknownProp = {289 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {356 ,700 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {357 ,699 ,4 ,0 ,4 } Begin
+                        0x02000000
+                    End
+                    UnknownProp = {358 ,701 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
+                    UnknownProp = {359 ,702 ,4 ,0 ,4 } Begin
+                        0x01000000
+                    End
                 End
             End
         End

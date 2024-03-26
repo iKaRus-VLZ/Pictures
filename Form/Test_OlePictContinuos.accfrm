@@ -1,6 +1,6 @@
 Version =20
 VersionRequired =20
-Checksum =-121310047
+Checksum =-272571070
 Begin Form
     AutoCenter = NotDefault
     KeyPreview = NotDefault
@@ -73,9 +73,13 @@ Begin Form
     OnKeyDown ="[Event Procedure]"
     OnResize ="[Event Procedure]"
     OnLoad ="[Event Procedure]"
-    FilterOnLoad =0
-    DatasheetGridlinesColor12 =12632256
-    PrtDevModeW = Begin
+    UnknownProp = {305 ,452 ,1 ,1 ,1 } Begin
+        0x00
+    End
+    UnknownProp = {400 ,582 ,4 ,4 ,4 } Begin
+        0xc0c0c000
+    End
+    UnknownProp = {419 ,678 ,11 ,0 ,584 } Begin
         0x0000000000000000000000000000000000000000000000000000000000000000 ,
         0x0000000000000000000000000000000000000000000000000000000000000000 ,
         0x0104220bdc006c01036e07000100090000000000640001000100580202000100 ,
@@ -96,12 +100,11 @@ Begin Form
         0x0000000000000000000000000000000000000000000000000000000000009600 ,
         0x4b002c0100800000
     End
-    PrtDevNamesW = Begin
+    UnknownProp = {420 ,679 ,11 ,0 ,68 } Begin
         0x040011001b000100000000000000000000000000000000000000000000000000 ,
         0x0000000000000000000000000000000000000000000046005000520031003100 ,
         0x3a000000
     End
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0
@@ -135,7 +138,9 @@ Begin Form
             FontSize =8
             FontWeight =400
             FontName ="MS Sans Serif"
-            BorderLineStyle =0
+            UnknownProp = {324 ,11 ,2 ,1 ,1 } Begin
+                0x00
+            End
         End
         Begin OptionButton
             SpecialEffect =2
@@ -213,14 +218,18 @@ Begin Form
             FontSize =8
             FontWeight =400
             FontName ="MS Sans Serif"
-            BorderLineStyle =0
+            UnknownProp = {321 ,11 ,2 ,1 ,1 } Begin
+                0x00
+            End
         End
         Begin Tab
             TextFontCharSet =204
             BackStyle =0
             Width =5103
             Height =3402
-            BorderLineStyle =0
+            UnknownProp = {311 ,11 ,2 ,1 ,1 } Begin
+                0x00
+            End
         End
         Begin FormHeader
             Height =567
@@ -246,7 +255,9 @@ Begin Form
                     GUID = Begin
                         0xb3de21eaca620144b65fe55eb66346b4
                     End
-                    ForeThemeColorIndex =0
+                    UnknownProp = {298 ,622 ,4 ,0 ,4 } Begin
+                        0x00000000
+                    End
                 End
                 Begin Label
                     OverlapFlags =93
@@ -263,7 +274,9 @@ Begin Form
                     GUID = Begin
                         0x28147a6b090981449eda2e431fad195c
                     End
-                    ForeThemeColorIndex =0
+                    UnknownProp = {298 ,622 ,4 ,0 ,4 } Begin
+                        0x00000000
+                    End
                 End
                 Begin Label
                     OverlapFlags =93
@@ -280,7 +293,9 @@ Begin Form
                     GUID = Begin
                         0xd9ec7a817aee5b459dfc8f23c384632d
                     End
-                    ForeThemeColorIndex =0
+                    UnknownProp = {298 ,622 ,4 ,0 ,4 } Begin
+                        0x00000000
+                    End
                 End
                 Begin TextBox
                     AutoTab = NotDefault
@@ -297,7 +312,9 @@ Begin Form
                     GUID = Begin
                         0xc5ffb40791fe4f469af9d3388966acec
                     End
-
+                    UnknownProp = {299 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
                 End
                 Begin TextBox
                     AutoTab = NotDefault
@@ -315,7 +332,9 @@ Begin Form
                     GUID = Begin
                         0x031d107350079a4e911a1174ed0654ca
                     End
-
+                    UnknownProp = {299 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
                 End
                 Begin Line
                     OverlapFlags =95
@@ -343,7 +362,9 @@ Begin Form
                     GUID = Begin
                         0x5d28679f7f16cd46991b8417d0f7f08f
                     End
-
+                    UnknownProp = {299 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
                 End
             End
         End
@@ -368,11 +389,21 @@ Begin Form
                     GUID = Begin
                         0x4422808a26380e46928629d4dfcf1017
                     End
-
-                    LayoutCachedLeft =60
-                    LayoutCachedTop =30
-                    LayoutCachedWidth =921
-                    LayoutCachedHeight =270
+                    UnknownProp = {299 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {302 ,586 ,3 ,4 ,4 } Begin
+                        0x3c000000
+                    End
+                    UnknownProp = {303 ,587 ,3 ,4 ,4 } Begin
+                        0x1e000000
+                    End
+                    UnknownProp = {304 ,588 ,3 ,4 ,4 } Begin
+                        0x99030000
+                    End
+                    UnknownProp = {305 ,589 ,3 ,4 ,4 } Begin
+                        0x0e010000
+                    End
                 End
                 Begin TextBox
                     OverlapFlags =85
@@ -387,7 +418,9 @@ Begin Form
                     GUID = Begin
                         0x67799803ed31014ab3904d7bf6832439
                     End
-
+                    UnknownProp = {299 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
                 End
                 Begin BoundObjectFrame
                     SizeMode =3
@@ -403,10 +436,18 @@ Begin Form
                     GUID = Begin
                         0x509716d38838c44ca79bf58712327402
                     End
-
-                    LayoutCachedLeft =963
-                    LayoutCachedWidth =1530
-                    LayoutCachedHeight =567
+                    UnknownProp = {291 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
+                    UnknownProp = {294 ,586 ,3 ,4 ,4 } Begin
+                        0xc3030000
+                    End
+                    UnknownProp = {296 ,588 ,3 ,4 ,4 } Begin
+                        0xfa050000
+                    End
+                    UnknownProp = {297 ,589 ,3 ,4 ,4 } Begin
+                        0x37020000
+                    End
                 End
                 Begin TextBox
                     OverlapFlags =85
@@ -421,7 +462,9 @@ Begin Form
                     GUID = Begin
                         0x1ed310a67959b84d93c58ee057e0c4d2
                     End
-
+                    UnknownProp = {299 ,0 ,3 ,4 ,4 } Begin
+                        0xffffffff
+                    End
                 End
             End
         End

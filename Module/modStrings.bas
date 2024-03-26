@@ -913,7 +913,7 @@ HandleExit:  PlaceHoldersGet = Result: Exit Function
 HandleError: Result = False: Err.Clear: Resume HandleExit
 End Function
 Private Function p_FindNamedPlaceHolder(ByRef Source As String, _
-    Optional ByRef NAME As String, _
+    Optional ByRef Name As String, _
     Optional ByRef sBeg As Long = 1, Optional ByRef sEnd As Long = 0, _
     Optional LBr As String = "[%", Optional RBr As String = "%]") As Boolean
 ' ищет в строке именную переменную, ограниченную разделителями, возвращает её имя и границы
@@ -933,7 +933,7 @@ Dim pBeg As Long, pEnd As Long
     ' ищем в выражении правую скобку
     pEnd = InStr(pBeg, Source, RBr): If pEnd = 0 Then GoTo HandleExit Else sEnd = pEnd + Len(RBr)
     ' получаем строку между скобками
-    NAME = Mid$(Source, pBeg, pEnd - pBeg)
+    Name = Mid$(Source, pBeg, pEnd - pBeg)
     Result = True 'Len(Name) > 0
 HandleExit:  p_FindNamedPlaceHolder = Result: Exit Function
 HandleError: Result = False: Err.Clear: Resume HandleExit

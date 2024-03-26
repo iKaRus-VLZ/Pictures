@@ -3,9 +3,9 @@ Name="PicturesFI"
 Description=""
 Help=""
 [Custom Properties]
-Support="KashRus@gmail.com"
 Version="2.24.3.453694558"
 Author="Кашкин Р.В."
+Support="KashRus@gmail.com"
 [Database Properties]
 QueryTimeout=Integer:60
 NavPane Closed=Long:0
@@ -37,7 +37,7 @@ ANSI Query Mode=Long:0
 Picture Property Storage Format=Long:1
 Themed Form Controls=Long:1
 [References]
-stdole={00020430-0000-0000-C000-000000000046}|2|0|C:\Windows\System32\stdole2.tlb
+stdole={00020430-0000-0000-C000-000000000046}|2|0|C:\WINDOWS\system32\stdole2.tlb
 MSForms={0D452EE1-E08F-101A-852E-02608C4D0BB4}|2|0|C:\WINDOWS\system32\FM20.DLL
-Office={2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}|2|8|C:\Program Files\Common Files\Microsoft Shared\OFFICE16\MSO.DLL
-DAO={4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}|12|0|C:\Program Files\Common Files\Microsoft Shared\OFFICE16\ACEDAO.DLL
+Office={2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}|2|3|C:\Program Files\Common Files\Microsoft Shared\OFFICE11\MSO.DLL
+DAO={00025E01-0000-0000-C000-000000000046}|5|0|C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll

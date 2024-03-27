@@ -6,8 +6,8 @@ Public IsDebug As Boolean
 Private Const c_strModule As String = "modPictureData"
 '=========================
 ' Описание      : модуль для работы с PictureData и BLOB полями
-' Версия        : 1.4.2.453723624
-' Дата          : 21.03.2024 8:41:51
+' Версия        : 1.4.2.453783793
+' Дата          : 27.03.2024 9:06:12
 ' Автор         : Кашкин Р.В. (KashRus@gmail.com)
 ' Примечание    : для вывода изображений использует дополнительные библиотеки в зависимости от ObjectDataType
 '               : проект должен содержать clsTransform - класс для трансформации координат _
@@ -1357,7 +1357,7 @@ Dim tmp As Object: Set tmp = ObjectControl.Picture: If Err Then Err.Raise vbObje
         ' граница контейнера ActiveX (CustomControl)
             If .BorderStyle = 0 Then GoTo HandleExit
             Select Case .BorderWidth
-            Case 0, 1:  Offpos = Offpos + 1: Offsize = Offsize + 1
+            Case 0, 1:  Offpos = Offpos + 1: Offsize = Offsize + 2
             Case 2:     Offpos = Offpos + 2: Offsize = Offsize + 3
             Case 3:     Offpos = Offpos + 2: Offsize = Offsize + 4
             Case 4:     Offpos = Offpos + 3: Offsize = Offsize + 5

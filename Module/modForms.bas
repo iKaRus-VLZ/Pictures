@@ -5,8 +5,8 @@ Option Compare Database
 Private Const c_strModule As String = "modForms"
 '=========================
 ' Описание      : Функции для работы с формами/отчетами и крнтролами Access
-' Версия        : 1.0.20.453555937
-' Дата          : 04.03.2024 14:14:56
+' Версия        : 1.0.20.453846943
+' Дата          : 02.04.2024 16:39:48
 ' Автор         : Кашкин Р.В. (KashRus@gmail.com)
 ' Примечание    :
 ' v.1.0.20      : 08.08.2021 - изменения в AccControlLocation - добавлена возможность возвращать клиентские/экранные координаты
@@ -16,6 +16,11 @@ Private Const c_strModule As String = "modForms"
 '=========================
 ' ToDo: очень много древнего мусора который просто неохота перебирать
 '-------------------------
+#Const UseModPictureData = 1    ' признак использования модуля вывода изображений в контрол ModPictureData
+#Const UseContextMenu = 1       ' признак использования классов вызова контекстного меню clsContextMenu
+#Const UseAccObjectExClass = 0  ' для хранения доп свойств, прочитанных из тэгов используется:
+'                            0 - тип   typAccObjectEx
+'                            1 - класс clsAccObjectEx
 Public Const twMinLim = 10  ' значения меньше данного считаются процентами, больше - твипами
 
 Public Const pxWinGap = 16                          ' смещение окон в px при размещении каскадом
@@ -225,7 +230,53 @@ End Enum
 '    apObjSizeZoom = acOLESizeZoom           ' 3 - пропорциональное масштабирование
 '    apObjSizeZoomDown = -1                  '-1 - пропорциональное масштабирование, только уменьшаем
 'End Enum
-
+Private Type tControlEx
+' положение
+    ' привязка контрола
+    BondLeft As Object
+    BondTop As Object
+    BondRight As Object
+    BondBottom As Object
+    BondWidth As Object
+    BondHeight As Object
+    ' положение по-умолчанию
+    DefLeft As Single
+    DefTop As Single
+    DefRight As Single
+    DefBottom As Single
+    DefWidth As Single
+    DefHeight As Single
+    ' предельные размеры
+    MinWidth As Single
+    MaxWidth As Single
+    MinHeight As Single
+    MaxHeight As Single
+' стиль оформления
+    TextColor As Long
+    BackColor As Long
+    BorderColor As Long
+' изображение/текст
+    PictName As String
+    PictSize As Long
+    PictAngle As Single
+    PictGray As Boolean
+    PictMode As eObjSizeMode
+    PictAlign As eAlign
+    PictText As String
+    TextAngle As Single
+    TextAlign As eAlign
+    TextPlace As ePlace
+    FontName As String
+    FontSize As Long
+    IconName As String
+' стиль отображения                                             (adhcSizeIt/adhcFloatIt/adhcStyleIt)
+    StyleIt As eObjectStyle ' растяжение/смещение
+    ScaleIt As eScaleType   ' масштабирование
+' поведение
+    SplitIt As eControlSplit
+    Action As String ' заданное для контрола действие
+End Type
+''--------------------------------------------------------------------------------
 Public Enum eFieldFormat
     vbInteger = 2
     vbLong = 3
@@ -560,16 +611,16 @@ Public Enum eObjectProps   ' типы дополнительных параметров, которые д.б. прочит
 ' свойства выводимого изображения
 ' ----------------------------------
     ltPictAll = &HFFFF0000
-    ltPictName = &H10000            '                                                               (adhcObjectName)
-    ltPictSize = &H20000            '                                                               (adhcObjectSize)
-    ltPictMode = &H40000            '                                                               (adhcObjectMode)
-    ltPictPlace = &H80000           '                                                               (adhcObjectAlign)
-    ltPictAngle = &H100000          '                                                               (adhcObjectAngle)
-    ltPictGray = &H200000           '                                                               (adhcObjectGray)
-    ltPictText = &H1000000          '                                                               (adhcObjectText)
-    ltTextAlign = &H4000000         '                                                               (adhcObjectTextAlign)
-    ltTextPlace = &H8000000         '                                                               (adhcObjectTextPlace)
-    ltTextAngle = &H10000000        '                                                               (adhcObjectTextAngle)
+    ltPictName = &H10000            '                                                               (adhcPictName)
+    ltPictSize = &H20000            '                                                               (adhcPictSize)
+    ltPictMode = &H40000            '                                                               (adhcPictMode)
+    ltPictPlace = &H80000           '                                                               (adhcPictAlign)
+    ltPictAngle = &H100000          '                                                               (adhcPictAngle)
+    ltPictGray = &H200000           '                                                               (adhcPictGray)
+    ltPictText = &H1000000          '                                                               (adhcText)
+    ltTextAlign = &H4000000         '                                                               (adhcTextAlign)
+    ltTextPlace = &H8000000         '                                                               (adhcTextPlace)
+    ltTextAngle = &H10000000        '                                                               (adhcTextAngle)
     ltFontName = &H40000000         '                                                               (adhcDefFontName)
     ltFontSize = &H80000000         '                                                               (adhcDefFontSize)
     ltPictShow = ltPictName + ltPictText
@@ -645,9 +696,10 @@ Public Const adhcBProp = adhcBottom1 & adhcProp                                 
 Public Const adhcWProp = adhcWidth1 & adhcProp                                         '48  ширина пропорциональна ширине области
 Public Const adhcHProp = adhcHeight1 & adhcProp                                        '192 высота пропорциональна высоте области
 
+Public Const adhcIcon = "Icon"                          '
 Public Const adhcPict = "Pict"                          '1024 выводить только картинку
 Public Const adhcText = "Text"                          '2048 выводить только текст
-Public Const adhcIconAndText = adhcPict & adhcText      '3072 выводить картинку и текст
+Public Const adhcPictAndText = adhcPict & adhcText      '3072 выводить картинку и текст
 ' ----------------------------------
 Public Const adhcSizeIt = "SizeIt"              ' изменить размер (фиксируем левую-правую/верхнюю-нижнюю границы)
 Public Const adhcSizeRight = adhcRight          ' вправо по краю формы
@@ -757,16 +809,18 @@ Public Const adhcColorLight3 = adhcColorLight & 3
 ' ----------------------------------
 ' для присвоения изображений
 ' ----------------------------------
-Public Const adhcObjectName = adhcPict 'PictName
-Public Const adhcObjectSize = adhcPict & adhcSize 'PictSize
-Public Const adhcObjectMode = adhcPict & adhcMode, adhcObjectMode1 = adhcObjectSize & adhcMode 'PictMode
-Public Const adhcObjectAlign = adhcPict & adhcPlace 'PictAlign
-Public Const adhcObjectAngle = adhcPict & adhcAngle 'PictAngle
-Public Const adhcObjectText = adhcText 'TextString
-Public Const adhcObjectTextAlign = adhcText & adhcAlign
-Public Const adhcObjectTextPlace = adhcText & adhcPlace 'TextPlace
-Public Const adhcObjectTextAngle = adhcText & adhcAngle 'TextAngle
-Public Const adhcObjectGray = adhcText & adhcColorGray, adhcObjectGray1 = adhcObjectGray & adhcScale 'GrayScale
+Public Const adhcIconName = adhcIcon 'PictName
+Public Const adhcPictName = adhcPict 'PictName
+Public Const adhcPictSize = adhcPict & adhcSize 'PictSize
+Public Const adhcPictMode = adhcPict & adhcMode, adhcPictMode1 = adhcPictSize & adhcMode 'PictMode
+Public Const adhcPictAlign = adhcPict & adhcPlace 'PictAlign
+Public Const adhcPictAngle = adhcPict & adhcAngle 'PictAngle
+Public Const adhcPictText = adhcText 'TextString
+Public Const adhcTextAlign = adhcText & adhcAlign
+Public Const adhcTextPlace = adhcText & adhcPlace 'TextPlace
+Public Const adhcTextAngle = adhcText & adhcAngle 'TextAngle
+
+Public Const adhcPictGray = adhcColorGray, adhcPictGray1 = adhcPictGray & adhcScale 'GrayScale
 '
 Public Const adhcFontName = adhcFont & adhcName
 Public Const adhcFontSize = adhcFont & adhcSize
@@ -1023,7 +1077,7 @@ Dim bolModal As Boolean: bolModal = (.ModalResult = .ModalResult)
 HandleExit:  FormOpenDrop = Result: Exit Function
 HandleError: Result = False:  Err.Clear: Resume HandleExit
 End Function
-
+#If UseContextMenu Then
 Public Function FormOpenContext( _
     ContextData As String, _
     Optional ByRef ContextMenu As Object, _
@@ -1083,7 +1137,7 @@ HandleShow:
 HandleExit:  Exit Function
 HandleError: Err.Clear: Resume HandleExit
 End Function
-
+#End If
 Public Function ReportOpen( _
     ReportName As String, _
     Optional View As AcFormView = acViewPreview, _
@@ -1148,7 +1202,7 @@ HandleExit:  DoCmd.Echo True: ReportOpen = Result: Exit Function
 HandleError: Result = False: Err.Clear: Resume HandleExit
 End Function
 
-Public Function AccObjectSet(AccObject As Object, _
+Public Function AccObjectSet(accObject As Object, _
     Optional View As AcFormView = acNormal, _
     Optional WhereCondition, _
     Optional DataMode As AcFormOpenDataMode = acFormPropertySettings, _
@@ -1177,15 +1231,15 @@ Public Function AccObjectSet(AccObject As Object, _
 Dim Result As Boolean: Result = False
     On Error GoTo HandleError
     
-    If TypeOf AccObject Is Access.Form Then
-    ElseIf TypeOf AccObject Is Access.Report Then
+    If TypeOf accObject Is Access.Form Then
+    ElseIf TypeOf accObject Is Access.Report Then
     Else: Err.Raise vbObjectError + 512
     End If
     
 '    'WindowFreeze Application.hWndAccessApp
     DoCmd.Echo False
     On Error Resume Next
-    With AccObject '
+    With accObject '
     ' здесь надо все сильно переделать, а пока так:
     ' выводим на экран, передаем параметры и делаем активным окно формы
 '----------------------------------
@@ -1231,7 +1285,6 @@ HandlePlaceForm:
 '----------------------------------
 ' позиционируем окно относительно заданного родителя
 '----------------------------------
-        
         On Error GoTo HandleObjectDesign
 ' получаем точки привязки и параметры размещения созданной формы относительно родителя
 Dim Cascade As Boolean: Cascade = ((Placement And eCascade) = eCascade)
@@ -1239,7 +1292,7 @@ Dim rXpar As Single, rYpar As Single: Call GetAlignPoint(Placement Mod &H10, rXp
 Dim rXсli As Single, rYсli As Single: Call GetAlignPoint(Placement \ &H10, rXсli, rYсli)      ' на клиенте к родителю
 Dim Xcli As Long, Ycli As Long, dX As Long, dY As Long
 ' получаем координаты/размеры созданной формы
-Dim cliRect As RECT: GetWindowRect AccObject.hwnd, cliRect
+Dim cliRect As RECT: GetWindowRect accObject.hwnd, cliRect
 ' получаем координаты/размеры родительского объекта
 Dim parRect As RECT:
         If IsMissing(ObjectParent) Then
@@ -1264,29 +1317,17 @@ Dim parRect As RECT:
         Xcli = parRect.Left + rXpar * (parRect.Right - parRect.Left) - rXсli * (cliRect.Right - cliRect.Left) + dX
         Ycli = parRect.Top + rYpar * (parRect.Bottom - parRect.Top) - rYсli * (cliRect.Bottom - cliRect.Top) + dY
 ' Надо отловить почему ошибочно позиционирует окно за пределами области видимости
-        FormMove AccObject, Xcli, Ycli ' позиционируем
+        FormMove accObject, Xcli, Ycli ' позиционируем
 '----------------------------------
 ' задаём оформление формы
 '----------------------------------
 HandleObjectDesign:
 ' ...
     On Error Resume Next
-Dim tmp, i As Long
-        For i = acDetail To acFooter
-            tmp = GetColorFromText(TaggedStringGet(.Section(i).Tag, adhcBackColor)): Err.Clear
-            If IsNull(tmp) Then tmp = GetColorFromText(TaggedStringGet(.Tag, adhcBackColor)): Err.Clear
-            If IsNumeric(tmp) Then .Section(i).BackColor = tmp
-        Next i
-        If Not IsMissing(Icon) Then
-            With AccObject: Call PictureData_SetIcon(.hwnd, Icon): End With
-        End If
-' ...
-' ToDo: сделать нормальную инициализациию оформления/позиционирования контролов формы
-' !!! надо отдельно обрабатывать встроенные формы и группы контролов
-Dim ctl As Control
-        For Each ctl In .Controls
-            AccControlSet ctl, Init:=True
-        Next ctl
+    Call TagsRead(accObject, Init:=True)
+#If UseModPictureData Then
+    If Not IsMissing(Icon) Then Call PictureData_SetIcon(accObject.hwnd, Icon)
+#End If
 '----------------------------------
     End With
     Result = True
@@ -1302,6 +1343,7 @@ Public Function AccControlSet( _
     Optional r, Optional b, _
     Optional Show, _
     Optional Init As Boolean = False, _
+    Optional Col, _
     Optional frm As Access.Form) As Boolean
 ' выводит контрол в заданную позицию, и настраивает его внешний вид
 Const c_strProcedure = "AccControlSet"
@@ -1311,6 +1353,7 @@ Const c_strProcedure = "AccControlSet"
 '             имеет смысл только при Show=False - когда необходимо сохранить текущую позицию/размеры в Тэг перед обнулением
 ' Show      - признак видимости контрола
 ' Init      - признак инициализации контрола
+' col       - ссылка на коллекцию имен контролов содержащих читаемые тэги
 ' frm       - ссылка на родительскую форму
 '-------------------------
 ' v.1.0.0       : 17.07.2023 - исходная версия
@@ -1323,45 +1366,22 @@ Dim bTry As Byte: bTry = 0  ' счетчик попыток вместить контрол
 Dim sec As Access.Section: Set sec = frm.Section(ctl.Section)
 'Dim bInit As Boolean: bInit = bInit And Show
     
-    With ctl
-'----------------------------------
 ' читаем и разбираем доп свойства контрола сохранённые в тэге
-'----------------------------------
-    If Init Then
-    If Len(.Tag) > 0 Then
-'Stop
-Dim cTags As New Collection, aKeys() As String
-        'Set cTags = New Collection
-        Call TaggedString2Collection(.Tag, cTags, aKeys)
-    On Error Resume Next
-Dim Key: For Each Key In aKeys
-            Select Case Key
-            Case adhcBackColor:     .BackColor = GetColorFromText(cTags(Key)) ': Err.Clear
-            Case adhcBorderColor:   .BorderColor = GetColorFromText(cTags(Key)) ': Err.Clear
-            Case adhcForeColor, adhcFontColor, adhcTextColor: _
-                                    .ForeColor = GetColorFromText(cTags(Key))
-                                    If Err Then Err.Clear:  .FontColor = GetColorFromText(cTags(Key))
-                                    If Err Then Err.Clear:  .TextColor = GetColorFromText(cTags(Key))
-        ' etc
-            End Select
-            Err.Clear
-        Next Key
-    End If
-    End If
-'----------------------------------
-    On Error GoTo HandleError
-'----------------------------------
-' задаём позицию контрола
-'----------------------------------
 Dim xCtl As Long, yCtl As Long, wCtl As Long, hCtl As Long
+    If Init Then If Len(ctl.Tag) > 0 Then Call TagsRead(ctl)  'Control.Tag -> Control
+    On Error GoTo HandleError
+' задаём позицию и размеры контрола
+    With ctl
         If Show Then
         ' получаем требуемые размеры контрола
         ' если  >1      - берём как абсолютное занчение в tw,
         ' если [0..1]   - берём относительно размеров формы/секции контрола
             If IsMissing(x) Then xCtl = .Left Else If x > twMinLim Then xCtl = x Else xCtl = frm.Width * x
-            If IsMissing(y) Then yCtl = .Top Else If y > twMinLim Then yCtl = y Else yCtl = sec.Height * y
             If IsMissing(w) Then wCtl = .Width Else If w > twMinLim Then wCtl = w Else wCtl = frm.Width * w
+            'If IsMissing(r) Then wCtl = .Width Else If w > twMinLim Then wCtl = w Else wCtl = frm.Width * w
+            If IsMissing(y) Then yCtl = .Top Else If y > twMinLim Then yCtl = y Else yCtl = sec.Height * y
             If IsMissing(h) Then hCtl = .Height Else If h > twMinLim Then hCtl = h Else hCtl = sec.Height * h
+            'If IsMissing(b) Then hCtl = .Height Else If h > twMinLim Then hCtl = h Else hCtl = sec.Height * h
         ' если контрол не влазит изменяем размеры формы/секции
             If xCtl + wCtl > frm.Width Then frm.Width = xCtl + wCtl
             If yCtl + hCtl > sec.Height Then sec.Height = yCtl + hCtl
@@ -1447,13 +1467,8 @@ Dim frmRect As RECT, accRect As RECT
         MoveWindow .hwnd, x, y, Width, Height, 1
     End With
 
-HandleExit:
-
-    Exit Function
-HandleError:
-'    Dbg.Error Err.Number, Err.Description, Err.Source, Erl(), c_strModule & "." & c_strProcedure
-    Err.Clear
-    Resume HandleExit
+HandleExit:  Exit Function
+HandleError: Err.Clear: Resume HandleExit
 End Function
 Public Function PosAccForm2Client( _
     AccForm As Access.Form, _
@@ -1491,7 +1506,7 @@ Dim hwnd As Long
 HandleExit:  PosAccForm2Client = Result: Exit Function
 HandleError: Result = False: Err.Clear: Resume HandleExit
 End Function
-Public Function AccControlLocation(AccObject As Variant, _
+Public Function AccControlLocation(accObject As Variant, _
     Optional ByRef x, Optional ByRef y, Optional ByRef w, Optional ByRef h, _
     Optional ParentObject, _
     Optional ClientAreaPos As Boolean) As Boolean
@@ -1520,24 +1535,24 @@ Dim lpPoint As POINT
 Dim cX As Long, cY As Long, cW As Long, ch As Long
 Dim dX As Long, dY As Long, dW As Long, dH As Long
 ' определяем родительскую форму и координаты/размеры переданного контрола
-    If TypeOf AccObject Is Access.Control Then
-        Set ParentObject = GetTopParent(AccObject)
-        With AccObject: cX = .Left: cY = .Top: cW = .Width: ch = .Height: End With
+    If TypeOf accObject Is Access.Control Then
+        Set ParentObject = GetTopParent(accObject)
+        With accObject: cX = .Left: cY = .Top: cW = .Width: ch = .Height: End With
         With ParentObject
         dX = .CurrentSectionLeft
-        If AccObject.Section <> acHeader Then
+        If accObject.Section <> acHeader Then
     ' если это не заголовок формы
         ' для обычной формы добавляем высоты вышестоящих секций
         ' для ленточной формы добавляем расстояние от верхнего края формы
             On Error Resume Next: dY = .Section(acHeader).Height: Err.Clear: On Error GoTo HandleError
-            Select Case AccObject.Section
+            Select Case accObject.Section
             Case acDetail: If (.DefaultView = 1 Or .DefaultView = 2) Then dY = .CurrentSectionTop
             Case acFooter: dY = dY + .Section(acDetail).Height
             End Select
         End If
         End With
-    ElseIf TypeOf AccObject Is Access.Form Or TypeOf AccObject Is Access.Report Then
-        Set ParentObject = AccObject
+    ElseIf TypeOf accObject Is Access.Form Or TypeOf accObject Is Access.Report Then
+        Set ParentObject = accObject
         cX = 0: cY = 0
         '' размеры окна формы
         'cW = frm.InsideWidth: cH = frm.InsideHeight: End With
@@ -2005,14 +2020,14 @@ Dim strValue As String
     Err.Clear
 End Function
 
-Public Function GetTopParent(AccObject, Optional AllowSubForms As Boolean) As Object 'Access.Form
+Public Function GetTopParent(accObject, Optional AllowSubForms As Boolean) As Object 'Access.Form
 ' возвращает ссылку на верхнюю родительскую форму(отчёт) для объекта
 ' AllowSubForms - если True будет останавливаться на форме/отчёте в том числе открытых как субформа(-отчёт),
 '                 иначе будет подниматься выше пока не найдёт форму (отчёт) без родителей
 Dim Result As Object
     On Error GoTo HandleError
 ' перебираем родителей контрола пока не доберётся до верхнего (формы или отчёта)
-    Set Result = AccObject
+    Set Result = accObject
     Do While (TypeOf Result Is Access.Control): Set Result = Result.PARENT: Loop
     If AllowSubForms Then GoTo HandleExit
     On Error Resume Next
@@ -2372,105 +2387,184 @@ End Function
 '=========================
 ' Функции чтения/записи свойств из тэга
 '=========================
-Public Function TagsRead(objFrom As Object, Optional objTo As Object) As Boolean '(Optional TagTypes As eObjectProps = ltAll) As Boolean
+Public Function TagsRead(accObject As Object, Optional Init As Boolean, Optional Col As Collection) As Boolean
 ' читает доп свойства из Tag объекта в дополнительные свойства
 '-------------------------
-' objFrom   - ссылка на объект (Form,Section,Control) из тэга которого читаются дополнительные свойства
-' objTo     - ссылка на объект в который читаются дополнительные свойства из тэга objFrom
+' accObject   - ссылка на объект (Form,Section,Control) из тэга которого читаются дополнительные свойства
+' Init      - если True читаются все свойства
 '-------------------------
-Dim Result As Boolean: Result = False
+Dim Result As Boolean ': Result = False
+    On Error GoTo HandleError
+'Stop
+Dim i As Long, iMax As Long
+Dim ctl As Control, tmp ': If col Is Nothing Then Set col = New Collection
+    If TypeOf accObject Is Access.Form Or TypeOf accObject Is Access.Report Then
+' Если объект - форма/отчёт
+    ' пробегаем все секции
+        Set Col = New Collection
+        For i = acDetail To acFooter:
+        Call TagsRead(accObject.Section(i), Init, Col):
+        Next i
+        Set Col = Nothing
+    Else
+    On Error Resume Next 'GoTo HandleError
+        i = accObject.Controls.Count
+        If Err = 0 And i > 0 Then
+' объекта c подчинёнными контролами в коллекции Controls (Section, Tabs, Groups, Switchboard etc)
+    ''' !!! надо отдельно обрабатывать встроенные формы и группы контролов
+    '' Если объект - контрол у которого есть родитель или привязка - рекурсивно читаем их
+    '' т.к. прежде чем выстраивать данный контрол надо задать позиции объектов относительно которых он задан
+            For Each ctl In accObject.Controls
+            ' если контрол ещё не обработан - обрабатываем если уже обработан - пропускаем
+                Set tmp = Col(ctl.Name): If Err Then Err.Clear: Call TagsRead(ctl, Init, Col)
+            Next ctl
+        Else
+            Err.Clear: If TypeOf accObject Is Access.SubForm Then Call TagsRead(accObject.Form, Init) ' у субформы будет своя коллекция проверенных контролов
+        End If
+    End If
+'----------------------------------
+Dim tmpVal As String
+Dim ctlEx As tControlEx: ctlEx = p_TypeControlExInit
+    With ctlEx 'objTo
+    If Len(Trim(accObject.Tag)) = 0 Then If TypeOf accObject Is Access.Section Then GoTo HandleColor Else Exit Function
     On Error Resume Next 'GoTo HandleError
 Dim Tags As New Collection, Keys As Variant
-Dim i As Long, iMax As Long
-    With objFrom
-    If Len(Trim(.Tag)) = 0 Then Exit Function
-    Call TaggedString2Collection(.Tag, Tags, Keys): i = LBound(Keys): iMax = UBound(Keys)
-    End With
-    If (objTo Is Nothing) Then Set objTo = objFrom
-Dim tmpVal
-    With objTo
+    Call TaggedString2Collection(accObject.Tag, Tags, Keys): i = LBound(Keys): iMax = UBound(Keys)
+'    If (objTo Is Nothing) Then Set objTo = accObject
+' ----------------------------------
+' чтение доп свойств из тэга в типизированную переменную / объект (пока не решил)
+' ----------------------------------
+' ToDo: для некоторых элементов оформления можно сделать так:
+'       если не задан элемент но задан для родителя - читать по родителю.
+'       например м.б. актуально для субформы - перенос стиля оформления секции на субформу
     For i = LBound(Keys) To UBound(Keys) 'Each sKey In Keys
-        Select Case Keys(i)
-' ----------------------------------
-' стиль/оформление
-' ----------------------------------
-' цветовое оформление (Back/Fore/Font/TextColor)                (adhcColor/adhcBackColor/etc)
-    ' применяется на исходный объект (objFrom)
-        Case adhcBackColor: tmpVal = GetColorFromText(UCase(Tags(i))):
-            If (tmpVal <> COLORNOTSET) Then .BackColor = tmpVal
-        Case adhcTextColor, adhcFontColor, adhcForeColor: tmpVal = GetColorFromText(UCase(Tags(i))):
-            If (tmpVal <> COLORNOTSET) Then .ForeColor = tmpVal: If Err Then Err.Clear: .FontColor = tmpVal: If Err Then Err.Clear: .TextColor = tmpVal
-' ----------------------------------
-' стиль отображения                                             (adhcSizeIt/adhcFloatIt/adhcStyleIt)
-' ----------------------------------
-        Case adhcStyleIt: .StyleIt = GetStyleFromText(Tags(i))
-' растяжение (перекрывается StyleIt)
-        Case adhcSizeIt: Select Case Tags(i)
-            Case adhcSizeRight: .StyleIt = .StyleIt Or lsHorz      ' растягивать по горизонтали (вправо)
-            Case adhcSizeBottom: .StyleIt = .StyleIt Or lsVert     ' растягивать по вертикали (вниз)
-            Case adhcSizeBoth: .StyleIt = .StyleIt Or lsFull       ' растягивать по горизонтали и вертикали (вправо-вниз)
-            End Select
-' смещение (перекрывается StyleIt)
-        Case adhcFloatIt: Select Case Tags(i)
-            Case adhcFloatRight: .StyleIt = .StyleIt Or lsRight    ' смещать по горизонтали (вправо)
-            Case adhcFloatBottom: .StyleIt = .StyleIt Or lsBottom  ' смещать по вертикали (вправо)
-            Case adhcFloatBoth: .StyleIt = .StyleIt Or lsRightBottom ' смещать по горизонтали и вертикали (вправо-вниз)
-            End Select
-' масштабирование
-        Case adhcScaleIt:   .ScaleIt = GetBoolFromText(Tags(i))     ' масштабировать
-' ----------------------------------
-' поведение
-' ----------------------------------
-        Case adhcSplitIt:   .SplitIt = GetSplitFromText(Tags(i))    ' признак разделителя (сплиттера)
-        Case adhcAction:    .Action = Tags(i)                       ' заданное для контрола действие
-' ----------------------------------
+        tmpVal = Tags(i)
+        Select Case Keys(i) 'tmpVal
+' стиль оформления
+    ' цветовое оформление
+        Case adhcBackColor:                                 If Len(tmpVal) > 0 Then .BackColor = GetColorFromText(UCase(tmpVal))
+        Case adhcTextColor, adhcFontColor, adhcForeColor:   If Len(tmpVal) > 0 Then .TextColor = GetColorFromText(UCase(tmpVal))
+        Case adhcBorderColor:                               If Len(tmpVal) > 0 Then .BorderColor = GetColorFromText(UCase(tmpVal))
+' предельные размеры
+        Case adhcMinWidth, adhcMinWidth1:                   If Len(tmpVal) > 0 Then .MinWidth = GetSizeFromText(tmpVal)
+        Case adhcMaxWidth, adhcMaxWidth1:                   If Len(tmpVal) > 0 Then .MaxWidth = GetSizeFromText(tmpVal)
+        Case adhcMinHeight, adhcMinHeight1:                 If Len(tmpVal) > 0 Then .MinHeight = GetSizeFromText(tmpVal)
+        Case adhcMaxHeight, adhcMaxHeight1:                 If Len(tmpVal) > 0 Then .MaxHeight = GetSizeFromText(tmpVal)
 ' положение
-' ----------------------------------
-    ' привязка контрола (получаем из имени контрола относительно границ которого определены координаты ссылку на него)
-        Case adhcBondLeft, adhcBondLeft1, adhcBondLeft2:    Set .BondLeft = objFrom.Form.Controls(Tags(i))
-        Case adhcBondTop, adhcBondTop1, adhcBondTop2:       Set .BondTop = objFrom.Form.Controls(Tags(i))
-        Case adhcBondRight, adhcBondRight1:                 Set .BondRight = objFrom.Form.Controls(Tags(i))
-        Case adhcBondBottom, adhcBondBottom1:               Set .BondBottom = objFrom.Form.Controls(Tags(i))
-        Case adhcBondWidth, adhcBondWidth1:                 Set .BondWidth = objFrom.Form.Controls(Tags(i))
-        Case adhcBondHeight, adhcBondHeight1:               Set .BondHeight = objFrom.Form.Controls(Tags(i))
-    ' положение по-умолчанию
-        Case adhcDefLeft, adhcDefLeft1, adhcDefLeft2:       .DefLeft = GetSizeFromText(Tags(i), .GetBoundInTwips(eLeft))
-        Case adhcDefTop, adhcDefTop1, adhcDefTop2:          .DefTop = GetSizeFromText(Tags(i), .GetBoundInTwips(eTop))
-        Case adhcDefRight, adhcDefRight1:                   .DefRight = GetSizeFromText(Tags(i), .GetBoundInTwips(eRight))
-        Case adhcDefBottom, adhcDefBottom1:                 .DefBottom = GetSizeFromText(Tags(i), .GetBoundInTwips(eBottom))
-        Case adhcDefWidth, adhcDefWidth1:                   .DefWidth = GetSizeFromText(Tags(i), .GetBoundInTwips(eWidth))
-        Case adhcDefHeight, adhcDefHeight1:                 .DefHeight = GetSizeFromText(Tags(i), .GetBoundInTwips(eHeight))
-    ' предельные размеры
-        Case adhcMinWidth, adhcMinWidth1:                   .MinWidth = GetSizeFromText(Tags(i), .GetBoundInTwips(eWidth))
-        Case adhcMaxWidth, adhcMaxWidth1:                   .MaxWidth = GetSizeFromText(Tags(i), .GetBoundInTwips(eWidth))
-        Case adhcMinHeight, adhcMinHeight1:                 .MinHeight = GetSizeFromText(Tags(i), .GetBoundInTwips(eHeight))
-        Case adhcMaxHeight, adhcMaxHeight1:                 .MaxHeight = GetSizeFromText(Tags(i), .GetBoundInTwips(eHeight))
-' ----------------------------------
+        Case adhcDefLeft, adhcDefLeft1, adhcDefLeft2:       If Len(tmpVal) > 0 Then .DefLeft = GetSizeFromText(tmpVal)
+        Case adhcDefTop, adhcDefTop1, adhcDefTop2:          If Len(tmpVal) > 0 Then .DefTop = GetSizeFromText(tmpVal)
+        Case adhcDefWidth, adhcDefWidth1:                   If Len(tmpVal) > 0 Then .DefWidth = GetSizeFromText(tmpVal)
+        Case adhcDefHeight, adhcDefHeight1:                 If Len(tmpVal) > 0 Then .DefHeight = GetSizeFromText(tmpVal)
+        Case adhcDefRight, adhcDefRight1:                   If Len(tmpVal) > 0 Then .DefRight = GetSizeFromText(tmpVal)
+        Case adhcDefBottom, adhcDefBottom1:                 If Len(tmpVal) > 0 Then .DefBottom = GetSizeFromText(tmpVal)
+' привязка контрола (получаем из имени контрола относительно границ которого определены координаты ссылку на него)
+        Case adhcBondLeft, adhcBondLeft1, adhcBondLeft2:    If Len(tmpVal) > 0 Then Set .BondLeft = accObject.Form.Controls(tmpVal): Call TagsRead(.BondLeft, Init, Col)
+        Case adhcBondTop, adhcBondTop1, adhcBondTop2:       If Len(tmpVal) > 0 Then Set .BondTop = accObject.Form.Controls(tmpVal): Call TagsRead(.BondTop, Init, Col)
+        Case adhcBondWidth, adhcBondWidth1:                 If Len(tmpVal) > 0 Then Set .BondWidth = accObject.Form.Controls(tmpVal): Call TagsRead(.BondWidth, Init, Col)
+        Case adhcBondHeight, adhcBondHeight1:               If Len(tmpVal) > 0 Then Set .BondHeight = accObject.Form.Controls(tmpVal): Call TagsRead(.BondHeight, Init, Col)
+        Case adhcBondRight, adhcBondRight1:                 If Len(tmpVal) > 0 Then Set .BondRight = accObject.Form.Controls(tmpVal): Call TagsRead(.BondRight, Init, Col)
+' стиль вывода (adhcSizeIt/adhcFloatIt/adhcStyleIt)
+        Case adhcStyleIt:                                   .StyleIt = GetStyleFromText(tmpVal)
+        Case adhcSizeIt: Select Case tmpVal             ' растяжение (перекрывается StyleIt)
+        Case adhcSizeRight:                                 .StyleIt = .StyleIt Or lsHorz           ' растягивать по горизонтали (вправо)
+        Case adhcSizeBottom:                                .StyleIt = .StyleIt Or lsVert           ' растягивать по вертикали (вниз)
+        Case adhcSizeBoth:                                  .StyleIt = .StyleIt Or lsFull           ' растягивать по горизонтали и вертикали (вправо-вниз)
+        End Select
+        Case adhcFloatIt: Select Case tmpVal            ' смещение (перекрывается StyleIt)
+        Case adhcFloatRight:                                .StyleIt = .StyleIt Or lsRight          ' смещать по горизонтали (вправо)
+        Case adhcFloatBottom:                               .StyleIt = .StyleIt Or lsBottom         ' смещать по вертикали (вправо)
+        Case adhcFloatBoth:                                 .StyleIt = .StyleIt Or lsRightBottom    ' смещать по горизонтали и вертикали (вправо-вниз)
+        End Select
+        Case adhcScaleIt:                                   .ScaleIt = GetBoolFromText(tmpVal)      ' масштабировать
 ' изображение/текст
-' ----------------------------------
-' свойства выводимого изображения
-        Case adhcObjectName:        .ObjName = Tags(i)
-        Case adhcObjectSize:        .ObjSize = Tags(i)
-        Case adhcObjectMode:        .ObjMode = GetPictModeFromText(Tags(i))
-        Case adhcObjectAlign:       .ObjAlign = GetAlignFromText(Tags(i))
-        Case adhcObjectAngle:       .ObjAngle = Tags(i)
-        Case adhcObjectGray:        .ObjGray = GetBoolFromText(Tags(i))
-' свойства выводимого текста
-        Case adhcObjectText:        .ObjText = Tags(i)
-        Case adhcObjectTextAlign:   .TxtAlign = GetAlignFromText(Tags(i))
-        Case adhcObjectTextPlace:   .TxtPlace = GetPlaceFromText(Tags(i))
-        Case adhcObjectTextAngle:   .TxtAngle = Tags(i)
-' свойства шрифта выводимого текста
-        Case adhcFontName:          .FontName = Tags(i)
-        Case adhcFontSize:          .FontSize = Tags(i)
-' ----------------------------------
+        Case adhcIconName:                                  .IconName = tmpVal
+        ' свойства выводимого изображения
+        Case adhcPictName:                                  .PictName = tmpVal
+        Case adhcPictSize:                                  If Len(tmpVal) > 0 Then .PictSize = tmpVal
+        Case adhcPictAngle:                                 If Len(tmpVal) > 0 Then .PictAngle = tmpVal
+        Case adhcPictMode:                                  If Len(tmpVal) > 0 Then .PictMode = GetPictModeFromText(tmpVal) 'Else .PictMode = apObjSizeZoomDown
+        Case adhcPictAlign:                                 If Len(tmpVal) > 0 Then .PictAlign = GetPositionFromText(tmpVal) 'Else .PictAlign = eCenter
+        Case adhcPictGray:                                  If Len(tmpVal) > 0 Then .PictGray = GetBoolFromText(tmpVal)
+        ' свойства выводимого текста
+        Case adhcPictText:                                  .PictText = tmpVal
+        Case adhcTextAngle:                                 If Len(tmpVal) > 0 Then .TextAngle = tmpVal
+        Case adhcTextAlign:                                 If Len(tmpVal) > 0 Then .TextAlign = GetAlignFromText(tmpVal) 'Else .TextAlign = TA_LEFT
+        Case adhcTextPlace:                                 If Len(tmpVal) > 0 Then .TextPlace = GetPlaceFromText(tmpVal) 'Else .TextPlace = ePlaceOnRight
+        ' свойства шрифта выводимого текста
+        Case adhcFontName:                                  If Len(tmpVal) > 0 Then .FontName = tmpVal
+        Case adhcFontSize:                                  If Len(tmpVal) > 0 Then .FontSize = tmpVal
+' поведение
+        Case adhcSplitIt:                                   .SplitIt = GetSplitFromText(tmpVal)     ' признак разделителя (сплиттера)
+        'Case adhcAction:                                    .Action = tmpVal                        ' заданное для контрола действие
+        Case adhcBondBottom, adhcBondBottom1:               If Len(tmpVal) > 0 Then Set .BondBottom = accObject.Form.Controls(tmpVal): Call TagsRead(.BondBottom, Init, Col)
         End Select
 HandleNext: Err.Clear
     Next
+' ----------------------------------
+' применяем прочитанные свойства на объект
+' ----------------------------------
+HandleSet: Err.Clear
+' позиция/размеры
+    '' положение по-умолчанию
+    '' если нет привязки позиция берётся относительно родителя
+    '' для расчёта позиции:
+    '' 1) проверить наличие привязки - если привязка не задана берём привязку по родителю
+    '' 2) определить к какой границе связанного контрола привязан текущий
+    ''    если контрол лежит внутри контрола к которому привязан - левая граница привязана к левой,- правая к правой  (+ - внутрь - - наружу)
+    ''    если правая граница контрола левее левой границы родителя - и правая и левая заданы относительно левой границы родителя
+    ''    если левая граница контрола правее правой границы родителя - и правая и левая заданы относительно правой границы родителя
+    '' 3) если задан стиль вывода - получаем положение из стиля
+    ''    если попложение конфликтует со стилем вывода,- предпочитаем положение
+    
+    'If .DefLeft Then
+    'If .DefTop Then
+    'If .DefWidth Then
+    'If .DefHeight Then
+    'If .DefRight Then
+    'If .DefBottom Then
+    ' предельные размеры
+    '  .MinWidth = GetSizeFromText(tmpVal) ', .GetBoundInTwips(eWidth))
+    'Case adhcMaxWidth, adhcMaxWidth1:                   .MaxWidth = GetSizeFromText(tmpVal) ', .GetBoundInTwips(eWidth))
+    'Case adhcMinHeight, adhcMinHeight1:                 .MinHeight = GetSizeFromText(tmpVal) ', .GetBoundInTwips(eHeight))
+    'Case adhcMaxHeight, adhcMaxHeight1:                 .MaxHeight = GetSizeFromText(tmpVal) ', .GetBoundInTwips(eHeight))
+' стиль отображения                                             (adhcSizeIt/adhcFloatIt/adhcStyleIt)
+        'If .StyleIt <> lsUndef Then   ' стиль
+        
+        'If .ScaleIt <> sfNo Then      ' масштабировать
+' поведение
+        'If .SplitIt <>cdNone Then     ' разделитель
+' изображение/текст
+#If UseModPictureData Then
+    If TypeOf accObject Is Access.Control Then If Len(.PictName) = 0 And Len(.IconName) > 0 Then .PictName = .IconName
+    If Len(.PictName) > 0 Or Len(.PictText) > 0 Then Call PictureData_SetToControl(accObject, _
+                ObjectData:=.PictName, Alignment:=.PictAlign, PictSizeMode:=.PictMode, PictWidth:=.PictSize, PictAngle:=.PictAngle, GrayScale:=.PictGray, _
+                TextString:=.PictText, TextPlacement:=.TextPlace, TextAlignment:=.TextAlign, TextAngle:=.TextAngle)
+    If TypeOf accObject Is Access.Form Or TypeOf accObject Is Access.Report Then If Len(.IconName) > 0 Then Call PictureData_SetIcon(accObject.hwnd, ObjectData:=.IconName)
+#End If
+' цветовое оформление
+HandleColor:
+    If (.BackColor = COLORNOTSET) Then If TypeOf accObject Is Access.Section Then tmpVal = TaggedStringGet(accObject.PARENT.Tag, adhcBackColor): If Len(tmpVal) > 0 Then .BackColor = GetColorFromText(UCase(tmpVal))
+    If (.BackColor <> COLORNOTSET) Then accObject.BackColor = .BackColor
+    If (.TextColor <> COLORNOTSET) Then accObject.ForeColor = .TextColor: If Err Then Err.Clear: accObject.FontColor = .TextColor: If Err Then Err.Clear: accObject.TextColor = .TextColor
+    If (.BorderColor <> COLORNOTSET) Then accObject.BorderColor = .BorderColor
     End With
+' ----------------------------------
+    ' добавляем контрол в коллекцию уже обработанных для контроля
+    If TypeOf accObject Is Access.Control Then Col.Add accObject, accObject.Name
     Result = True
 HandleExit:  TagsRead = Result: Exit Function
 HandleError: Result = False: Err.Clear: Resume HandleExit
+End Function
+Private Function p_TypeControlExInit() As tControlEx
+' значения элементов типа по-умолчанию
+    With p_TypeControlExInit
+        .BackColor = COLORNOTSET
+        .TextColor = COLORNOTSET
+        .BorderColor = COLORNOTSET
+        .PictMode = apObjSizeZoomDown
+        .PictAlign = eCenter
+        .TextPlace = ePlaceOnRight
+    End With
 End Function
 Public Function TagsSave(objFrom As Object, Optional objTo As Object) As Boolean '(Optional TagTypes As eObjectProps = ltAll) As Boolean
 ' сохраняет дополнительные свойства в тэг контрола
@@ -2598,27 +2692,27 @@ Dim Result As Boolean: Result = False
 ''' свойства выводимого изображения
 ''' ----------------------------------
 ''    If (TagTypes And ltPictName) = ltPictName Then
-'        strTag = adhcObjectName: strVal = Trim(ObjName): Call TaggedStringSet(.Tag, strTag, strVal) ' имя/код выводимого объекта
+'        strTag = adhcPictName: strVal = Trim(ObjName): Call TaggedStringSet(.Tag, strTag, strVal) ' имя/код выводимого объекта
 ''    End If
 '        If Len(strVal) > 0 Then
 ''    If (TagTypes And ltPictSize) = ltPictSize Then
-'        strTag = adhcObjectSize: If ObjSize > 0 Then strVal = ObjSize Else strVal = vbNullString    ' размер выводимого объекта в пикселях
+'        strTag = adhcPictSize: If ObjSize > 0 Then strVal = ObjSize Else strVal = vbNullString    ' размер выводимого объекта в пикселях
 '        Call TaggedStringSet(.Tag, strTag, strVal)
 ''    End If
 ''    If (TagTypes And ltPictMode) = ltPictMode Then
-'        strTag = adhcObjectMode: strVal = GetPictModeText(ObjMode)                                  ' режим масштабирования объекта
+'        strTag = adhcPictMode: strVal = GetPictModeText(ObjMode)                                  ' режим масштабирования объекта
 '        Call TaggedStringSet(.Tag, strTag, strVal)
 ''    End If
 ''    If (TagTypes And ltPictPlace) = ltPictPlace Then
-'        strTag = adhcObjectAlign: strVal = GetAlignText(ObjAlign)                                   ' режим выравнивания объекта
+'        strTag = adhcPictAlign: strVal = GetPositionText(ObjAlign)                                   ' режим выравнивания объекта
 '        Call TaggedStringSet(.Tag, strTag, strVal)
 ''    End If
 ''    If (TagTypes And ltPictAngle) = ltPictAngle Then
-'        strTag = adhcObjectAngle: If ObjAngle = 0 Then strVal = vbNullString Else strVal = ObjAngle ' угол поворота изображения
+'        strTag = adhcPictAngle: If ObjAngle = 0 Then strVal = vbNullString Else strVal = ObjAngle ' угол поворота изображения
 '        Call TaggedStringSet(.Tag, strTag, strVal)
 ''    End If
 ''    If (TagTypes And ltPictGray) = ltPictGray Then
-'        strTag = adhcObjectGray: If Not ObjGray Then strVal = vbNullString Else strVal = GetBoolText(ObjGray, 1)   ' серое/цветное изображение
+'        strTag = adhcPictGray: If Not ObjGray Then strVal = vbNullString Else strVal = GetBoolText(ObjGray, 1)   ' серое/цветное изображение
 '        Call TaggedStringSet(.Tag, strTag, strVal)
 '        End If
 ''    End If
@@ -2626,19 +2720,19 @@ Dim Result As Boolean: Result = False
 ''' управление текстом на контроле
 ''' ----------------------------------
 ''    If (TagTypes And ltPictText) = ltPictText Then
-'        strTag = adhcObjectText: strVal = Trim(ObjText): Call TaggedStringSet(.Tag, strTag, strVal) ' текст выводимый вместе с изображением
+'        strTag = adhcText: strVal = Trim(ObjText): Call TaggedStringSet(.Tag, strTag, strVal) ' текст выводимый вместе с изображением
 ''    End If
 '        If Len(strVal) > 0 Then
 ''    If (TagTypes And ltTextPlace) = ltTextPlace Then
-'        strTag = adhcObjectTextPlace: strVal = GetPlaceText(TxtPlace)                               ' размещение текста относительно изображения
+'        strTag = adhcTextPlace: strVal = GetPlaceText(TxtPlace)                               ' размещение текста относительно изображения
 '        Call TaggedStringSet(.Tag, strTag, strVal)
 ''    End If
 ''    If (TagTypes And ltTextAlign) = ltTextAlign Then
-'        strTag = adhcObjectTextAlign: strVal = GetAlignText(TxtAlign)                               ' выравнивание текста
+'        strTag = adhcTextAlign: strVal = GetPositionText(TxtAlign)                               ' выравнивание текста
 '        Call TaggedStringSet(.Tag, strTag, strVal)
 ''    End If
 ''    If (TagTypes And ltTextAngle) = ltTextAngle Then
-'        strTag = adhcObjectTextAngle: If TxtAngle = 0 Then strVal = vbNullString Else strVal = TxtAngle ' угол наклона текста
+'        strTag = adhcTextAngle: If TxtAngle = 0 Then strVal = vbNullString Else strVal = TxtAngle ' угол наклона текста
 '        Call TaggedStringSet(.Tag, strTag, strVal)
 ''    End If
 ''    If (TagTypes And ltFontName) = ltFontName Then
@@ -2982,7 +3076,7 @@ Dim tmp As Long: tmp = lngStyle
     If (tmp And lsBProp) = lsBProp Then strVal = strVal & strDelim & adhcBProp: tmp = tmp And Not lsBProp
 ' вывод изображения/подписи
     Select Case (tmp And lsShowIconText)
-    Case lsShowIconText:    strVal = strVal & strDelim & adhcIconAndText: tmp = tmp And Not lsShowIconText
+    Case lsShowIconText:    strVal = strVal & strDelim & adhcPictAndText: tmp = tmp And Not lsShowIconText
     Case lsShowIcon:        strVal = strVal & strDelim & adhcPict: tmp = tmp And Not lsShowIcon
     Case lsShowText:        strVal = strVal & strDelim & adhcText: tmp = tmp And Not lsShowText
     End Select
@@ -3005,8 +3099,8 @@ Dim strVal As String, arrVal() As String, j As Long, tmp As eObjectStyle
             lsShowIcon, lsShowText, lsShowIconText, _
             lsXProp, lsYProp, lsRProp, lsBProp, lsWProp, lsHProp ', _
             'lsCenterHorz, lsCenterVert, lsCenter,
-                                                    tmp = CLng(strVal)                  ' задано числом
-        Case adhcNone:                         tmp = lsNone                        '
+                                          tmp = CLng(strVal)                  ' задано числом
+        Case adhcNone:                    tmp = lsNone                        '
 ' стиль выравнивания позиции (основные)
         Case adhcLeft, adhcLeft1:         tmp = lsLeft                        ' привязан к левой границе области
         Case adhcRight, adhcRight1:       tmp = lsRight                       ' привязан к правой стороне области
@@ -3033,8 +3127,8 @@ Dim strVal As String, arrVal() As String, j As Long, tmp As eObjectStyle
         Case adhcHProp:                   tmp = lsHProp                       ' Height пропорциональна высоте области
 ' стили вывода изображения/текста
         Case adhcPict:                    tmp = lsShowIcon                    ' выводить иконку
-        Case adhcText:                    tmp = lsShowText                    ' выводить подпись
-        Case adhcIconAndText:             tmp = lsShowIconText                ' выводить иконку и подпись
+        Case adhcPictText:                    tmp = lsShowText                    ' выводить подпись
+        Case adhcPictAndText:             tmp = lsShowIconText                ' выводить иконку и подпись
         Case Else 'Exit for' если не предусмотренное значение сбрасываем стиль и выходим
         End Select
         GetStyleFromText = GetStyleFromText Or tmp ' суммируем стили
@@ -3068,7 +3162,33 @@ Public Function GetBoolText(bBool As Boolean, Optional Mode As Long) As String
         GetBoolText = Choose(Mode + 1, adhcFalse, adhcNo, adhcOff)
     End If
 End Function
-Public Function GetAlignText(lngAlign As eAlign, Optional Short As Boolean = False) As String
+Public Function GetAlignText(lngAlign As eAlignText, Optional Short As Boolean = False) As String
+' выравнивания текста
+    Select Case lngAlign
+    Case TA_RIGHT:      GetAlignText = IIf(Short, adhcRight1, adhcRight)    ' Опорная точка находится на правой кромке рабочего прямоугольника.
+    Case TA_CENTER:     GetAlignText = IIf(Short, adhcCenter1, adhcCenter)  ' Опорная точка выравнивается горизонтально по центру рабочего прямоугольника.
+    Case TA_BOTTOM:     GetAlignText = IIf(Short, adhcBottom1, adhcBottom)  ' Опорная точка на нижней кромке рабочего прямоугольника.
+''    Case TA_BASELINE:   GetAlignText = IIf(Short, , ) ' Опорная точка находится на базовой линии текста.
+''    Case TA_RTLREADING: GetAlignText = IIf(Short, , ) ' Редакция Windows на языках Ближнего Востока: Текст размечается для порядка чтения справа налево , в противоположность порядку чтения по умолчанию слева направо. Это применяется только тогда, когда шрифт, выбранный в контекст устройства предназначен или для Еврейского или для Арабского языка.
+''   Case TA_NOUPDATECP               ' Текущая позиция не модифицируется после каждого вызова вывода текста.
+''   Case TA_UPDATECP                 ' Текущая позиция модифицируется после каждого вызова вывода текста.
+''   Case TA_MASK  = (TA_BASELINE + TA_CENTER + TA_UPDATECP)
+
+'    Case TA_LEFT:      GetAlignText = vbNullString ' 0         ' Опорная точка находится на левой кромке рабочего прямоугольника.
+'    Case TA_TOP:       GetAlignText = vbNullString ' 0         ' Опорная точка на верхней кромке рабочего прямоугольника.
+    Case Else:          GetAlignText = vbNullString '
+    End Select
+End Function
+Public Function GetAlignFromText(strAlign As String) As eAlignText
+' выравнивания текста
+    Select Case strAlign
+    Case adhcRight1, adhcRight:         GetAlignFromText = TA_RIGHT         ' Опорная точка находится на правой кромке рабочего прямоугольника.
+    Case adhcCenter1, adhcCenter:       GetAlignFromText = TA_CENTER        ' Опорная точка выравнивается горизонтально по центру рабочего прямоугольника.
+    Case adhcBottom1, adhcBottom:       GetAlignFromText = TA_BOTTOM        ' Опорная точка на нижней кромке рабочего прямоугольника.
+    Case Else:                          GetAlignFromText = TA_LEFT '
+    End Select
+End Function
+Public Function GetPositionText(lngAlign As eAlign, Optional Short As Boolean = False) As String
     If lngAlign = eAlignUndef Then Exit Function
 '    If lngAlign = eAlignLeftTop Then Exit Function
 Dim strVal As String
@@ -3081,11 +3201,11 @@ Dim tmp As Long: tmp = lngAlign
     If (tmp And lsRight) = lsRight Then strVal = strVal & IIf(Short, adhcRight1, adhcRight): tmp = tmp And Not lsRight
     If (tmp And lsTop) = lsTop Then strVal = strVal & IIf(Short, adhcTop1, adhcTop): tmp = tmp And Not lsTop
     If (tmp And lsBottom) = lsBottom Then strVal = strVal & IIf(Short, adhcBottom1, adhcBottom): tmp = tmp And Not lsBottom
-    GetAlignText = strVal
+    GetPositionText = strVal
 End Function
-Public Function GetAlignFromText(strAlign As String) As eAlign
+Public Function GetPositionFromText(strAlign As String) As eAlign
 ' стиль выравнивания позиции
-    GetAlignFromText = eAlignUndef: If Len(Trim(strAlign)) = 0 Then Exit Function
+    GetPositionFromText = eAlignUndef: If Len(Trim(strAlign)) = 0 Then Exit Function
 Dim strVal As String, arrVal() As String, j As Long, tmp As eAlign
     Call Tokenize(strAlign, arrVal, c_strStyleDelims)     ' SplitMany(strVal, c_strStyleDelims)
     For j = LBound(arrVal) To UBound(arrVal)
@@ -3124,7 +3244,7 @@ Dim strVal As String, arrVal() As String, j As Long, tmp As eAlign
         Case adhcCascade:       tmp = eCascade                      ' композиция (только для формы ??)
         Case eAlignUndef:       tmp = eAlignUndef                   '
         End Select
-        GetAlignFromText = GetAlignFromText Or tmp ' суммируем
+        GetPositionFromText = GetPositionFromText Or tmp ' суммируем
     Next j
 End Function
 Public Function GetPlaceText(lngPlace As ePlace) As String
@@ -3161,9 +3281,9 @@ Public Function GetPlaceText(lngPlace As ePlace) As String
     Case eCascadeFromRightBottom: GetPlaceText = adhcCascadeFromRightBottom  ' размещение каскадом влево-вверх
     Case Else: GetPlaceText = vbNullString 'adhcUndef
 'Dim StrVal As String
-'    StrVal = GetAlignText(lngPlace And eCenter, Short)
+'    StrVal = GetPositionText(lngPlace And eCenter, Short)
 '    StrVal = StrVal & IIf(Short, adhcTo1, adhcTo)
-'    StrVal = StrVal & GetAlignText((lngPlace And eCenter * &H10) / &H10, Short)
+'    StrVal = StrVal & GetPositionText((lngPlace And eCenter * &H10) / &H10, Short)
 '    GetPlaceText = StrVal
     End Select
 End Function
@@ -3213,9 +3333,9 @@ Public Function GetPlaceFromText(strPlace As String) As ePlace
     '        Pos = InStr(1, strPlace, arrDelim(i)): If Pos > 1 Then Exit For
     '    Next i
     '    If Pos < 1 Then Err.Raise vbObjectError + 512
-    '' каждую прочесть через GetAlignFromText и объединить со сдвигом &h10
-    '    Result = GetAlignFromText(Left$(strPlace, Pos - 1))                                ' читаем левую часть
-    '    Result = Result Or &H10 * GetAlignFromText(Mid$(strPlace, Pos + Len(arrDelim(i))))    ' читаем правую часть
+    '' каждую прочесть через GetPositionFromText и объединить со сдвигом &h10
+    '    Result = GetPositionFromText(Left$(strPlace, Pos - 1))                                ' читаем левую часть
+    '    Result = Result Or &H10 * GetPositionFromText(Mid$(strPlace, Pos + Len(arrDelim(i))))    ' читаем правую часть
     End Select
 'HandleExit:  GetPlaceFromText = Result: Exit Function
 'HandleError: Result = False: Err.Clear: Resume HandleExit
@@ -3224,9 +3344,9 @@ Public Function GetPictModeText(ObjMode As eObjSizeMode) As String
     Select Case ObjMode
     Case acOLESizeStretch:      GetPictModeText = adhcStretch             ' сжатие/растяжение (нарушает пропорции)
     Case acOLESizeZoom:         GetPictModeText = adhcZoom                ' пропорциональное масштабирование
-    Case apObjSizeZoomDown:     GetPictModeText = adhcDown                ' пропорциональное масштабирование, только уменьшаем
     'Case acOLESizeAutoSize:     GetPictModeText = adhcAuto
-    'Case acOLESizeClip:         GetPictModeText = vbNullString 'adhcClip  ' не меняем размер. если размер больше области вывода - обрезка
+    Case acOLESizeClip:         GetPictModeText = adhcClip  ' не меняем размер. если размер больше области вывода - обрезка
+    'Case apObjSizeZoomDown:     GetPictModeText = adhcDown                ' пропорциональное масштабирование, только уменьшаем
     Case Else:                  GetPictModeText = vbNullString 'adhcClip  ' не меняем размер. если размер больше области вывода - обрезка
     End Select
 End Function
@@ -3235,10 +3355,10 @@ Public Function GetPictModeFromText(ObjModeText As String) As eObjSizeMode
     Select Case ObjModeText
     Case adhcStretch:           GetPictModeFromText = acOLESizeStretch    ' сжатие/растяжение (нарушает пропорции)
     Case adhcZoom:              GetPictModeFromText = acOLESizeZoom       ' пропорциональное масштабирование
-    Case adhcDown, adhcDown1:   GetPictModeFromText = apObjSizeZoomDown   ' пропорциональное масштабирование, только уменьшаем
     'Case adhcAuto, adhcAuto1:   GetPictModeFromText = acOLESizeAutoSize  '
-    'Case adhcClip:              GetPictModeFromText = acOLESizeClip      ' не меняем размер. если размер больше области вывода - обрезка
-    Case Else:                  GetPictModeFromText = acOLESizeClip       ' не меняем размер. если размер больше области вывода - обрезка
+    Case adhcClip:              GetPictModeFromText = acOLESizeClip      ' не меняем размер. если размер больше области вывода - обрезка
+    'Case adhcDown, adhcDown1:   GetPictModeFromText = apObjSizeZoomDown   ' пропорциональное масштабирование, только уменьшаем
+    Case Else:                  GetPictModeFromText = apObjSizeZoomDown   ' не меняем размер. если размер больше области вывода - обрезка
     End Select
 End Function
 ' --------------------
@@ -3319,5 +3439,14 @@ Public Function GetAlignPoint(Alignment As eAlign, _
     Case eBottom:       cY = 1            ' Bottom-to-Bottom
     Case eCenterVert:   cY = 1 / 2        ' CenterVert-to-CenterVert
     End Select
+End Function
+
+Private Function p_IsExist(Key As String, Coll As Collection, Optional ByRef Value) As Boolean
+' проверяет наличие элемента в коллекции
+'-------------------------
+    On Error GoTo HandleError
+    Value = Coll(Key)
+HandleExit:  p_IsExist = True:  Exit Function
+HandleError: p_IsExist = False: Err.Clear
 End Function
 

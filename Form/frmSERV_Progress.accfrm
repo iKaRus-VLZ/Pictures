@@ -1,6 +1,6 @@
 Version =20
 VersionRequired =20
-Checksum =1127599741
+Checksum =2053424864
 Begin Form
     PopUp = NotDefault
     Modal = NotDefault
@@ -27,10 +27,10 @@ Begin Form
     Width =5670
     DatasheetFontHeight =10
     ItemSuffix =15
-    Left =11520
-    Top =4275
-    Right =17190
-    Bottom =6345
+    Left =10440
+    Top =3960
+    Right =16110
+    Bottom =6030
     DatasheetGridlinesColor =12632256
     RecSrcDt = Begin
         0x110187182c21e440
@@ -39,7 +39,7 @@ Begin Form
         0x123ad8db7c68c8478b1ebf729d2622d6
     End
     NameMap = Begin
-        0x0acc0e5500000000000000000000000000000000000000000c00000005000000 ,
+        0x0acc0e5500000000000000000000000000000000000000000c00000003000000 ,
         0x0000000000000000000000000000
     End
     Caption =" "
@@ -136,7 +136,6 @@ Begin Form
             SpecialEffect =2
             OldBorderStyle =0
             TextFontCharSet =204
-            BorderLineStyle =0
             Width =1701
             LabelX =-1701
             FontName ="Tahoma"
@@ -144,7 +143,6 @@ Begin Form
         End
         Begin Subform
             SpecialEffect =2
-            BorderLineStyle =0
             Width =1701
             Height =1701
         End

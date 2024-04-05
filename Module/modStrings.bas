@@ -7,8 +7,8 @@ Private Const c_strModule As String = "modStrings"
 '=========================
 ' Описание      : Функции для работы со строками
 ' Автор         : Кашкин Р.В. (KashRus@gmail.com)
-' Версия        : 1.1.30.453844714
-' Дата          : 02.04.2024 11:18:49
+' Версия        : 1.1.30.453854194
+' Дата          : 03.04.2024 10:03:56
 ' Примечание    : сделано под Access x86, адаптировано под x64, но толком не тестировалось. _
 '               : для работы с Excel сделать APPTYPE=1
 ' v.1.1.30      : 12.03.2024 - изменения в GroupsGet - первая попытка переделать скобки под шаблоны (чтобы получить возможность разбирать двух- и более -звенные выражения вроде If .. Then .. End If)
@@ -2762,19 +2762,20 @@ Public Function TextToArrayByWidth(TextString As String, WidthInPix As Long, Opt
 ' hDC - hDC -области куда будет выводиться текст
 '' OutLineWidth, OutLineHeight - массивы размеров строк разбитого текста
 '-------------------------
+Dim Result As String
 Dim sz As Size, tm As TEXTMETRIC
 Dim strText As String, strRest As String, strTemp As String
 Dim aWords() As String, aText() As String ', aWidth() As Long, aHeight() As Long
 Dim spLen As Long, spPos As Integer, spPosNext As Integer
 Dim tWidth As Long, tHeight As Long
 Dim i As Long, iMax As Long, ii As Long, w As Long
-Dim Result As String
 
     On Error GoTo HandleError
     Result = vbNullString
     tWidth = 0: tHeight = 0
     If hFont = 0 Then hFont = p_HFontByControl() 'GoTo HandleExit
     If WidthInPix < 0 Then GoTo HandleExit
+Dim WidthMax As Long: WidthMax = WidthInPix - 2 ' костылик )
 Dim tDC As LongPtr, hOldFont As LongPtr
     If hdc = 0 Then tDC = GetDC(0) Else tDC = hdc
 
@@ -2811,7 +2812,7 @@ Dim PIXEL_PER_INCH_X As Long: PIXEL_PER_INCH_X = GetDeviceCaps(tDC, LOGPIXELSX)
         ' получаем размер текста
             GetTextExtentPoint32 tDC, strTemp, spLen, sz
         ' условие: w=0, - ещё один костыль
-            If sz.cX <= WidthInPix Or w = 0 Then
+            If sz.cX <= WidthMax Or w = 0 Then
             ' если первое слово в строке меньше области печати - всё равно берём,
             ' иначе зависает в мертвом цикле
                 If sz.cX > tWidth Then tWidth = sz.cX
@@ -2820,7 +2821,7 @@ Dim PIXEL_PER_INCH_X As Long: PIXEL_PER_INCH_X = GetDeviceCaps(tDC, LOGPIXELSX)
                 i = i + 1
                 w = w + 1
             End If
-        Loop Until (i > iMax) Or (WidthInPix < sz.cX) '(WidthInPix < (sz.cx * ((1 + spLen) / spLen))
+        Loop Until (i > iMax) Or (WidthMax < sz.cX) '(WidthMax < (sz.cx * ((1 + spLen) / spLen))
         ReDim Preserve aText(ii): aText(ii) = Trim$(strText)
 '        ReDim Preserve aWidth(ii): aWidth(ii) = sz.CX
 '        ReDim Preserve aHeight(ii): aHeight(ii) = sz.CY

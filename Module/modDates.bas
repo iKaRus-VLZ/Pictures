@@ -440,7 +440,7 @@ Dim Result As eDateType: Result = eDateTypeUndef
     Result = eDateTypeUndef: EventId = 0 ': EventIds = vbNullString
 'Dim datDateBeg As Date:  datDateBeg = Date1
 ' если таблицы нет переходим к получению информации по дню недели
-    If Not p_DatesTableExists(AskTable:=AskTable, dbs:=dbs, wks:=wks) Then GoTo HandleResult
+    If Not p_DatesTableExists(AskTable:=AskTable, dbs:=dbs, wks:=wks) Then GoTo Handleresult
 '' определяем тип по таблице настраиваимых дат
 '    ' выбираем типы дат (не группа/не служебная информация)
 'Dim strTypes As String:     strTypes = Join(Array(eDateTypeWeekday, eDateTypeHolidayPre, eDateTypeHoliday, eDateTypeNonWorkday, eDateTypeUser), ",")
@@ -488,7 +488,7 @@ Dim tmpType As eDateType, strDesc As String, tmpDesc As String
 HandleNext: .MoveNext
         Loop
     End With
-HandleResult:
+Handleresult:
 ' если тип всё ещё не задан - определяем его по дню недели
     If Result = eDateTypeUndef Then
         If ISWEEKEND(Date1) Then
@@ -1462,7 +1462,7 @@ Const cTmp = "[" & c_strTmpTablPref & "]"               ' имя подзапроса
 Dim sqlDate1 As String: sqlDate1 = p_DateToSQL(Date1)
 Dim sqlDate2 As String: sqlDate2 = p_DateToSQL(Date2)
 Dim strWhereDate As String: strWhereDate = "(" & c_strDateBeg & sqlBetween & sqlDate1 & sqlAnd & sqlDate2 & ")" ' фильтр по дате
-    If Not Requery Then If Date1 >= m_datTempBeg And Date2 <= m_datTempEnd Then GoTo HandleResult
+    If Not Requery Then If Date1 >= m_datTempBeg And Date2 <= m_datTempEnd Then GoTo Handleresult
 Dim bolTransOpen As Boolean
     If wks Is Nothing Then Set wks = DBEngine.Workspaces(0): Set dbs = CurrentDb                                         ' по-умолчанию текущая база и рабочее пространство
     If dbs Is Nothing Then If wks.Databases.Count > 0 Then Set dbs = wks.Databases(0) Else Err.Raise vbObjectError + 512 ' если не задана база, но задано рабочее пространство - берём первую в рабочем пространстве, иначе - ошибка
@@ -1578,7 +1578,7 @@ HandleNext: ' переходим к следующему элементу ленты для данного события
 '    'Application.RefreshDatabaseWindow
     m_datTempBeg = Date1: m_datTempEnd = Date2: m_strTempName = TempName
 
-HandleResult:
+Handleresult:
 ' сортируем рекордсет по дате и возвращаем
     If Len(Fields) = 0 Then strFields = sqlAll Else strFields = Fields
     strOrder = Join(Array(c_strDateBeg, c_strDateType), ",")

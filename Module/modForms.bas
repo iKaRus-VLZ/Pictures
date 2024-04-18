@@ -1532,12 +1532,12 @@ Dim Result As Boolean: Result = False
     On Error GoTo HandleError
 Dim lpPoint As POINT
 'Dim frm As Access.Form
-Dim cX As Long, cY As Long, cW As Long, ch As Long
+Dim cX As Long, cY As Long, cW As Long, cH As Long
 Dim dX As Long, dY As Long, dW As Long, dH As Long
 ' определяем родительскую форму и координаты/размеры переданного контрола
     If TypeOf accObject Is Access.Control Then
         Set ParentObject = GetTopParent(accObject)
-        With accObject: cX = .Left: cY = .Top: cW = .Width: ch = .Height: End With
+        With accObject: cX = .Left: cY = .Top: cW = .Width: cH = .Height: End With
         With ParentObject
         dX = .CurrentSectionLeft
         If accObject.Section <> acHeader Then
@@ -1561,7 +1561,7 @@ Dim dX As Long, dY As Long, dW As Long, dH As Long
             On Error Resume Next
             dH = .Section(acHeader).Height + .Section(acFooter).Height: Err.Clear
             On Error GoTo HandleError
-            cW = .Width: ch = dH + .Section(acDetail).Height
+            cW = .Width: cH = dH + .Section(acDetail).Height
         End With
     Else: Err.Raise vbObjectError + 512
     End If
@@ -1572,7 +1572,7 @@ Dim dX As Long, dY As Long, dW As Long, dH As Long
     If Not IsMissing(y) Then y = lpPoint.y + TwipsToPixels(cY + dY, DIRECTION_VERTICAL)
 ' получаем размеры контрола
     If Not IsMissing(w) Then w = TwipsToPixels(cW, DIRECTION_HORIZONTAL)
-    If Not IsMissing(h) Then h = TwipsToPixels(ch, DIRECTION_VERTICAL)
+    If Not IsMissing(h) Then h = TwipsToPixels(cH, DIRECTION_VERTICAL)
     Result = True
 HandleExit:  AccControlLocation = Result: Exit Function
 HandleError: Result = False: Err.Clear: Resume HandleExit
@@ -2236,13 +2236,13 @@ Dim Style&
 HandleExit:  Exit Function
 HandleError: Resume HandleExit
 End Function
-Private Function StrZ(Par As String) As String
+Private Function StrZ(par As String) As String
 Dim nSize As Long, i As Long ', Rez As String
-   nSize = Len(Par)
-   i = InStr(1, Par, Chr(0)) - 1
+   nSize = Len(par)
+   i = InStr(1, par, Chr(0)) - 1
    If i > nSize Then i = nSize
    If i < 0 Then i = nSize
-   StrZ = Mid$(Par, 1, i)
+   StrZ = Mid$(par, 1, i)
 End Function
 Public Function GetWinClass(hwnd As LongPtr) As String
 ' получаем класс окна

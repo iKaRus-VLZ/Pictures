@@ -422,7 +422,7 @@ Const cstrSec = "SS"    ' SS - секунды
 Const cstrMSec = "FFF"  ' FFF - милисекунды
 Dim Result As String
     On Error GoTo HandleError
-    If InStr(FormatString, cstrMSec) <= 0 Then ad = DateTime: GoTo HandleResult
+    If InStr(FormatString, cstrMSec) <= 0 Then ad = DateTime: GoTo Handleresult
 Dim dt As SYSTEMTIME
 Dim tmp As Double
     tmp = DateTime
@@ -439,7 +439,7 @@ Dim tmp As Double
 ' собираем
         ad = ad + TimeSerial(.wHour, .wMinute, .wSecond)
     End With
-HandleResult:
+Handleresult:
     Result = VBA.Format$(ad, FormatString)
 HandleExit:
     FormatDateTime = Result

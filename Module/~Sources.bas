@@ -8,8 +8,8 @@ Option Base 0
 Private Const c_strModule As String = "~Sources"
 '=========================
 ' Описание      : Модуль для работы с исходным текстом приложения
-' Версия        : 1.9.1.451754634
-' Дата          : 06.09.2023 11:07:18
+' Версия        : 1.9.1.453985865
+' Дата          : 16.04.2024 14:04:34
 ' Автор         : Кашкин Р.В. (KashRus@gmail.com)
 ' Примечание    : при USEZIPCLASS = True, нужен модуль clzZipArchive
 ' v.1.9.1       : 24.10.2022 - изменения в ZipPack - изменён способ контроля завершения архивирования элемента
@@ -2690,8 +2690,8 @@ Dim LineType As m_CodeLineType, LineBreak As Boolean
     LineType = m_CodeHead ' модуль сразу начинается с кода
 
 Dim strLine As String, strResult As String
-    For CodeLine = 1 To objModule.CountOfDeclarationLines
-        'If LineType = m_CodeProc Then Exit For
+    For CodeLine = 1 To objModule.CountOfLines '.CountOfDeclarationLines - игнорирует комментарии в конце заголовка модуля потому не подходит нам для определения конца заголовка
+        If LineType = m_CodeProc Then Exit For
     ' читаем построчно пока не достигнем конца или не дойдем до объявления первой процедуры
         strLine = objModule.Lines(CodeLine, 1)
     ' проверяем в каком месте модуля находимся
@@ -4056,13 +4056,13 @@ End Function
 '-------------------------
 ' вспомогательные функции
 '-------------------------
-Private Function StrZ(Par As String) As String
+Private Function StrZ(par As String) As String
 Dim nSize As Long, i As Long ', Rez As String
-   nSize = Len(Par)
-   i = InStr(1, Par, VBA.Chr(0)) - 1
+   nSize = Len(par)
+   i = InStr(1, par, VBA.Chr(0)) - 1
    If i > nSize Then i = nSize
    If i < 0 Then i = nSize
-   StrZ = VBA.Mid$(Par, 1, i)
+   StrZ = VBA.Mid$(par, 1, i)
 End Function
 #If USEZIPCLASS Then
 Private Function oZip() As clzZipArchive
@@ -4101,6 +4101,3 @@ Const DiskName = "C:\"
 HandleExit:     p_GetSysDiskSerial = Result: Exit Function
 HandleError:    Result = VBA.String$(8, "0"): Err.Clear: Resume HandleExit
 End Function
-
-
-
